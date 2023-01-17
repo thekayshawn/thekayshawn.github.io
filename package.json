@@ -7,7 +7,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "preversion": "git fetch --tags",
+    "postversion": "git push --follow-tags"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^1.0.0",
