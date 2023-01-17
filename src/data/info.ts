@@ -1,52 +1,47 @@
 export const info = {
-  baseUrl: "https://astro-portfolio-uzair.vercel.app",
-  name: "Uzair Ahmed",
-  jobDescription: "Web Developer",
-  about: `I'm a software engineer based in Karachi, Pakistan.
-   I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
-   I have been working for 3 year, with a demonstrated history of working in the Computer Software industry. Skilled in Front-end Development.
-   I have 3 years of experience in HTML, CSS, SCSS, JavaScript, Bootstrap, tailwind CSS, StyledComponent, React JS and Next JS. Hence,
-   I have successfully completed several web projects from scratch. 
-   Yet, I learn continuously and never stop exploring new technologies.
-   So, I have also gained knowledge of Node JS, Express JS, Mongo DB, Python,
-   firebase and React Native with time.
-  `,
+  baseUrl: "https://kashan-ahmad.github.io",
+  name: "Kashan Ahmad",
+  jobDescription: "Software Engineer",
+  about:
+    "I'm a dynamic and proactive software engineer with a proven track record of success in the development of exceptional software systems. Right now, I'm developing a seamless dashboard system at TheTutor.",
 
   experience: [
     {
-      name: "InterNative Labs, LLC",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "Apr 2022",
+      name: "Lead Engineer @TheTutor.me",
+      location: "Dubai, UAE",
+      startDate: "June 2022",
       endDate: "Present",
       description: [
-        "- Developing screens and UI components for the web application using React and Tailwind.",
-        "- Fixing UI issues and integrating backend APIs with Redux Saga.",
+        "Wrote, managed, and reviewed enterprise-level React code for the EdTech platform. Developed a maintainable user dashboard and a drag-and-drop content builder.",
       ],
     },
 
     {
-      name: "Coupon Approve (Remote)",
-      location: "Amsterdam, North Holland, Netherlands",
-      startDate: "Nov 2020",
-      endDate: "Apr 2022",
+      name: "Engineering Manager @Devshot",
+      location: "Birmingham, UK",
+      startDate: "June 2021",
+      endDate: "June 2022",
       description: [
-        "✓ Developing code in accordance with appropriate design and architectural rules",
-        "✓ Documenting, testing, deployment, maintenance, support of platforms, applications, databases and solutions",
-        "✓ Help and training of other colleagues",
-        "✓ Others tasks connected to the nature of the job",
-        "✓ Code Improvements and Refactoring ",
-        "✓ Best Practices and Rules Maintainer",
+        "Conducted regular code reviews, lead, and managed a team of talented software engineers, serving as a mentor for the newly acquisitioned talent.",
       ],
     },
 
     {
-      name: "Interns Pakistan",
-      location: "Pakistan",
-      startDate: "Oct 2020",
-      endDate: "Nov 2020",
+      name: "Software Engineer @BusinessDoor",
+      location: "Birmingham, UK",
+      startDate: "June 2020",
+      endDate: "June 2021",
       description: [
-        "An Immersive Internship Program that prepares me for the world's most in-demand career. A six weeks program completely based on learning and challenges.",
-        "The internship track is built by an industry expert that let develop the skills in the areas most important ",
+        "Wrote scalable React code that lead the product to be used by hundreds of businesses and entrepreneurs to jump start their careers to new heights.",
+      ],
+    },
+    {
+      name: "Full-Stack Engineer @How2Pass",
+      location: "Ontario, CA",
+      startDate: "November 2019",
+      endDate: "Present",
+      description: [
+        "Wrote performant & elegant PHP code, complimented by a sweet blend of TypeScript and SCSS. The end result has been a product loved by thousands of users.",
       ],
     },
   ],
@@ -78,20 +73,36 @@ export const info = {
   ],
 
   socialMedia: {
-    facebook: "https://www.facebook.com/profile.php?id=100022899849583",
-    twitter: "https://twitter.com/Uzzii_21",
-    github: "https://github.com/uzzii-21",
-    email: "uzairahmed@74372gmail.com",
-    linkedin: "https://www.linkedin.com/in/uzzii21/",
+    email: "kashan.aech.620@gmail.com",
+    github: "https://github.com/kashan-ahmad",
+    twitter: "https://twitter.com/kashanAhmad_",
+    linkedin: "https://www.linkedin.com/in/kashan-ahmad-227194243/",
   },
 
   projects: [
     {
-      title: "Astro Portfolio",
+      title: "TheTutor",
       isFeatured: true,
-      thumbnail: "/assets/images/astro-portfolio.png",
-      githubUrl: "https://github.com/uzzii-21/astro-portfolio",
-      liveUrl: "https://astro-portfolio-uzair.vercel.app/",
+      liveUrl: "https://thetutor.me",
+      thumbnail: "/assets/images/thetutor.png",
+    },
+    {
+      title: "Content Builder",
+      isFeatured: true,
+      liveUrl: "https://content-builder.thetutor.me",
+      thumbnail: "/assets/images/content-builder.png",
+    },
+    {
+      title: "SEO Helpify",
+      isFeatured: true,
+      liveUrl: "https://seohelpify.com",
+      thumbnail: "/assets/images/seohelpify.png",
+    },
+    {
+      title: "How2Pass",
+      isFeatured: true,
+      liveUrl: "https://how2pass.com",
+      thumbnail: "/assets/images/how2pass.png",
     },
   ],
 };
