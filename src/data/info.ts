@@ -73,7 +73,7 @@ export const info = {
   ],
 
   socialMedia: {
-    email: "kashan.aech.620@gmail.com",
+    email: "mailto:kashan.aech.620@gmail.com",
     github: "https://github.com/kashan-ahmad",
     twitter: "https://twitter.com/kashanAhmad_",
     linkedin: "https://www.linkedin.com/in/kashan-ahmad-227194243/",
