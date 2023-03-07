@@ -14,13 +14,27 @@ import { createLogo } from "@utils";
   <nav>
     <ul class="flex items-center">
       <li>
-        <a class="p-4 dark:text-light block text-lg" href="/projects"
+        <a class="py-4 px-3 dark:text-light block text-lg" href="/projects"
           >Projects</a
         >
       </li>
-      <!-- <li>
-        <a class="p-4 dark:text-light block text-lg" href="/contact">Contact</a>
-      </li> -->
+      <li>
+        <a
+          href={info.socialMedia.email}
+          target="_blank"
+          rel="noreferrer"
+          class="py-4 px-3 dark:text-light block text-lg">Contact</a
+        >
+      </li>
+      <li>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          class="py-4 px-3 dark:text-light block text-lg"
+          download="resume.pdf"
+          href="/resume.pdf">Resume</a
+        >
+      </li>
       <li>
         <button
           aria-label="theme-button"

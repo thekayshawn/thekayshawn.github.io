@@ -48,8 +48,27 @@ export const info = {
     },
   ],
 
+  certifications: [
+    {
+      name: "TypeScript React Mastery",
+      location: "Oak Academy",
+      url: "https://rb.gy/wjmppf",
+      description: [
+        "Brought up a perfectly type-safe and scalable clone of Twitter. Bootstrapped with Firebase and Railway.",
+      ],
+    },
+    {
+      name: "Ethereum and Solidity Mastery",
+      location: "Stephen Grider",
+      url: "https://rb.gy/kthpvp",
+      description: [
+        "Solidified smart contracts for a mock wallet system, allowing the development of chrome extensions for the corresponding web3.0 authentication.",
+      ],
+    },
+  ],
+
   socialMedia: {
-    email: "mailto:kashan.aech.620@gmail.com",
+    email: "mailto:sup@kashanahmad.me",
     github: "https://github.com/kashan-ahmad",
     twitter: "https://twitter.com/kashanAhmad_",
     linkedin: "https://www.linkedin.com/in/kashoot",
@@ -57,16 +76,16 @@ export const info = {
 
   projects: [
     {
-      title: "TheTutor",
+      title: "Sassy Chat",
       isFeatured: true,
-      liveUrl: "https://thetutor.me",
-      thumbnail: "/assets/images/thetutor.png",
+      liveUrl: "https://sassy-chat.pages.dev",
+      thumbnail: "/assets/images/sassy-chat.png",
     },
     {
-      title: "Content Builder",
+      title: "Sassy JS",
       isFeatured: true,
-      liveUrl: "https://contentbuilder.thetutor.me",
-      thumbnail: "/assets/images/content-builder.png",
+      liveUrl: "https://npmjs.com/package/@sassy-js/vanilla",
+      thumbnail: "/assets/images/sassy-js.png",
     },
     {
       title: "SEO Helpify",
@@ -75,10 +94,10 @@ export const info = {
       thumbnail: "/assets/images/seohelpify.png",
     },
     {
-      title: "How2Pass",
+      title: "TenTwenty Clone",
       isFeatured: true,
-      liveUrl: "https://how2pass.com",
-      thumbnail: "/assets/images/how2pass.png",
+      liveUrl: "https://tentwenty.pages.dev",
+      thumbnail: "/assets/images/tentwenty.png",
     },
   ],
 };
