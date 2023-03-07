@@ -27,8 +27,8 @@ const featureProjects = info.projects.map((project, index) => {
   <body>
     <Layout>
       <Hero name={info.name} about={info.about} />
-      <Experience title={"EXPERIENCE"} details={info.experience} />
-      <!-- <Experience title={"EDUCATION"} details={info.education} /> -->
+      <Experience title="EXPERIENCE" details={info.experience} />
+      <Experience title={"EDUCATION"} details={info.education} />
       <section>
         <h2 class="w-[15rem] dark:text-light mt-16">FEATURED PROJECTS</h2>
         <ProjectsWrapper projects={featureProjects} />

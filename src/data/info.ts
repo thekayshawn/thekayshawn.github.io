@@ -8,75 +8,43 @@ export const info = {
   experience: [
     {
       name: "Frontend Web Developer @TheTutor.me",
-      location: "Dubai, UAE",
+      location: "Dubai, UAE (Remote)",
       startDate: "June 2022",
       endDate: "Present",
       description: [
-        `Leading a team of efficient individuals through writing, managing, and reviewing enterprise-level React and TypeScript code for the EdTech platform. The product was released in October after a comprehensive closed beta-testing session got wrapped up.
-
-        Currently, we're building a user-first dashboard system that allows the tutors and their students to seamlessly manage their assets and purchase/sell the products. That's not all, a drag-and-drop content builder tool allows the tutors to create complex presentations, learning materials, and real-time quizzes, thanks to React and TypeScript.`,
+        "Led the development of a React-based user dashboard that generated a 20% increase in revenue and reduced bounce rates by 15%.",
+        "Integrated a custom React component library that saved 100+ development hours and accelerated consistency across multiple projects.",
+        "Optimized the performance of a React application, reducing load times by 50% and improving user engagement, using modern tactics such as lazy loading.",
+        "Implemented modern features and reinvigorated an existing React code- base for a leading Ed-Tech startup, resulting in a 90% increase in user satisfaction.",
+        "Mentored and piloted junior React developers, resulting in revitalized productivity (up to 40%) and up to 50% faster project deliveries.",
       ],
     },
 
     {
       name: "Frontend Web Developer @How2Pass",
-      location: "Ontario, Canada",
-      startDate: "June 2021",
+      location: "Ontario, Canada (Remote)",
+      startDate: "November 2019 (Part time)",
       endDate: "Present",
       description: [
-        `Writing scalable React code that's leading the product to be used by hundreds of businesses and entrepreneurs to jump-start their careers to new heights.
-        
-        The product has been selling more than ever since we updated it's UI and optimized it for the phones. Currently, we're building a comprehensive comments system as a microfrontend which will, later on, be integrated with the main application, allowing the users to communicate in real-time and let us know their suggestions.`,
-      ],
-    },
-
-    {
-      name: "Full-Stack Web Developer @How2Pass",
-      location: "Ontario, Canada",
-      startDate: "June 2020",
-      endDate: "June 2021",
-      description: [
-        `Re-engineered a PHP5 application to utilize modern architectural and behavioral patterns. Optimized the code base and introduced detachable database support.
-
-        Engineered the website to become one of the leading networking-oriented training companies with real-time simulations and terminal experiences, join us at how2pass.com`,
-      ],
-    },
-    {
-      name: "Full-Stack Engineer @How2Pass",
-      location: "Ontario, CA",
-      startDate: "November 2019",
-      endDate: "June 2020",
-      description: [
-        `Updated, developed, and maintained the APIs of an admin dashboard system used by the many admins of How2Pass. Designed and developed eloquent RESTful APIs that allowed the admins to make use of a rigorous CRUD system.
-
-        Wrote an ORM for a testimonials system that allowed the users to add testimonials and the admins to moderate.`,
+        "Developed and prospered front-end features and functionalities using HTML, CSS, and TypeScript for a web-based application, contributing to a 20% increase in user engagement.",
+        "Collaborated with UX/UI designers and project managers to administered responsive and visually appealing interfaces for a mobile-first e- commerce platform, boosting the sales by 75% due to the popularity of phone users.",
+        "Ushered a front-end codebase to attain 40% better SEO rankings ensuring cross-browser compatibility and adherence to accessibility standards.",
+        "Bestowed to the development of a design system with 7 other developers and participated in code reviews as the associate team lead.",
+        "Revamped the performance of front-end code, resulting in faster load times by 80% and an improved user experience.",
       ],
     },
   ],
 
   education: [
     {
-      name: "Pakistan Institute of Professional Science & Technology (PIPS-TECH)",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "2019",
+      name: "BS Software Engineering @KFUEIT",
+      location: "Rahim Yar Khan, Pakistan",
+      startDate: "2018",
       endDate: "2022",
       description: [
-        "Diploma of Associate Engineering,  Computer Information Technology (CIT)",
+        "Data Structures and Algorithms, Operating Systems, Database Systems, Web Development, Object-Oriented Programming.",
+        "Business Management, Computer Hardware, Software Engineering and Re-engineering, Software Architecture and Design.",
       ],
-    },
-    {
-      name: "Govt. Degree Boys College Buffer Zone",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "2018",
-      endDate: "2020",
-      description: ["Intermediate, Pre-Engineering"],
-    },
-    {
-      name: "Ghazi Foundation Schools & Colleges",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "2016",
-      endDate: "2018",
-      description: ["Matriculation,  Computer Science"],
     },
   ],
 
