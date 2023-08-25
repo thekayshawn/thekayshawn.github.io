@@ -1,6 +1,6 @@
 {
   "name": "kashan-ahmad.github.io",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -10,7 +10,7 @@
     "astro": "astro",
     "preversion": "git fetch --tags",
     "postversion": "git push --follow-tags",
-    "commit": "git add . && git commit -m \"build: release prepared\"",
+    "commit": "git add . && if [[ $(git status --porcelain) ]]; then git commit -m 'build: release prepared'; else echo 'No changes to commit'; fi",
     "push": "git push --follow-tags",
     "release:prepare": "npx changeset",
     "release": "npx changeset version",
