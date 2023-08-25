@@ -1,7 +1,8 @@
 {
   "name": "kashan-ahmad.github.io",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "private": true,
+  "packageManager": "pnpm@8.6.6",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

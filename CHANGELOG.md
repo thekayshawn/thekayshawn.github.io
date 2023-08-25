@@ -1,5 +1,11 @@
 # kashan-ahmad.github.io
 
+## 2.2.2
+
+### Patch Changes
+
+- 2ca18d0: added package manager field
+
 ## 2.2.1
 
 ### Patch Changes

@@ -1,27 +1,27 @@
 
-> kashan-ahmad.github.io@2.2.0 build /Users/kashanahmad/workspaces/sassy-workspace/apps/kashan-ahmad
+> kashan-ahmad.github.io@2.2.1 build /Users/kashanahmad/workspaces/sassy-workspace/apps/kashan-ahmad
 > astro build
 
 The site configuration value includes a pathname of /github.io but there is no base configuration.
 
 A future version of Astro will stop using the site pathname when producing <link> and <script> tags. Set your site's base with the base configuration.
-01:16:09 AM [content] No content directory found. Skipping type generation.
-01:16:09 AM [build] output target: static
-01:16:09 AM [build] Collecting build info...
-01:16:09 AM [build] Completed in 120ms.
-01:16:09 AM [build] Building static entrypoints...
-01:16:10 AM [build] Completed in 0.79s.
+01:36:05 AM [content] No content directory found. Skipping type generation.
+01:36:05 AM [build] output target: static
+01:36:05 AM [build] Collecting build info...
+01:36:05 AM [build] Completed in 61ms.
+01:36:05 AM [build] Building static entrypoints...
+01:36:06 AM [build] Completed in 547ms.
 
  generating static routes 
 ▶ src/pages/index.astro
-  └─ /index.html (+16ms)
+  └─ /index.html (+9ms)
 ▶ src/pages/projects.astro
   └─ /projects/index.html (+2ms)
-Completed in 23ms.
+Completed in 14ms.
 
 [32m@astrojs/sitemap:[0m `sitemap-index.xml` is created.
 
 [32mastro-robots-txt:[0m `robots.txt` is created.
 
-01:16:10 AM [build] 2 page(s) built in 0.95s
-01:16:10 AM [build] Complete!
+01:36:06 AM [build] 2 page(s) built in 635ms
+01:36:06 AM [build] Complete!
