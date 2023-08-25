@@ -11,7 +11,7 @@
     "preversion": "git fetch --tags",
     "postversion": "git push --follow-tags",
     "commit": "git add . && git commit -m \"build: release prepared\"",
-    "push": "git push && git push --follow-tags",
+    "push": "git push --follow-tags",
     "release:prepare": "npx changeset",
     "release": "npx changeset version",
     "clean": "rm -rf dist && rm -rf node_modules && pnpm i"
