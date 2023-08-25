@@ -1,0 +1,23 @@
+
+> kashan-ahmad.github.io@2.0.0 build /Users/kashanahmad/workspaces/sassy-workspace/apps/kashan-ahmad
+> astro build
+
+05:29:47 PM [build] output target: static
+05:29:47 PM [build] Collecting build info...
+05:29:47 PM [build] Completed in 24ms.
+05:29:47 PM [build] Building static entrypoints...
+05:29:48 PM [build] Completed in 0.97s.
+
+ generating static routes 
+▶ src/pages/index.astro
+  └─ /index.html (+22ms)
+▶ src/pages/projects.astro
+  └─ /projects/index.html (+2ms)
+Completed in 27ms.
+
+[32m@astrojs/sitemap:[0m `sitemap-index.xml` is created.
+
+[32mastro-robots-txt:[0m `robots.txt` is created.
+
+05:29:48 PM [build] 2 page(s) built in 1.04s
+05:29:48 PM [build] Complete!
