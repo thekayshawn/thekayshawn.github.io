@@ -1,6 +1,6 @@
 {
   "name": "kashan-ahmad.github.io",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -17,9 +17,11 @@
     "clean": "rm -rf dist && rm -rf node_modules && pnpm i"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/tailwind": "^1.0.0",
-    "astro": "^1.0.0",
-    "astro-robots-txt": "^0.3.8"
+    "@astrojs/sitemap": "^2.0.2",
+    "@astrojs/tailwind": "^4.0.0",
+    "astro": "^2.10.14",
+    "astro-robots-txt": "^0.5.0",
+    "prettier": "^3.0.2",
+    "prettier-plugin-astro": "^0.12.0"
   }
 }

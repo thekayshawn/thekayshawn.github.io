@@ -1,34 +1,9 @@
 ---
 import { IHeroProps } from "@types";
 
-const { name, about } = Astro.props as IHeroProps;
+const { name } = Astro.props as IHeroProps;
 ---
 
 <section>
-  <p class="dark:text-light mt-[117px]">Hey, I’m</p>
   <h1 class="mb-8">{name}</h1>
-  <ul class="mb-8 list-disc ml-5">
-    <li class="dark:text-light text-lg">
-      A dude who ❤️ the frontend aspect of web development.
-    </li>
-    <li class="dark:text-light text-lg">
-      A pilot who crash-landed on a webpage (literally).
-    </li>
-    <li class="dark:text-light text-lg">
-      A beardo who drinks coffee for the day and pumps code for the night.
-    </li>
-  </ul>
-  <h2 class="mb-8"></h2>
-  <p class="dark:text-light text-lg">
-    I always aspired to be a fighter pilot and was an avid fan of the Ace Combat
-    game series. Then I saw a dude edit out his grades by editing the HTML of
-    the webpage, and I fell in love.
-  </p>
-  <br />
-  <p class="dark:text-light text-lg">
-    I love learning new things and keeping myself up-to-date in the boiling mess
-    of a world called Web Development. Right now, I'm learning GSAP in order to
-    make those cool animations, other than getting my head around Angular and
-    React Query, of course.
-  </p>
 </section>

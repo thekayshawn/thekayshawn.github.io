@@ -6,9 +6,10 @@ import Hero from "@components/home/Hero.astro";
 import MetaHead from "@components/general/MetaHead.astro";
 import Experience from "@components/home/Experience.astro";
 import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
+import Footer from "@components/general/Footer.astro";
 
 const featureProjects = info.projects.map((project, index) => {
-  if (project.isFeatured && index < 6) {
+  if (project.isFeatured && index < 4) {
     return project;
   }
 });
@@ -26,14 +27,19 @@ const featureProjects = info.projects.map((project, index) => {
 
   <body>
     <Layout>
-      <Hero name={info.name} about={info.about} />
-      <Experience title="EXPERIENCE" details={info.experience} />
-      <Experience title={"EDUCATION"} details={info.education} />
-      <Experience title={"CERTIFICATIONS"} details={info.certifications} />
+      <Hero {...info} />
       <section>
-        <h2 class="w-[15rem] dark:text-light mt-16">FEATURED PROJECTS</h2>
+        <div class="mt-16 flex justify-between items-center">
+          <h2 class="dark:text-light">Featured Projects</h2>
+          <a href="/projects" class="dark:text-light footer-icons inline-flex items-center gap-2">
+            See All <svg class="origin-center scale-125" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/> </svg>
+          </a>
+        </div>
         <ProjectsWrapper projects={featureProjects} />
       </section>
+      <Experience id="experiences" title="EXPERIENCE" details={info.experience} />
+      <Experience id="education" title={"EDUCATION"} details={info.education} />
+      <Experience id="certifications" title={"CERTIFICATIONS"} details={info.certifications} />
     </Layout>
   </body>
 </html>

@@ -6,7 +6,28 @@ const { title, thumbnail, liveUrl, githubUrl } = projectDetail;
 
 <article class="w-full max-h-[25rem] overflow-hidden relative group">
   <div class="flex items-center absolute right-4 top-4 z-10">
-    {
+    <span
+      class="text-white p-3 bg-black/50 rounded-full backdrop-blur-md ml-1 after:absolute after:inset-0"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-link-2"
+      >
+        <path
+          d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"
+        ></path>
+        <line x1="8" y1="12" x2="16" y2="12"></line>
+      </svg>
+    </span>
+    <!-- {
       githubUrl && (
         <a
           href={githubUrl}
@@ -30,13 +51,13 @@ const { title, thumbnail, liveUrl, githubUrl } = projectDetail;
           </svg>
         </a>
       )
-    }
+    } -->
 
-    {
+    <!-- {
       liveUrl && (
         <a
           href={liveUrl}
-          class="text-white p-3 bg-black/50 rounded-full backdrop-blur-md ml-1"
+          class="text-white p-3 bg-black/50 rounded-full backdrop-blur-md ml-1 after:absolute after:inset-0"
           aria-label="Social Media"
           target="_blank"
         >
@@ -57,19 +78,24 @@ const { title, thumbnail, liveUrl, githubUrl } = projectDetail;
           </svg>
         </a>
       )
-    }
+    } -->
   </div>
   <img
     src={thumbnail}
-    class="w-full h-auto scale-100 h-full hover:scale-110 transition duration-[1.5s]"
+    class="w-full scale-100 h-full group-hover:scale-110 group-focus-within:scale-110 transition duration-[1.5s]"
     loading="lazy"
     width="100%"
     height="100%"
     alt="featureImage"
   />
   <div
-    class="absolute w-full bottom-0 left-0 backdrop-blur-md dark:text-white text-white bg-black/50 p-4 translate-y-[100%] group-hover:translate-y-0 transition duration-700"
+    class="absolute w-full bottom-0 left-0 backdrop-blur-md dark:text-white text-white bg-black/50 p-4 translate-y-[100%] group-hover:translate-y-0 group-focus-within:translate-y-0 transition duration-700"
   >
     <h3 class="mr-2 text-xl">{title}</h3>
   </div>
+  <a
+    href={liveUrl}
+    class="text-white p-3 bg-black/50 rounded-full backdrop-blur-md ml-1 absolute inset-0 z-50 opacity-0"
+    aria-label="Social Media"
+    target="_blank">Visit</a>
 </article>

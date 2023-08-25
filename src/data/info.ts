@@ -1,16 +1,27 @@
 export const info = {
   baseUrl: "https://kashan-ahmad.github.io",
   name: "Kashan Ahmad",
-  jobDescription: "Frontend Web Developer",
+  title: "Frontend Web Developer",
   about:
-    "I'm a dynamic and proactive software engineer with a proven track record of success in the development of exceptional software systems. Right now, I'm developing a seamless dashboard system at TheTutor.",
+    "Portfolio of Kashan Ahmad, a frontend web developer recognized for crafting engaging user experiences. Currently focused on creating captivating animations at Tentwenty, the website showcases a history of successful projects and collaborations.",
 
   experience: [
+    {
+      name: 'Frontend Web Developer @Tentwenty',
+      location: "Dubai, UAE (Remote)",
+      startDate: "June 2023",
+      endDate: "Present",
+      description: [
+        "Developed lively website animations with GSAP, enhancing visual appeal.","Mentored and interviewed juniors, reducing management's strain by 90%.\n",
+        "Designed multiple comprehensive design systems from scratch.",
+        "Created user-friendly UI elements, including keyboard-friendly, WAI-ARIA-compatible elements that provided a seamless user experience comparable to using a mouse.",
+      ]
+    },
     {
       name: "Frontend Web Developer @TheTutor.me",
       location: "Dubai, UAE (Remote)",
       startDate: "June 2022",
-      endDate: "Present",
+      endDate: "June 2023",
       description: [
         "Led the development of a React-based user dashboard that generated a 20% increase in revenue and reduced bounce rates by 15%.",
         "Integrated a custom React component library that saved 100+ development hours and accelerated consistency across multiple projects.",
@@ -68,9 +79,8 @@ export const info = {
   ],
 
   socialMedia: {
-    email: "mailto:sup@kashanahmad.me",
+    email: "mailto:hi@kashanahmad.me",
     github: "https://github.com/kashan-ahmad",
-    twitter: "https://twitter.com/kashanAhmad_",
     linkedin: "https://www.linkedin.com/in/kashoot",
   },
 
@@ -94,7 +104,7 @@ export const info = {
       thumbnail: "/assets/images/seohelpify.png",
     },
     {
-      title: "TenTwenty Clone",
+      title: "Tentwenty Clone",
       isFeatured: true,
       liveUrl: "https://tentwenty.pages.dev",
       thumbnail: "/assets/images/tentwenty.png",

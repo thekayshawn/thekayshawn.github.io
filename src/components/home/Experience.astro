@@ -1,10 +1,13 @@
 ---
 import { IExperiences } from "@types";
 
-const { title, details } = Astro.props as IExperiences;
+const { id, title, details } = Astro.props as IExperiences & {
+  id: string;
+};
 ---
 
 <section
+  id={id}
   class="flex items-start justify-between flex-col sm:flex-row dark:text-light"
 >
   <h2 class="w-[15rem] mt-16">{title}</h2>
