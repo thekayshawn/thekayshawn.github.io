@@ -1,5 +1,11 @@
 # kashan-ahmad.github.io
 
+## 2.3.1
+
+### Patch Changes
+
+- 47c3b48: added dev deps
+
 ## 2.3.0
 
 ### Minor Changes

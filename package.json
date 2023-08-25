@@ -1,6 +1,6 @@
 {
   "name": "kashan-ahmad.github.io",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "private": true,
   "packageManager": "pnpm@8.6.6",
   "scripts": {
@@ -22,7 +22,10 @@
     "@astrojs/tailwind": "^4.0.0",
     "astro": "^2.10.14",
     "astro-robots-txt": "^0.5.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
     "prettier": "^3.0.2",
-    "prettier-plugin-astro": "^0.12.0"
+    "prettier-plugin-astro": "^0.12.0",
+    "tailwindcss": "^3.3.2"
   }
 }
