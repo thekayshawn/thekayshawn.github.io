@@ -1,5 +1,11 @@
 # kashan-ahmad.github.io
 
+## 2.3.0
+
+### Minor Changes
+
+- 3b044ca: updated actions
+
 ## 2.2.2
 
 ### Patch Changes
