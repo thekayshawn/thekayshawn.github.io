@@ -1,21 +1,23 @@
 export const info = {
   baseUrl: "https://kashan-ahmad.github.io",
   name: "Kashan Ahmad",
-  title: "Frontend Web Developer",
+  title: "Front-End Web Developer",
+  tagline: "Embodying the art of web artistry.",
   about:
     "Portfolio of Kashan Ahmad, a frontend web developer recognized for crafting engaging user experiences. Currently focused on creating captivating animations at Tentwenty, the website showcases a history of successful projects and collaborations.",
 
   experience: [
     {
-      name: 'Frontend Web Developer @Tentwenty',
+      name: "Frontend Web Developer @Tentwenty",
       location: "Dubai, UAE (Remote)",
       startDate: "June 2023",
       endDate: "Present",
       description: [
-        "Developed lively website animations with GSAP, enhancing visual appeal.","Mentored and interviewed juniors, reducing management's strain by 90%.\n",
+        "Developed lively website animations with GSAP, enhancing visual appeal.",
+        "Mentored and interviewed juniors, reducing management's strain by 90%.\n",
         "Designed multiple comprehensive design systems from scratch.",
         "Created user-friendly UI elements, including keyboard-friendly, WAI-ARIA-compatible elements that provided a seamless user experience comparable to using a mouse.",
-      ]
+      ],
     },
     {
       name: "Frontend Web Developer @TheTutor.me",
