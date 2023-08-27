@@ -1,6 +1,6 @@
 {
   "name": "kashan-ahmad.github.io",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "private": true,
   "packageManager": "pnpm@8.6.6",
   "scripts": {

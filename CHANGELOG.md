@@ -1,5 +1,11 @@
 # kashan-ahmad.github.io
 
+## 2.3.2
+
+### Patch Changes
+
+- 18cbc9c: updated hero section
+
 ## 2.3.1
 
 ### Patch Changes
