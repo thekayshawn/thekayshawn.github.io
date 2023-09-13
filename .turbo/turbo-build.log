@@ -5,23 +5,23 @@
 The site configuration value includes a pathname of /github.io but there is no base configuration.
 
 A future version of Astro will stop using the site pathname when producing <link> and <script> tags. Set your site's base with the base configuration.
-12:22:09 AM [content] No content directory found. Skipping type generation.
-12:22:09 AM [build] output target: static
-12:22:09 AM [build] Collecting build info...
-12:22:09 AM [build] Completed in 55ms.
-12:22:09 AM [build] Building static entrypoints...
-12:22:09 AM [build] Completed in 544ms.
+02:02:54 AM [content] No content directory found. Skipping type generation.
+02:02:54 AM [build] output target: static
+02:02:54 AM [build] Collecting build info...
+02:02:54 AM [build] Completed in 63ms.
+02:02:54 AM [build] Building static entrypoints...
+02:02:55 AM [build] Completed in 568ms.
 
  generating static routes 
 ▶ src/pages/index.astro
-  └─ /index.html (+10ms)
+  └─ /index.html (+14ms)
 ▶ src/pages/projects.astro
   └─ /projects/index.html (+2ms)
-Completed in 15ms.
+Completed in 19ms.
 
 [32m@astrojs/sitemap:[0m `sitemap-index.xml` is created.
 
 [32mastro-robots-txt:[0m `robots.txt` is created.
 
-12:22:09 AM [build] 2 page(s) built in 627ms
-12:22:09 AM [build] Complete!
+02:02:55 AM [build] 2 page(s) built in 665ms
+02:02:55 AM [build] Complete!
