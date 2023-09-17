@@ -1,5 +1,14 @@
 # kashan-ahmad.github.io
 
+## 2.3.3
+
+### Patch Changes
+
+- aa2e0a3: - Introduced background gradients.
+  - Fixed resume link.
+  - Fixed broken footer social links.
+  - Added the new hero data.
+
 ## 2.3.2
 
 ### Patch Changes

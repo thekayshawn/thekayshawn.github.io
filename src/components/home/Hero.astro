@@ -1,10 +1,13 @@
 ---
 import { IHeroProps } from "@types";
 
-const { name, title, tagline } = Astro.props as IHeroProps;
+const { title, tagline } = Astro.props as IHeroProps;
 ---
 
 <section class="py-8">
-  <h1 class="mt-0 mb-4">{tagline}</h1>
-  <h2 class="ml-1 mb-0 dark:text-pink-400 text-4xl opacity-50">{title}</h2>
+  <h1
+    class="mt-0 mb-4 font-bold text-3xl md:text-7xl uppercase tracking-tight"
+    set:html={tagline}
+  />
+  <h2 class="ml-1 mb-0 dark:text-pink-400 text-xl md:text-4xl">{title}</h2>
 </section>
