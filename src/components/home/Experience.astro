@@ -26,12 +26,14 @@ const { id, title, details } = Astro.props as IExperiences & {
               href={item.url}
               target="_blank"
               rel="noreferrer"
-              class="text-sm mt-3 text-blue underline"
+              class="text-sm mt-3 text-sky-600 dark:text-blue underline"
             >
               {item.location}
             </a>
           ) : (
-            <p class="text-sm mt-3 text-blue">{item.location}</p>
+            <p class="text-sm mt-3 text-sky-600 dark:text-blue">
+              {item.location}
+            </p>
           )}
           <ul class="mt-3 flex flex-col gap-4 ml-5 list-disc">
             {item.description.map((item) => (

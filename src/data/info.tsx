@@ -1,8 +1,8 @@
 export const info = {
   baseUrl: "https://kashan-ahmad.github.io",
   name: "Kashan Ahmad",
-  title: "Front-End Web Developer",
-  tagline: "Embodying the art of web artistry.",
+  title: "Frontend Web Developer",
+  tagline: "Developing<br>Tomorrow, Today",
   about:
     "Portfolio of Kashan Ahmad, a frontend web developer recognized for crafting engaging user experiences. Currently focused on creating captivating animations at Tentwenty, the website showcases a history of successful projects and collaborations.",
 
@@ -82,8 +82,9 @@ export const info = {
 
   socialMedia: {
     email: "mailto:hi@kashanahmad.me",
-    github: "https://github.com/kashan-ahmad",
-    linkedin: "https://www.linkedin.com/in/kashoot",
+    github: "https://github.com/OiKashan",
+    twitter: "https://twitter.com/OiKashan",
+    linkedin: "https://www.linkedin.com/in/OiKashan",
   },
 
   projects: [

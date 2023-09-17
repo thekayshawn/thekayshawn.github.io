@@ -11,7 +11,21 @@
 /* ========== tailwind custom styles ========== */
 @layer components {
   body {
-    @apply bg-light dark:bg-dark;
+    background: linear-gradient(
+      0deg,
+      rgba(253, 241, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 33%,
+      rgba(252, 243, 255, 1) 100%
+    );
+  }
+
+  html[data-theme="dark"] body {
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(76, 17, 93, 1) 33%,
+      rgba(0, 0, 0, 1) 100%
+    );
   }
   .container {
     @apply max-w-[1112px] mx-auto px-4;
