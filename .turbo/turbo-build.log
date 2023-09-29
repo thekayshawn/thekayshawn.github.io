@@ -1,27 +1,31 @@
 
-> kashan-ahmad.github.io@2.3.2 build /Users/kashanahmad/workspaces/sassy-workspace/apps/kashan-ahmad
+> kashan-ahmad.github.io@2.3.2 build F:\workspace\projects\sassywares\sassy-workspace\apps\kashan-ahmad
 > astro build
 
 The site configuration value includes a pathname of /github.io but there is no base configuration.
 
 A future version of Astro will stop using the site pathname when producing <link> and <script> tags. Set your site's base with the base configuration.
-12:53:19 PM [content] No content directory found. Skipping type generation.
-12:53:19 PM [build] output target: static
-12:53:19 PM [build] Collecting build info...
-12:53:19 PM [build] Completed in 67ms.
-12:53:19 PM [build] Building static entrypoints...
-12:53:19 PM [build] Completed in 649ms.
+10:51:09 pm [content] No content directory found. Skipping type generation.
+10:51:09 pm [build] output target: static
+10:51:09 pm [build] Collecting build info...
+10:51:09 pm [build] Completed in 461ms.
+10:51:09 pm [build] Building static entrypoints...
+10:51:12 pm [renderer] F:/workspace/projects/sassywares/sassy-workspace/apps/kashan-ahmad/src/data/info.tsx
+Unable to find a renderer for JSX. Do you have one configured in your Astro config? See this page to learn how:
+https://docs.astro.build/en/core-concepts/framework-components/#installing-integrations
+
+10:51:13 pm [build] Completed in 3.93s.
 
  generating static routes 
 ▶ src/pages/index.astro
-  └─ /index.html (+16ms)
+  └─ /index.html (+86ms)
 ▶ src/pages/projects.astro
-  └─ /projects/index.html (+2ms)
-Completed in 21ms.
+  └─ /projects/index.html (+75ms)
+Completed in 407ms.
 
 [32m@astrojs/sitemap:[0m `sitemap-index.xml` is created.
 
 [32mastro-robots-txt:[0m `robots.txt` is created.
 
-12:53:20 PM [build] 2 page(s) built in 0.76s
-12:53:20 PM [build] Complete!
+10:51:14 pm [build] 2 page(s) built in 4.88s
+10:51:14 pm [build] Complete!
