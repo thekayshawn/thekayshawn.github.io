@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://kashan-ahmad/github.io",
+  site: "https://oikashan/github.io",
 
   integrations: [
     tailwind(),
