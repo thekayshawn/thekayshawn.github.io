@@ -1,5 +1,6 @@
 ---
 import Container from "@components/container.astro";
+import SocialLinks from "@components/sociallinks.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
@@ -19,6 +20,10 @@ const menuitems: {
   {
     title: strings.projects,
     path: routes.projects,
+  },
+  {
+    title: strings.contact,
+    path: routes.contact,
   },
   {
     title: strings.about,
@@ -60,7 +65,7 @@ const menuitems: {
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 focus:text-gray-900 relative before:absolute before:top-full before:left-0 before:w-0 before:h-[2px] before:rounded before:bg-pink-600 hover:before:w-full focus:before:w-full before:transition-all before:duration-200">
                       <span> {item.title}</span>
                       {item.badge && (
                         <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
@@ -74,18 +79,32 @@ const menuitems: {
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link download href={routes.resume} style="muted" block size="md">
+        <div class="lg:hidden flex items-center justify-end mt-3 gap-4">
+          <div class="flex gap-1">
+            <SocialLinks />
+          </div>
+          <Link
+            block
+            size="md"
+            class="w-fit"
+            style="outline"
+            href={routes.resume}
+            download="Kashan Ahmad's Resume">
             {strings.resume}
           </Link>
-          <Link href={routes.contact} size="md" block>{strings.contact}</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <a download href={routes.resume}> {strings.resume}</a>
-        <Link href={routes.contact} size="md" block>{strings.contact}</Link>
+      <div class="hidden lg:flex items-center gap-1">
+        <Link
+          size="md"
+          style="muted"
+          href={routes.resume}
+          download="Kashan Ahmad's Resume">
+          {strings.resume}
+        </Link>
+        <SocialLinks />
       </div>
     </div>
   </header>

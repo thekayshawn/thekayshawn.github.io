@@ -1,0 +1,22 @@
+---
+import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+import { strings } from "@utils/strings";
+---
+
+<Link
+  size="md"
+  style="muted"
+  target="_blank"
+  rel="noreferrer"
+  href={`https://github.com/${strings.githubUsername}`}>
+  <Icon class="w-6 h-6" name={strings.githubIcon} />
+</Link>
+<Link
+  size="md"
+  style="muted"
+  target="_blank"
+  rel="noreferrer"
+  href={`https://linkedin.com/in/${strings.linkedInUsername}`}>
+  <Icon class="w-6 h-6" name={strings.linkedInIcon} />
+</Link>

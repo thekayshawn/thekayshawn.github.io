@@ -4,6 +4,7 @@ import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 import { strings } from "@utils/strings";
+import { routes } from "@utils/routes";
 ---
 
 <main
@@ -19,6 +20,12 @@ import { strings } from "@utils/strings";
     />
   </div>
   <div>
+    <span
+      class="px-2 py-1 mb-4 sm:mb-6 rounded bg-indigo-600 w-fit flex gap-1 items-center text-white">
+      <Icon class="w-5 h-5 badge" name={strings.yearsOfExperienceIcon} />
+      {strings.yearsOfExperienceCount}
+      {strings.yearsOfExperience}
+    </span>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
       {strings.title}
@@ -29,7 +36,7 @@ import { strings } from "@utils/strings";
     <div
       class="mt-6 flex flex-col items-start sm:flex-row gap-3 group relative">
       <Link
-        href="/experiences"
+        href={routes.contact}
         class="flex gap-1 items-center justify-center w-full sm:w-auto">
         <Icon class="text-white w-5 h-5" name={strings.contactIcon} />
         {strings.contactLabel}
@@ -43,12 +50,12 @@ import { strings } from "@utils/strings";
 </main>
 <style>
   .open-to-work-label {
-    @apply px-2 py-1 rounded bg-pink-600 flex gap-1 items-center justify-center border-white text-white transition-transform;
+    @apply px-2 py-1 rounded bg-pink-600 flex gap-1 items-center justify-center text-white transition-transform;
 
     /* Rules for Smaller screens */
     @apply absolute top-0 right-0 -translate-y-2 translate-x-4 rotate-6;
 
     /* Rules for Larger screens only */
-    @apply sm:relative sm:-rotate-12 sm:-translate-x-20 sm:translate-y-8 sm:group-hover:rotate-0 sm:group-hover:translate-y-10 sm:group-focus-within:rotate-0 sm:group-focus-within:translate-y-10;
+    @apply sm:relative sm:-rotate-12 sm:-translate-x-20 sm:translate-y-8 sm:group-hover:rotate-2 sm:group-hover:translate-y-10 sm:group-focus-within:rotate-2 sm:group-focus-within:translate-y-10;
   }
 </style>
