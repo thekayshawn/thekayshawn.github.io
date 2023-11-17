@@ -3,38 +3,30 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { strings } from "@utils/strings";
+import { routes } from "@utils/routes";
 
-const menuitems = [
+const menuitems: {
+  title: string;
+  path: string;
+  badge?: boolean;
+  children?: { title: string; path: string }[];
+}[] = [
   {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
+    title: strings.experiences,
+    path: routes.experiences,
   },
   {
-    title: "Pricing",
-    path: "/pricing",
+    title: strings.projects,
+    path: routes.projects,
   },
   {
-    title: "About",
-    path: "/about",
+    title: strings.about,
+    path: routes.about,
   },
   {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-  {
-    title: "Pro Version",
-    badge: true,
-    path: "https://astroship-pro.web3templates.com/",
+    title: strings.blog,
+    path: routes.blog,
   },
 ];
 ---
@@ -44,9 +36,8 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
-          >
+          ><span class="font-bold text-slate-800">Kashan</span>
+          <span class="text-slate-500">A.</span>
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -84,15 +75,17 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
+          <Link download href={routes.resume} style="muted" block size="md">
+            {strings.resume}
+          </Link>
+          <Link href={routes.contact} size="md" block>{strings.contact}</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
+        <a download href={routes.resume}> {strings.resume}</a>
+        <Link href={routes.contact} size="md" block>{strings.contact}</Link>
       </div>
     </div>
   </header>

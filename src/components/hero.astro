@@ -3,6 +3,7 @@ import { Picture } from "astro:assets";
 import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
+import { strings } from "@utils/strings";
 ---
 
 <main
@@ -20,34 +21,34 @@ import { Icon } from "astro-icon";
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      {strings.title}
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly
-      create any website with this starter.
+      {strings.summary}
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+    <div
+      class="mt-6 flex flex-col items-start sm:flex-row gap-3 group relative">
       <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-
-         Download for Free
+        href="/experiences"
+        class="flex gap-1 items-center justify-center w-full sm:w-auto">
+        <Icon class="text-white w-5 h-5" name={strings.contactIcon} />
+        {strings.contactLabel}
       </Link>
-      <Link
-        size="lg"
-        style="outline"
-        rel="noopener"
-        href="https://github.com/surjithctly/astroship"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-         GitHub Repo
-      </Link>
+      <span class="open-to-work-label">
+        <Icon class="text-white w-4 h-4" name={strings.openToWorkIcon} />
+        {strings.openToWork}
+      </span>
     </div>
   </div>
 </main>
+<style>
+  .open-to-work-label {
+    @apply px-2 py-1 rounded bg-pink-600 flex gap-1 items-center justify-center border-white text-white transition-transform;
+
+    /* Rules for Smaller screens */
+    @apply absolute top-0 right-0 -translate-y-2 translate-x-4 rotate-6;
+
+    /* Rules for Larger screens only */
+    @apply sm:relative sm:-rotate-12 sm:-translate-x-20 sm:translate-y-8 sm:group-hover:rotate-0 sm:group-hover:translate-y-10 sm:group-focus-within:rotate-0 sm:group-focus-within:translate-y-10;
+  }
+</style>
