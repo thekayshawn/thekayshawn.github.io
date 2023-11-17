@@ -4,51 +4,52 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Modern JavaScript/TypeScript",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "Well-versed in modern JavaScript and TypeScript, You'll never have to worry about browser compatibility again.",
+    icon: "bx:bxl-javascript",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "CSS, The Right Way",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Been using CSS for years, I've seen the pain points of cross-browser CSS and I know how to avoid them.",
+    icon: "bx:bxl-css3",
   },
   {
-    title: "On-Demand Components",
+    title: "Astronomical Performance",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Experienced in optimizing web apps' performance, I know how to achieve those shiny Lighthouse scores.",
+    icon: "bx:bxs-rocket",
   },
   {
-    title: "Broad Integration",
+    title: "A Soldier's Skillset",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "CSS Modules, Markdown, MDX, React, Next, Astro, Firebase, Supabase, AWS, JIRA, Docker, you name it, I've used it.",
+    icon: "bx:bxs-cube-alt",
   },
   {
-    title: "SEO Enabled",
+    title: "SEO, A11y, I18n, PWA",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "Web apps I make are accessible, internationalized, SEO-ready, and installable on any device as native apps through Ionic.",
+    icon: "bx:bx-globe",
   },
   {
-    title: "Community",
+    title: "Love for Open Source",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "I love open source and I'm always shipping new projects. Check out my GitHub profile to see what I've been up to.",
+    icon: "bx:bxl-github",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    The last frontend engineer you'll ever need.
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    Web Applications I build aren't just accessible, but also secure, modern,
+    and SEO-ready. I'm detail oriented which results in pixel-perfect designs
+    and I'm always looking for ways to improve my workflow.
   </p>
 </div>
 
@@ -56,7 +57,7 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+        <div class="mt-1 bg-pink-600 rounded-full  p-2 w-10 h-10 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
