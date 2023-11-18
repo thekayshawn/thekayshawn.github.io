@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import { strings } from "@utils/strings";
 ---
 
 <div
@@ -7,16 +8,14 @@ import { Icon } from "astro-icon";
   <span class="text-white">
     <Icon name="bx:bxs-bowl-rice" class="w-20 h-20 mb-8" />
   </span>
-  <h2 class="text-white text-4xl md:text-6xl tracking-tight">
-    I'm O<span
-      class="relative before:absolute before:top-[80%] before:left-0 before:w-full before:h-[4px] before:rounded before:bg-pink-400"
-      >pen for Wor</span
-    >k
+  <h2 class="text-white text-3xl sm:text-4xl md:text-6xl tracking-tight">
+    I'm <span
+      class="relative before:absolute before:top-[84%] before:right-0 before:w-[84%] before:h-[2px] md:before:h-[4px] lg:before:h-[6px] before:rounded before:bg-pink-600">
+      {strings.openToWork}
+    </span>
   </h2>
   <p class="text-slate-400 mt-4 text-lg md:text-xl">
-    I'm always looking for new problems to solve and new people to work with. If
-    you have a project that you want to get started, think you need my help with
-    something or just fancy saying hey, 👋 get in touch.
+    {strings.openToWorkDescription}
   </p>
 </div>
 <style></style>

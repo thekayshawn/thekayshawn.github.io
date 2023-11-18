@@ -9,6 +9,8 @@ export const strings = {
   ],
   openToWork: "Open to work",
   openToWorkIcon: "bx:bx-bolt-circle",
+  openToWorkDescription:
+    "Im always looking for new problems to solve and new people to work with. If you have a project, think you need my help, or just fancy a chat, get in touch 👋",
   yearsOfExperience: "Years of experience",
   yearsOfExperienceCount: 5,
   yearsOfExperienceIcon: "bx:bx-award",
@@ -21,6 +23,8 @@ export const strings = {
   resume: "Resume",
   contact: "Contact",
   contactLabel: "Get in touch",
+  contactTagline:
+    "My Mac stays on 24/7. I'll get back to you as soon as possible.",
   contactIcon: "bx:bx-mail-send",
   twitterHandle: "@oikashan",
   twitterIcon: "bx:bxl-twitter",

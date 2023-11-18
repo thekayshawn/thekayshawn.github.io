@@ -26,7 +26,7 @@ const menuLinkProps = getLinkProps(menuLinkClassName);
     <Sectionhead>
       <Fragment slot="title">Contact Me</Fragment>
       <Fragment slot="desc">
-        My Mac stays on 24/7. I'll get back to you as soon as possible.
+        {strings.contactTagline}
       </Fragment>
     </Sectionhead>
 
@@ -58,10 +58,18 @@ const menuLinkProps = getLinkProps(menuLinkClassName);
             <span>
               {strings.emailAddress}
             </span>
+            <Icon
+              class="w-4 h-4 -translate-x-1 text-pink-600"
+              name="bx:bx-link"
+            />
           </a>
           <a {...menuLinkProps} href={`tel://${strings.phoneNumber}`}>
             <Icon class="w-4 h-4" name={strings.phoneNumberIcon} />
             <span> {strings.phoneNumber}</span>
+            <Icon
+              class="w-4 h-4 -translate-x-1 text-pink-600"
+              name="bx:bx-link"
+            />
           </a>
           <div class={menuLinkClassName}>
             <Icon class="w-4 h-4" name={strings.addressIcon} />
