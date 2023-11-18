@@ -3,36 +3,68 @@ import Contactform from "@components/contactform.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
+import { strings } from "@utils/strings";
 import { Icon } from "astro-icon";
+
+const getLinkProps = (className?: string) => ({
+  target: "_blank",
+  rel: "noreferrer",
+  class: `${className} hover:text-pink-600 focus:text-pink-600 before-ornament`,
+});
+
+const basicLinkProps = getLinkProps("text-black");
+
+const menuLinkClassName =
+  "flex items-center mt-2 space-x-2 text-gray-500 w-fit";
+
+const menuLinkProps = getLinkProps(menuLinkClassName);
 ---
 
 <Layout title="Contact">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Contact</Fragment>
-      <Fragment slot="desc">We are a here to help.</Fragment>
+      <Fragment slot="title">Contact Me</Fragment>
+      <Fragment slot="desc">
+        My Mac stays on 24/7. I'll get back to you as soon as possible.
+      </Fragment>
     </Sectionhead>
 
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
       <div>
-        <h2 class="font-medium text-2xl text-gray-800">Contact Astroship</h2>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
-          Have something to say? We are here to help. Fill up the form or send
-          email or call phone.
+          Drop me a <a
+            {...basicLinkProps}
+            href={`mailto://${strings.emailAddress}`}>mail</a
+          >, a DM on <a
+            {...basicLinkProps}
+            href={`https://twitter.com/${strings.twitterHandle}`}>Twitter</a
+          >, a message on <a
+            {...basicLinkProps}
+            href={`https://linkedin.com/in/${strings.linkedInUsername}`}
+            >LinkedIn</a
+          >, a call on <a
+            {...basicLinkProps}
+            href={`https://calendly.com/${strings.calendlyUsername}`}>
+            Meet
+          </a>, or just fill out the form <span class="hidden md:inline">
+            to your right.
+          </span>
+          <span class="md:hidden"> below.</span>
         </p>
         <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>1734 Sanfransico, CA 93063</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello@astroshipstarter.com"
-              >hello@astroshipstarter.com</a
-            >
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+1 (987) 4587 899">+1 (987) 4587 899</a
-            >
+          <a {...menuLinkProps} href={`mailto://${strings.emailAddress}`}>
+            <Icon class="w-4 h-4" name={strings.emailAddressIcon} />
+            <span>
+              {strings.emailAddress}
+            </span>
+          </a>
+          <a {...menuLinkProps} href={`tel://${strings.phoneNumber}`}>
+            <Icon class="w-4 h-4" name={strings.phoneNumberIcon} />
+            <span> {strings.phoneNumber}</span>
+          </a>
+          <div class={menuLinkClassName}>
+            <Icon class="w-4 h-4" name={strings.addressIcon} />
+            <span>{strings.address}</span>
           </div>
         </div>
       </div>
