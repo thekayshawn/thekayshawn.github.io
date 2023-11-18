@@ -1,7 +1,8 @@
 ---
 import { Icon } from "astro-icon";
-import Link from "@components/ui/link.astro";
 import { strings } from "@utils/strings";
+import Link from "@components/ui/link.astro";
+import X from "./ui/icons/x.astro";
 ---
 
 <Link
@@ -10,6 +11,7 @@ import { strings } from "@utils/strings";
   target="_blank"
   rel="noreferrer"
   href={`https://github.com/${strings.githubUsername}`}>
+  <span class="sr-only"> My GitHub profile</span>
   <Icon class="w-6 h-6" name={strings.githubIcon} />
 </Link>
 <Link
@@ -18,5 +20,15 @@ import { strings } from "@utils/strings";
   target="_blank"
   rel="noreferrer"
   href={`https://linkedin.com/in/${strings.linkedInUsername}`}>
+  <span class="sr-only"> My LinkedIn profile</span>
   <Icon class="w-6 h-6" name={strings.linkedInIcon} />
+</Link>
+<Link
+  size="md"
+  style="muted"
+  target="_blank"
+  rel="noreferrer"
+  href={`https://twitter.com/${strings.twitterHandle}`}>
+  <span class="sr-only"> My Twitter profile</span>
+  <X class="w-6 h-6 p-1" />
 </Link>
