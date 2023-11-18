@@ -54,11 +54,21 @@ const makeTitle = title
       }}
     />
   </head>
-  <body>
+  <body class="pt-[var(--navbar-height)]">
     <Navbar />
     <slot />
     <Footer />
     <style is:global>
+      :root {
+        --navbar-height: 70px;
+      }
+
+      @screen lg {
+        :root {
+          --navbar-height: 85px;
+        }
+      }
+
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {
@@ -67,6 +77,10 @@ const makeTitle = title
 
       *:focus-visible {
         @apply outline-2 outline-pink-600;
+      }
+
+      .before-ornament {
+        @apply relative before:absolute before:top-full before:left-0 before:w-0 before:h-[2px] before:rounded before:bg-pink-400 before:transition-all before:duration-200 hover:before:w-full focus:before:w-full;
       }
     </style>
   </body>

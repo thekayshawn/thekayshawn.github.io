@@ -36,8 +36,10 @@ const menuitems: {
 ];
 ---
 
-<Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+<header
+  class="h-[var(--navbar-height)] border-b fixed top-0 left-0 w-screen backdrop-blur bg-white/80 z-navbar flex items-center">
+  <Container
+    class:list={["flex flex-col lg:flex-row justify-between items-center"]}>
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
@@ -65,7 +67,7 @@ const menuitems: {
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 focus:text-gray-900 relative before:absolute before:top-full before:left-0 before:w-0 before:h-[2px] before:rounded before:bg-pink-600 hover:before:w-full focus:before:w-full before:transition-all before:duration-200">
+                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 focus:text-gray-900 before-ornament">
                       <span> {item.title}</span>
                       {item.badge && (
                         <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
@@ -79,7 +81,8 @@ const menuitems: {
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center justify-end mt-3 gap-4">
+        <div
+          class="lg:hidden flex flex-col justify-center items-center mt-3 gap-4">
           <div class="flex gap-1">
             <SocialLinks />
           </div>
@@ -107,5 +110,17 @@ const menuitems: {
         <SocialLinks />
       </div>
     </div>
-  </header>
-</Container>
+  </Container>
+</header>
+<style is:global>
+  .astronav-toggle:not(.hidden) {
+    height: calc(100svh - var(--navbar-height));
+    @apply w-screen fixed z-navbar top-[var(--navbar-height)] left-0 bg-white px-5 flex flex-col items-center justify-center;
+  }
+
+  @media (max-width: theme(screens.lg)) {
+    .astronav-toggle li a {
+      @apply text-2xl font-semibold text-gray-800 justify-center;
+    }
+  }
+</style>

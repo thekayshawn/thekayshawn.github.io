@@ -1,10 +1,9 @@
 ---
 import { Picture } from "astro:assets";
 import heroImage from "assets/hero.png";
-import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 import { strings } from "@utils/strings";
-import { routes } from "@utils/routes";
+import GetInTouch from "./GetInTouch.astro";
 ---
 
 <main
@@ -33,29 +32,6 @@ import { routes } from "@utils/routes";
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
       {strings.summary}
     </p>
-    <div
-      class="mt-6 flex flex-col items-start sm:flex-row gap-3 group relative">
-      <Link
-        href={routes.contact}
-        class="flex gap-1 items-center justify-center w-full sm:w-auto">
-        <Icon class="text-white w-5 h-5" name={strings.contactIcon} />
-        {strings.contactLabel}
-      </Link>
-      <span class="open-to-work-label">
-        <Icon class="text-white w-4 h-4" name={strings.openToWorkIcon} />
-        {strings.openToWork}
-      </span>
-    </div>
+    <GetInTouch />
   </div>
 </main>
-<style>
-  .open-to-work-label {
-    @apply px-2 py-1 rounded bg-pink-600 flex gap-1 items-center justify-center text-white transition-transform;
-
-    /* Rules for Smaller screens */
-    @apply absolute top-0 right-0 -translate-y-2 translate-x-4 rotate-6;
-
-    /* Rules for Larger screens only */
-    @apply sm:relative sm:-rotate-12 sm:-translate-x-20 sm:translate-y-8 sm:group-hover:rotate-2 sm:group-hover:translate-y-10 sm:group-focus-within:rotate-2 sm:group-focus-within:translate-y-10;
-  }
-</style>

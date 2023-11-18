@@ -1,17 +1,36 @@
 ---
-import Link from "./ui/link.astro";
+import GetInTouch from "./GetInTouch.astro";
+import Sociallinks from "./sociallinks.astro";
+
+const linkProps = {
+  target: "_blank",
+  rel: "noreferrer",
+  class: "link before-ornament",
+};
 ---
 
 <div
   class="bg-black p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
   <h2 class="text-white text-4xl md:text-6xl tracking-tight">
-    Build faster websites.
+    Building web apps the right way
   </h2>
   <p class="text-slate-400 mt-4 text-lg md:text-xl">
-    Pull content from anywhere and serve it fast with Astro's next-gen island
-    architecture.
+    Built with <a {...linkProps} href="https://astro.build">Astro</a> and
+    sprinked with an interstellar touch by the kashtronauter himself. Styled
+    with
+    <a {...linkProps} href="https://tailwindcss.com">Tailwind</a>
+     and deployed on <a {...linkProps} href="https://cloudflare.com"
+      >Cloudflare</a
+    >. All text is set in <a
+      {...linkProps}
+      href="https://fontsource.org/fonts/bricolage-grotesque"
+      >Bricolage Grotesque</a
+    > typeface.
   </p>
-  <div class="flex mt-5">
-    <Link href="#" style="inverted">Get Started</Link>
-  </div>
+  <GetInTouch linkStyle="inverted" />
 </div>
+<style>
+  .link {
+    @apply text-slate-300 hover:text-pink-300 focus:text-pink-300;
+  }
+</style>

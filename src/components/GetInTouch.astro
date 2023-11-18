@@ -1,0 +1,41 @@
+---
+import Link from "./ui/link.astro";
+import { Icon } from "astro-icon";
+import { routes } from "@utils/routes";
+import { strings } from "@utils/strings";
+
+interface Props {
+  class?: string;
+  linkStyle?: Parameters<typeof Link>[0]["style"];
+  [x: string]: any;
+}
+
+const { class: className = "", linkStyle = "primary", ...rest } = Astro.props;
+---
+
+<div
+  {...rest}
+  class={`w-full sm:w-fit mt-6 flex flex-col items-start sm:flex-row gap-3 group relative ${className}`}>
+  <Link
+    style={linkStyle}
+    href={routes.contact}
+    class="flex gap-1 items-center justify-center w-full sm:w-auto">
+    <Icon class="w-5 h-5" name={strings.contactIcon} />
+    {strings.contactLabel}
+  </Link>
+  <span class="open-to-work-label">
+    <Icon class="text-white w-4 h-4" name={strings.openToWorkIcon} />
+    {strings.openToWork}
+  </span>
+</div>
+<style>
+  .open-to-work-label {
+    @apply px-2 py-1 rounded bg-pink-600 flex gap-1 items-center justify-center text-white transition-transform;
+
+    /* Rules for Smaller screens */
+    @apply absolute top-0 right-0 -translate-y-4 translate-x-4 rotate-6;
+
+    /* Rules for Larger screens only */
+    @apply sm:-rotate-12 sm:translate-x-20 sm:translate-y-8 sm:group-hover:rotate-2 sm:group-hover:translate-y-10 sm:group-focus-within:rotate-2 sm:group-focus-within:translate-y-10;
+  }
+</style>
