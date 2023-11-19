@@ -3,19 +3,21 @@ import { Icon } from "astro-icon";
 import { strings } from "@utils/strings";
 ---
 
-<div
-  class="bg-black p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
-  <span class="text-white">
-    <Icon name="bx:bxs-bowl-rice" class="w-20 h-20 mb-8" />
-  </span>
-  <h2 class="text-white text-3xl sm:text-4xl md:text-6xl tracking-tight">
-    I'm <span
-      class="relative before:absolute before:top-[84%] before:right-0 before:w-[84%] before:h-[2px] md:before:h-[4px] lg:before:h-[6px] before:rounded before:bg-pink-600">
-      {strings.openToWork}
-    </span>
-  </h2>
-  <p class="text-slate-400 mt-4 text-lg md:text-xl">
-    {strings.openToWorkDescription}
-  </p>
-</div>
-<style></style>
+{
+  strings.isOpenToWork && (
+    <div class="bg-black p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
+      <span class="text-white">
+        <Icon name="bx:bxs-bowl-rice" class="w-20 h-20 mb-8" />
+      </span>
+      <h2 class="text-white text-3xl sm:text-4xl md:text-6xl tracking-tight">
+        I'm{" "}
+        <span class="underline underline-offset-4 decoration-pink-600">
+          {strings.openToWork}
+        </span>
+      </h2>
+      <p class="text-slate-400 mt-4 text-lg md:text-xl">
+        {strings.openToWorkDescription}
+      </p>
+    </div>
+  )
+}

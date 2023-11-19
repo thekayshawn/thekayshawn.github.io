@@ -4,9 +4,11 @@ export const strings = {
   summary:
     "Building beautifully animated yet performant web applications, I specialize in JavaScript, TypeScript, React, Next.js, and Tailwind CSS.",
   bio: [
-    "Been shipping accessible web applications since 2018, Kashan is an intuitive and creative software engineer with a passion for building beautifully animated yet performant web applications.",
-    "Hailing from Pakistan, Kashan self-taught himself how to code in JavaScript, TypeScript, and PHP. He ♥ open-source, and has shipped many open-source projects. He is also a huge fan of React, Next.js, and Tailwind CSS.",
+    "Been shipping accessible web applications since 2018, I'm a creative software engineer with a passion for building beautifully animated yet performant web applications.",
+    "Hailing from Pakistan, I self-taught myself how to code in JavaScript, TypeScript, and PHP. I ♥ open-source, and have shipped many open-source projects. I like pushing the boundaries of what's possible on the web, and I'm always eager to learn new things.",
+    "Just recently, I built what most wouldn't even consider possible, a literal 3D Space Ship in the browser using React, GSAP, and Tailwind CSS. That's not it, the ship literally hyperdrives to a new page when you click on a link.",
   ],
+  isOpenToWork: true,
   openToWork: "Open to work",
   openToWorkIcon: "bx:bx-bolt-circle",
   openToWorkDescription:
