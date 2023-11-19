@@ -23,10 +23,14 @@ const { class: className = "", linkStyle = "primary", ...rest } = Astro.props;
     <Icon class="w-5 h-5" name={strings.contactIcon} />
     {strings.contactLabel}
   </Link>
-  <span class="open-to-work-label">
-    <Icon class="text-white w-4 h-4" name={strings.openToWorkIcon} />
-    {strings.openToWork}
-  </span>
+  {
+    strings.isOpenToWork && (
+      <span class="open-to-work-label">
+        <Icon class="text-white w-4 h-4" name={strings.openToWorkIcon} />
+        {strings.openToWork}
+      </span>
+    )
+  }
 </div>
 <style>
   .open-to-work-label {

@@ -12,8 +12,8 @@ Every year, I set a new challenge for myself in a completely new environment. **
 
 _tl;dr_
 
-- Kashan, Frontend Software Engineer from Pakistan, 5 years experience.
-- Developed websites for ecommerce, Ed-tech, digital agency, and freelancing.
-- Goal: Aesthetic, accessible, animated, fast-loading, SEO-ready websites for conversions.
-- Fluent in HTML, CSS, JS, TS; skilled in responsive design, animations, serverless, API integration.
-- Experienced with React, Next.js, Astro, Tailwind, Sass, Firebase, Supabase, CI/CD, AWS, Git, NPM; always eager to learn and grow.
+- Frontend Software Engineer, 5 years experience.
+- Developing websites for multi-purpose organizations since 2018.
+- USP: Aesthetic, accessible, animated, fast-loading, SEO-ready websites for conversions.
+- Fluent in HTML, CSS, JS, TS, responsiveness, animations, and API integration.
+- Experienced with React, Next.js, Astro, Tailwind, Sass, Firebase, Supabase, CI/CD, and many more

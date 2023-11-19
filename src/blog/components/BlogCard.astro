@@ -1,0 +1,40 @@
+---
+import { Picture } from "astro:assets";
+import type { Blog } from "../blogSchema";
+
+interface Props extends Omit<Blog, "slug"> {
+  index: number;
+}
+
+const { index, image, title, category, publishDate } = Astro.props;
+---
+
+<div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+  <Picture
+    src={image.src}
+    alt={image.alt}
+    sizes="(max-width: 800px) 100vw, 800px"
+    width={800}
+    height={400}
+    loading={index <= 2 ? "eager" : "lazy"}
+    decoding={index <= 2 ? "sync" : "async"}
+    class="w-full rounded-md object-cover object-center bg-white shadow-box"
+  />
+  <div>
+    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+      {category}
+    </span>
+
+    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1">
+      {title}
+    </h2>
+
+    <div class="flex gap-2 mt-3">
+      <!-- <span class="text-gray-400">{author}</span> -->
+      <span class="text-gray-400">•</span>
+      <time class="text-gray-400" datetime={publishDate.toISOString()}>
+        {publishDate.toDateString()}
+      </time>
+    </div>
+  </div>
+</div>

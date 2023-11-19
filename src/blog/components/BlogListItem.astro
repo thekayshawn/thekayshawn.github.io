@@ -1,0 +1,9 @@
+---
+const { slug } = Astro.props;
+---
+
+<li class="group">
+  <a href={`/blog/${slug}`}>
+    <slot />
+  </a>
+</li>
