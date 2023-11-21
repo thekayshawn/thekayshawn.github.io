@@ -1,3 +1,4 @@
+import type { BlogContent } from "@utils/types";
 import { z } from "astro:content";
 
 // 2. Define your collection(s)
@@ -16,6 +17,8 @@ export const blogSchema = z.object({
 
 export type Blog = z.output<typeof blogSchema> & {
   slug: string;
+  color: string;
+  render: () => BlogContent;
 };
 
 export type BlogImage = z.output<typeof blogSchema.shape.image>;

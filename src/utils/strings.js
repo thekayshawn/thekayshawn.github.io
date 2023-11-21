@@ -11,8 +11,6 @@ export const strings = {
   isOpenToWork: true,
   openToWork: "Open to work",
   openToWorkIcon: "bx:bx-bolt-circle",
-  openToWorkDescription:
-    "Im always looking for new problems to solve and new people to work with. If you have a project, think you need my help, or just fancy a chat, get in touch 👋",
   yearsOfExperience: "Years of experience",
   yearsOfExperienceCount: 5,
   yearsOfExperienceIcon: "bx:bx-award",

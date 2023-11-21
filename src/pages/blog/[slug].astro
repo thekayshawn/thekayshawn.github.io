@@ -1,47 +1,48 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
+import { blogCollection, type Blog } from "@blog/index";
 import Container from "@components/container.astro";
 
-// Generate a new path for every collection entry
+// Generate a new path for every collection blog
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog");
-  return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
+  return blogCollection.map((blog) => ({
+    params: { slug: blog.slug },
+    props: blog,
   }));
 }
 
-// Get the entry directly from the prop on render
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+interface Props extends Blog {}
+
+// Get the blog directly from the prop on render
+const { tags, title, render, color, category, publishDate } = Astro.props;
+const { Content } = await render();
 ---
 
-<Layout title={entry.data.title}>
+<Layout title={title}>
   <Container>
     <div class="mx-auto max-w-3xl mt-14">
-      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-        {entry.data.category}
+      <span class={`badge text-white bg-${color}-500`}>
+        {category}
       </span>
       <h1
         class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
-        {entry.data.title}
+        {title}
       </h1>
       <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
-        <span class="text-gray-400">
-          {entry.data.author}
+        <!-- <span class="text-gray-400">
+          {author}
         </span>
-        <span class="text-gray-400">•</span>
-        <time
-          class="text-gray-400"
-          datetime={entry.data.publishDate.toISOString()}>
-          {entry.data.publishDate.toDateString()}
+        <span class="text-gray-400">•</span> -->
+        <time class="text-gray-400" datetime={publishDate.toISOString()}>
+          {publishDate.toDateString()}
         </time>
         <span class="text-gray-400 hidden md:block">•</span>
         <div class="w-full md:w-auto flex flex-wrap gap-3">
           {
-            entry.data.tags.map((tag) => (
-              <span class="text-sm text-gray-500">#{tag}</span>
+            tags.map((tag) => (
+              <span class="badge badge-sm bg-pink-200 text-pink-800">
+                #{tag}
+              </span>
             ))
           }
         </div>

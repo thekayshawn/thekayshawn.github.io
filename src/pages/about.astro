@@ -1,15 +1,9 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { getCollection } from "astro:content";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import { Content as AboutContent } from "@markdown/about.md";
 import OpenToWorkBanner from "@components/OpenToWorkBanner.astro";
-
-// Filter team entries with 'draft: false' & date before current date
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
 ---
 
 <Layout title="About">
@@ -18,7 +12,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       <Fragment slot="title">About Me</Fragment>
     </Sectionhead>
     <div
-      class="prose prose-a:no-underline prose-a:italic prose-p:my-2 flex flex-col gap-3 mx-auto max-w-blog mt-16">
+      class="prose prose-p:my-2 flex flex-col gap-3 mx-auto max-w-blog mt-16">
       <AboutContent />
     </div>
     <OpenToWorkBanner />

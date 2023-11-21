@@ -5,7 +5,8 @@ import Sectionhead from "@components/sectionhead.astro";
 import BlogList from "@blog/components/BlogList.astro";
 import BlogCard from "@blog/components/BlogCard.astro";
 import BlogListItem from "@blog/components/BlogListItem.astro";
-import { categorizedBlogCollection } from "@blog/index";
+import { sortedBlogCollection } from "@blog/blogCollection";
+// import { categorizedBlogCollection } from "@blog/index";
 ---
 
 <Layout title="Blog">
@@ -16,7 +17,7 @@ import { categorizedBlogCollection } from "@blog/index";
         I like writing about things I learn and scenarios I encounter.
       </Fragment>
     </Sectionhead>
-    <main class="mt-16 flex flex-col gap-20">
+    <!-- <main class="mt-16 flex flex-col gap-20">
       {
         categorizedBlogCollection.map(({ category, blogs }) => (
           <section class="max-w-4xl mx-auto flex flex-col gap-4">
@@ -31,6 +32,17 @@ import { categorizedBlogCollection } from "@blog/index";
           </section>
         ))
       }
+    </main> -->
+    <main class="mt-16 flex flex-col gap-20">
+      <BlogList>
+        {
+          sortedBlogCollection.map(({ slug, ...blog }, index) => (
+            <BlogListItem {slug}>
+              <BlogCard {...blog} {index} />
+            </BlogListItem>
+          ))
+        }
+      </BlogList>
     </main>
   </Container>
 </Layout>

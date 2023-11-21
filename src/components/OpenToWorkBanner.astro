@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import { routes } from "@utils/routes";
 import { strings } from "@utils/strings";
 ---
 
@@ -16,7 +17,14 @@ import { strings } from "@utils/strings";
         </span>
       </h2>
       <p class="text-slate-400 mt-4 text-lg md:text-xl">
-        {strings.openToWorkDescription}
+        Im always looking for new problems to solve and new people to work with.
+        If you have a project, think you need my help, or just fancy a chat,{" "}
+        <a
+          href={routes.contact}
+          class="before-ornament text-slate-200 hover:text-pink-400 focus:text-pink-400">
+          get in touch
+        </a>{" "}
+        👋
       </p>
     </div>
   )

@@ -19,5 +19,6 @@ module.exports = {
       },
     },
   },
+  safelist: ["bg-green-500", "bg-indigo-500", "bg-pink-500"],
   plugins: [require("@tailwindcss/typography")],
 };

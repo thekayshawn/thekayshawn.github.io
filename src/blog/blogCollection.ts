@@ -1,9 +1,47 @@
 import type { Blog } from "./blogSchema";
 import { getCollection } from "astro:content";
 
-export const blogCollection = await getCollection(
+export const blogCategories = [
+  {
+    name: "courses",
+    color: "green",
+  },
+  {
+    name: "tutorials",
+    color: "indigo",
+  },
+  {
+    name: "technology",
+    color: "pink",
+  },
+];
+
+export const blogCollection: Blog[] = [];
+
+await getCollection(
   "blog",
   ({ data }) => !data.draft && data.publishDate < new Date()
+).then((collection) =>
+  collection.map(({ data, slug, render }) => {
+    // Apply a color to the blog based on the category
+    const category = blogCategories.find(
+      ({ name }) => name.toLowerCase() === data.category.toLowerCase()
+    );
+
+    const blog = {
+      ...data,
+      slug,
+      render,
+      color: category?.color || "green",
+    };
+
+    blogCollection.push(blog);
+  })
+);
+
+export const sortedBlogCollection = blogCollection.sort(
+  (a, b) =>
+    new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
 );
 
 export const categorizedBlogCollection: {
@@ -11,18 +49,14 @@ export const categorizedBlogCollection: {
   category: string;
 }[] = [];
 
-blogCollection.map(({ data, slug }) => {
-  if (data.category) {
+blogCollection.map((blog) => {
+  if (blog.category) {
     // The goal here is to create a categorized collection if it doesn't exist
     // and add the blog to the categorized collection if it does exist.
 
-    // 1. Create a new object with the blog data and the slug
-    // This will serve as our new blog.
-    const blog = { ...data, slug };
-
     // 2. Find the categorized collection that matches the blog's category
     const categorizedCollection = categorizedBlogCollection.find(
-      (blog) => blog.category === data.category
+      (b) => b.category === blog.category
     );
 
     // 3. If the categorized collection doesn't exist, create it
@@ -30,7 +64,7 @@ blogCollection.map(({ data, slug }) => {
     if (!categorizedCollection) {
       categorizedBlogCollection.push({
         blogs: [blog],
-        category: data.category,
+        category: blog.category,
       });
 
       return;
