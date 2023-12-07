@@ -15,7 +15,7 @@ export const projectSchema = z.object({
   tags: z.array(z.string()),
   liveUrl: z.string(),
   repoUrl: z.string(),
-  relatedBlogs: z.array(reference("blog")),
+  relatedBlogs: z.array(reference("blog")).optional(),
   releaseDate: z.string().transform((str) => new Date(str)),
 });
 

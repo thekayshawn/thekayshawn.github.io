@@ -1,0 +1,71 @@
+---
+import type { Project } from "../projectSchema";
+
+interface Props extends Omit<Project, "slug"> {
+  index: number;
+}
+
+const { tags, title, snippet, color, category, releaseDate } = Astro.props;
+---
+
+<div class="flex flex-wrap md:flex-nowrap">
+  <div
+    class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col justify-between items-start">
+    <div class="flex items-start gap-2">
+      <span
+        class={`px-2 py-1 rounded bg-${color}-500 w-fit flex gap-1 items-center text-white`}>
+        {category}
+      </span>
+      <time class="text-gray-400 mt-1" datetime={releaseDate.toISOString()}>
+        {releaseDate.getFullYear()}
+      </time>
+    </div>
+    <span class="text-pink-500 items-center mt-4 hidden md:inline-flex"
+      >Read Case Study
+      <svg
+        class="w-4 h-4 ml-2"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M5 12h14"></path>
+        <path d="M12 5l7 7-7 7"></path>
+      </svg>
+    </span>
+  </div>
+  <div>
+    <div class="md:flex-grow">
+      <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
+        {title}
+      </h2>
+      <p class="leading-relaxed">
+        {snippet}
+      </p>
+    </div>
+    {
+      tags.length > 0 && (
+        <ul class="flex gap-2 mt-4">
+          {tags.map((tag) => (
+            <li class="badge badge-sm bg-amber-200 text-amber-800">#{tag}</li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+  <span class="text-pink-500 inline-flex items-center mt-4 md:hidden"
+    >Read Case Study
+    <svg
+      class="w-4 h-4 ml-2"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M5 12h14"></path>
+      <path d="M12 5l7 7-7 7"></path>
+    </svg>
+  </span>
+</div>

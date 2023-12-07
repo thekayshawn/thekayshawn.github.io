@@ -1,7 +1,7 @@
 // 1. Import utilities from `astro:content`
-import { projectSchema } from "project";
 import { blogSchema } from "@blog/blogSchema";
 import { z, defineCollection } from "astro:content";
+import { projectSchema } from "@project/projectSchema";
 
 // 2. Define your collection(s)
 const blogCollection = defineCollection({

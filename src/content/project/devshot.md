@@ -10,5 +10,6 @@ category: "Portfolio"
 isFeatured: false
 tags: [Portfolio, Angular, TypeScript, Sass, Firebase]
 liveUrl: "https://devshot-dotcom.github.io/"
+repoUrl: ""
 releaseDate: "2018-10-01 20:00"
 ---

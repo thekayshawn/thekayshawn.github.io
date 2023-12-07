@@ -1,0 +1,66 @@
+---
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import { projectCollection, type Project } from "@project/index";
+
+// Generate a new path for every collection project
+export async function getStaticPaths() {
+  return projectCollection.map((project) => ({
+    params: { slug: project.slug },
+    props: project,
+  }));
+}
+
+interface Props extends Project {}
+
+// Get the project directly from the prop on render
+const { tags, title, image, render, releaseDate } = Astro.props;
+const { Content } = await render();
+---
+
+<Layout title={title}>
+  <Container>
+    <div class="mx-auto max-w-3xl mt-14">
+      <Picture
+        width={800}
+        height={400}
+        format="avif"
+        src={image.src}
+        alt={image.alt}
+        sizes="(max-width: 800px) 100vw, 800px"
+        class="w-full rounded-md object-cover object-center bg-white shadow-box aspect-video"
+      />
+      <h1
+        class="text-4xl lg:text-5xl font-bold lg:tracking-tight lg:leading-tight mt-10 md:mt-20">
+        {title}
+      </h1>
+      <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
+        <time class="text-gray-400" datetime={releaseDate.toISOString()}>
+          {releaseDate.toDateString()}
+        </time>
+        <span class="text-gray-400 hidden md:block">•</span>
+        <div class="w-full md:w-auto flex flex-wrap gap-3">
+          {
+            tags.map((tag) => (
+              <span class="badge badge-sm bg-pink-200 text-pink-800">
+                #{tag}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+      <Content />
+    </div>
+    <div class="text-center mt-8">
+      <a
+        href="/projects"
+        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+        >← Back to Projects</a
+      >
+    </div>
+  </Container>
+</Layout>

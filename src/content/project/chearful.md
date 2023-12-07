@@ -10,5 +10,6 @@ category: "Portfolio"
 isFeatured: false
 tags: [Portfolio, React, TypeScript, Tailwind]
 liveUrl: "https://test-chearful.netlify.app/"
+repoUrl: ""
 releaseDate: "2022-06-15 20:00"
 ---

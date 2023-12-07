@@ -12,7 +12,8 @@
       "@layouts/*": ["layouts/*"],
       "@assets/*": ["assets/*"],
       "@pages/*": ["pages/*"],
-      "@blog/*": ["blog/*"]
+      "@blog/*": ["blog/*"],
+      "@project/*": ["project/*"]
     }
   }
 }

@@ -1,0 +1,31 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import ProjectList from "@project/components/ProjectList.astro";
+import ProjectRow from "@project/components/ProjectRow.astro";
+import ProjectListItem from "@project/components/ProjectListItem.astro";
+import { sortedProjectCollection } from "@project/projectCollection";
+---
+
+<Layout title="Project">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">My Projects</Fragment>
+      <Fragment slot="desc">
+        I've worked on lots of projects, here are some I value the most.
+      </Fragment>
+    </Sectionhead>
+    <main class="mt-16 flex flex-col gap-20">
+      <ProjectList>
+        {
+          sortedProjectCollection.map(({ slug, ...project }, index) => (
+            <ProjectListItem {slug}>
+              <ProjectRow {...project} {index} />
+            </ProjectListItem>
+          ))
+        }
+      </ProjectList>
+    </main>
+  </Container>
+</Layout>
