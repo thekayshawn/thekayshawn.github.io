@@ -3,7 +3,7 @@ draft: false
 title: "Meet Grape: 🍇 Great Recipes for Great People"
 snippet: "Grape is a collection of recipes (currently) for everyone. It's a place where you can lookup recipes, macros, ingredients, equipment, and instructions."
 image: {
-    src: "/src/assets/grape/grape-og.jpg",
+    src: "/src/assets/grape/grape-og.png",
     alt: "Great Recipes for Great People - Grape",
 }
 publishDate: "2023-12-06 21:30"
@@ -26,8 +26,7 @@ The main problem Grape will solve is the need to have multiple apps just to trac
 - [x] Macros
 - [x] Search
 
-![Mobile Screenshot](/src/assets/grape/grape-ss-phone.png)
-![Desktop Screenshot](/src/assets/grape/grape-ss-desktop.png)
+![App Screenshots](/src/assets/grape/grape-mockup.jpg)
 
 ## What's next?
 

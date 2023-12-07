@@ -3,16 +3,32 @@ import { getCollection } from "astro:content";
 
 export const blogCategories = [
   {
-    name: "courses",
-    color: "green",
+    name: "Thoughts",
+    color: "amber",
   },
   {
     name: "tutorials",
-    color: "indigo",
+    color: "green",
   },
   {
     name: "technology",
+    color: "indigo",
+  },
+  {
+    name: "Philosophy",
+    color: "orange",
+  },
+  {
+    name: "Sassywares",
     color: "pink",
+  },
+  {
+    name: "UX/UI",
+    color: "red",
+  },
+  {
+    name: "Astronomy",
+    color: "teal",
   },
 ];
 

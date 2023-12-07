@@ -3,7 +3,6 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import { Content as AboutContent } from "@markdown/about.md";
-import OpenToWorkBanner from "@components/OpenToWorkBanner.astro";
 ---
 
 <Layout title="About">
@@ -15,6 +14,5 @@ import OpenToWorkBanner from "@components/OpenToWorkBanner.astro";
       class="prose prose-p:my-2 flex flex-col gap-3 mx-auto max-w-blog mt-16">
       <AboutContent />
     </div>
-    <OpenToWorkBanner />
   </Container>
 </Layout>
