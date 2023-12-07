@@ -6,3 +6,9 @@ export type BlogContent = Promise<{
   headings: MarkdownHeading[];
   remarkPluginFrontmatter: Record<string, any>;
 }>;
+
+export type ProjectContent = Promise<{
+  Content: AstroComponentFactory;
+  headings: MarkdownHeading[];
+  remarkPluginFrontmatter: Record<string, any>;
+}>;

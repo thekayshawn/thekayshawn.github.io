@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Cloudflare: How to deploy to Pages manually using deploy hooks"
+title: "Cloudflare - How to deploy to Pages manually using deploy hooks"
 snippet: "Cloudflare Pages is awesome. It's free, it's fast, and it's easy to use, but there's no way to manually trigger a deployment, or is there?"
 image: {
     alt: "A crane hook next to a pulley",

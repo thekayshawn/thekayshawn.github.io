@@ -1,0 +1,42 @@
+---
+import { Picture } from "astro:assets";
+import type { Project } from "../projectSchema";
+
+interface Props extends Omit<Project, "slug"> {
+  index: number;
+}
+
+const { index, image, title, color, category, releaseDate } = Astro.props;
+---
+
+<div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+  <Picture
+    width={800}
+    height={400}
+    format="avif"
+    src={image.src}
+    alt={image.alt}
+    sizes="(max-width: 800px) 100vw, 800px"
+    loading={index <= 2 ? "eager" : "lazy"}
+    decoding={index <= 2 ? "sync" : "async"}
+    class="w-full rounded-md object-cover object-center bg-white shadow-box aspect-video"
+  />
+  <div>
+    <span
+      class={`px-2 py-1 mb-4 sm:mb-6 rounded bg-${color}-500 w-fit flex gap-1 items-center text-white`}>
+      {category}
+    </span>
+
+    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1">
+      {title}
+    </h2>
+
+    <div class="flex gap-2 mt-3">
+      <!-- <span class="text-gray-400">{author}</span> -->
+      <!-- <span class="text-gray-400">•</span> -->
+      <time class="text-gray-400" datetime={releaseDate.toISOString()}>
+        {releaseDate.toDateString()}
+      </time>
+    </div>
+  </div>
+</div>

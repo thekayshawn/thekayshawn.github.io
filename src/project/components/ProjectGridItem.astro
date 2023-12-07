@@ -1,0 +1,10 @@
+---
+const { slug } = Astro.props;
+---
+
+<li
+  class="group hover:bg-slate-100 focus-within:bg-slate-100 rounded transition-all">
+  <a href={`/blog/${slug}`}>
+    <slot />
+  </a>
+</li>

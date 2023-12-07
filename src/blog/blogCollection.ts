@@ -36,6 +36,7 @@ export const blogCollection: Blog[] = [];
 
 await getCollection(
   "blog",
+  // Only include blogs that are not drafts and have a publish date in the past
   ({ data }) => !data.draft && data.publishDate < new Date()
 ).then((collection) =>
   collection.map(({ data, slug, render }) => {

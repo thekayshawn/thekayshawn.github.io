@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Ionic/Capacitor: Fix stretched splash screen on Android"
+title: "Ionic - Fix stretched splash screen on Android"
 snippet: "How to fix the stretched splash screen on Android when using Ionic/Capacitor"
 image: {
     alt: "Person holding a phone next to a laptop",

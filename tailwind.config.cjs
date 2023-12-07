@@ -27,6 +27,7 @@ module.exports = {
     "bg-pink-500",
     "bg-red-500",
     "bg-teal-500",
+    "bg-blue-500",
   ],
   plugins: [require("@tailwindcss/typography")],
 };
