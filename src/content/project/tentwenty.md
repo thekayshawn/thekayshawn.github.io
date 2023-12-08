@@ -3,7 +3,7 @@ title: "🌟 Tentwenty's Portfolio Clone"
 snippet: "A clone of tentwenty's masterpiece with a few tweaks and changes."
 isDraft: false
 image: {
-    src: "/src/assets/tentwenty/cover.png",
+    src: "/src/assets/project/tentwenty/cover.png",
     alt: "Screenshots of Tentwenty's Portfolio Clone",
 }
 category: "Portfolio"

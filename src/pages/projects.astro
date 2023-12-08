@@ -2,10 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-import ProjectList from "@project/components/ProjectList.astro";
-import ProjectRow from "@project/components/ProjectRow.astro";
-import ProjectListItem from "@project/components/ProjectListItem.astro";
-import { sortedProjectCollection } from "@project/projectCollection";
+import ProjectListStack from "@project/stacks/ProjectListStack.astro";
 ---
 
 <Layout title="Project">
@@ -17,15 +14,7 @@ import { sortedProjectCollection } from "@project/projectCollection";
       </Fragment>
     </Sectionhead>
     <main class="mt-16 flex flex-col gap-20">
-      <ProjectList>
-        {
-          sortedProjectCollection.map((project, index) => (
-            <ProjectListItem {project}>
-              <ProjectRow {...project} {index} />
-            </ProjectListItem>
-          ))
-        }
-      </ProjectList>
+      <ProjectListStack />
     </main>
   </Container>
 </Layout>

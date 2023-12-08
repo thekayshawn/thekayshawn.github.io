@@ -1,0 +1,16 @@
+---
+import ProjectRow from "../components/ProjectRow.astro";
+import ProjectList from "../components/ProjectList.astro";
+import ProjectListItem from "../components/ProjectListItem.astro";
+import { sortedProjectCollection } from "../projectCollection";
+---
+
+<ProjectList>
+  {
+    sortedProjectCollection.map((project, index) => (
+      <ProjectListItem {project}>
+        <ProjectRow {...project} {index} />
+      </ProjectListItem>
+    ))
+  }
+</ProjectList>

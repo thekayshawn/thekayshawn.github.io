@@ -11,6 +11,7 @@ const { project } = Astro.props;
 
 <li
   class="group relative py-8 md:p-8 hover:bg-slate-100 focus-within:bg-slate-100 rounded transition-all">
+  <slot />
   <a
     target="_blank"
     rel="noopener noreferrer"
@@ -18,5 +19,4 @@ const { project } = Astro.props;
     class="opacity-0 absolute top-0 left-0 w-full h-full">
     Learn More</a
   >
-  <slot />
 </li>

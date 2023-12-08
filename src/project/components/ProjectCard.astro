@@ -1,42 +1,97 @@
 ---
 import { Picture } from "astro:assets";
+import { projectsPage } from "@utils/pages";
 import type { Project } from "../projectSchema";
 
 interface Props extends Omit<Project, "slug"> {
   index: number;
 }
 
-const { index, image, title, color, category, releaseDate } = Astro.props;
+const { tags, image, title, snippet, color, category, releaseDate } =
+  Astro.props;
+
+const ctaText = projectsPage.allowCaseStudies
+  ? "Read Case Study"
+  : "View Project";
 ---
 
-<div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+<article class="flex flex-col h-full">
+  <!-- Cover -->
   <Picture
     width={800}
     height={400}
-    format="avif"
+    format="png"
+    loading="lazy"
+    decoding="async"
     src={image.src}
     alt={image.alt}
     sizes="(max-width: 800px) 100vw, 800px"
-    loading={index <= 2 ? "eager" : "lazy"}
-    decoding={index <= 2 ? "sync" : "async"}
-    class="w-full rounded-md object-cover object-center bg-white shadow-box aspect-video"
+    class="w-full object-cover object-center aspect-video rounded-content border-b-2 bg-white group-hover:border-pink-500 group-focus-within:border-pink-500 transition-colors"
   />
-  <div>
-    <span
-      class={`px-2 py-1 mb-4 sm:mb-6 rounded bg-${color}-500 w-fit flex gap-1 items-center text-white`}>
-      {category}
-    </span>
-
-    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1">
-      {title}
-    </h2>
-
-    <div class="flex gap-2 mt-3">
-      <!-- <span class="text-gray-400">{author}</span> -->
-      <!-- <span class="text-gray-400">•</span> -->
-      <time class="text-gray-400" datetime={releaseDate.toISOString()}>
-        {releaseDate.toDateString()}
-      </time>
+  <!-- Body -->
+  <div class="h-full flex flex-col gap-content p-content justify-between">
+    <!-- Body Content -->
+    <div class="flex flex-col gap-content">
+      <!-- Header -->
+      <div class="flex items-center gap-element">
+        <span class={`badge badge-sm text-white bg-${color}-500`}>
+          {category}
+        </span>
+        <time class="text-secondary" datetime={releaseDate.toISOString()}>
+          {releaseDate.getFullYear()}
+        </time>
+      </div>
+      <!-- End Header -->
+      <!-- Meta -->
+      <div class="flex flex-col gap-element">
+        <!-- Title -->
+        <h3>
+          {title}
+        </h3>
+        <!-- End Title -->
+        <!-- Snippet -->
+        <p class="leading-relaxed text-secondary">
+          {snippet}
+        </p>
+        <!-- End Snippet -->
+      </div>
+      <!-- End Meta -->
     </div>
+    <!-- End Body Content -->
+    <!-- Footer -->
+    <div class="flex items-end gap-element">
+      <!-- Tags -->
+      {
+        tags.length > 0 && (
+          <ul class="flex gap-element flex-grow flex-wrap">
+            {tags.map((tag) => (
+              <li class="badge badge-sm bg-pink-200 text-pink-800 opacity-80">
+                #{tag}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      <!-- End Tags -->
+      <!-- CTA -->
+      <span
+        class="inline-flex items-center flex-shrink-0 group-hover:text-pink-500 group-focus-within:text-pink-500">
+        {ctaText}
+        <svg
+          class="w-4 h-4 ml-2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M5 12h14"></path>
+          <path d="M12 5l7 7-7 7"></path>
+        </svg>
+      </span>
+      <!-- End CTA -->
+    </div>
+    <!-- End Footer -->
   </div>
-</div>
+  <!-- End Body -->
+</article>

@@ -1,0 +1,16 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+import ProjectGrid from "../components/ProjectGrid.astro";
+import ProjectGridItem from "../components/ProjectGridItem.astro";
+import { featuredProjectCollection } from "../projectCollection";
+---
+
+<ProjectGrid>
+  {
+    featuredProjectCollection.map((project, index) => (
+      <ProjectGridItem {project}>
+        <ProjectCard {...project} {index} />
+      </ProjectGridItem>
+    ))
+  }
+</ProjectGrid>

@@ -10,11 +10,13 @@ const { project } = Astro.props;
 ---
 
 <li
-  class="group hover:bg-slate-100 focus-within:bg-slate-100 rounded transition-all">
+  class="group relative hover:bg-slate-50 focus-within:bg-slate-50 rounded-content transition-all border-2 hover:border-pink-500 focus-within:border-pink-500">
+  <slot />
   <a
     target="_blank"
     rel="noopener noreferrer"
-    href={routes.getProjectRoute(project)}>
-    <slot />
-  </a>
+    href={routes.getProjectRoute(project)}
+    class="opacity-0 absolute top-0 left-0 w-full h-full">
+    Learn More</a
+  >
 </li>

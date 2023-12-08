@@ -4,6 +4,9 @@ export const indexPage = {
   },
   projects: {
     isHidden: false,
+    title: "My Projects",
+    buttonText: "View All Projects",
+    buttonHref: "/projects",
   },
   features: {
     isHidden: true,
@@ -14,4 +17,8 @@ export const indexPage = {
   cta: {
     isHidden: false,
   },
+};
+
+export const projectsPage = {
+  allowCaseStudies: false,
 };

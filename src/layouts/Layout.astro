@@ -128,11 +128,11 @@ const makeTitle = title
       }
 
       h3 {
-        @apply text-base md:text-lg xl:text-xl;
+        @apply text-lg md:text-xl xl:text-2xl;
       }
 
       h2 {
-        @apply text-2xl lg:text-3xl;
+        @apply text-3xl lg:text-4xl;
       }
 
       h1 {
@@ -166,6 +166,10 @@ const makeTitle = title
       }
 
       /* Gap */
+      .gap-layout {
+        @apply gap-md sm:gap-lg md:gap-xl;
+      }
+
       .gap-content {
         @apply gap-sm sm:gap-base md:gap-md;
       }
@@ -198,11 +202,11 @@ const makeTitle = title
 
       /* Borders */
       .rounded-content {
-        @apply rounded-md md:rounded-lg;
+        @apply rounded-lg md:rounded-xl;
       }
 
       .rounded-element {
-        @apply rounded-sm md:rounded-md;
+        @apply rounded-md md:rounded-lg;
       }
     </style>
   </body>

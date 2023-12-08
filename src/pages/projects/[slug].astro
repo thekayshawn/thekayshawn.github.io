@@ -57,7 +57,7 @@ const blogs = await getEntries(relatedBlogs);
             {blogs.map(({ slug, data }) => (
               <li
                 class:list={[
-                  "flex-shrink-0 relative max-w-sm rounded-element overflow-hidden border-2 hover:border-pink-500 focus-within:border-pink-500 transition-colors group",
+                  "flex-shrink-0 relative max-w-sm rounded-content overflow-hidden border-2 hover:border-pink-500 focus-within:border-pink-500 transition-colors group",
                   blogs.length > 1 ? "w-3/4" : "w-full",
                 ]}>
                 <Picture
@@ -69,7 +69,7 @@ const blogs = await getEntries(relatedBlogs);
                   src={data.image.src}
                   alt={data.image.alt}
                   sizes="(max-width: 800px) 100vw, 800px"
-                  class="w-full rounded-md object-cover object-center bg-white aspect-video border-b-2 rounded-b-none group-hover:border-pink-500 group-focus-within:border-pink-500 transition-colors"
+                  class="w-full rounded-content object-cover object-center bg-white aspect-video border-b-2 group-hover:border-pink-500 group-focus-within:border-pink-500 transition-colors"
                 />
                 <div class="p-content group-hover:bg-gray-100 group-focus-within:bg-gray-200 flex flex-col gap-content">
                   <h3 class="whitespace-normal">{data.title}</h3>

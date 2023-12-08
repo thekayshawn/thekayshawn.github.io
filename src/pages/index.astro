@@ -6,15 +6,39 @@ import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 import { indexPage } from "@utils/pages";
+import ProjectGridStack from "@project/stacks/ProjectGridStack.astro";
+import Button from "@components/ui/button.astro";
+import { Arrow } from "@components/ui/icons";
 
-const { hero, features, logos, cta } = indexPage;
+const { hero, features, logos, cta, projects } = indexPage;
 ---
 
 <Layout title="">
   <Container>
-    {!hero.isHidden && <Hero {...hero} />}
-    {!features.isHidden && <Features {...features} />}
-    {!logos.isHidden && <Logos {...logos} />}
-    {!cta.isHidden && <Cta {...cta} />}
+    {!hero.isHidden && <Hero />}
+    {
+      !projects.isHidden && (
+        <section class="flex flex-col gap-layout">
+          <header class="flex items-end justify-between">
+            <h2>{projects.title}</h2>
+            <Button
+              as="a"
+              href={projects.buttonHref}
+              class="hidden md:inline-flex">
+              {projects.buttonText} <Arrow />
+            </Button>
+          </header>
+          <ProjectGridStack />
+          <footer class="md:hidden text-right">
+            <Button as="a" href={projects.buttonHref}>
+              {projects.buttonText} <Arrow />
+            </Button>
+          </footer>
+        </section>
+      )
+    }
+    {!features.isHidden && <Features />}
+    {!logos.isHidden && <Logos />}
+    {!cta.isHidden && <Cta />}
   </Container>
 </Layout>
