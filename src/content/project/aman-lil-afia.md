@@ -1,5 +1,5 @@
 ---
-title: "✌ Aman Lil Afia - Clinic Portfolio"
+title: "✌ Aman Lil Afia Clinic's Portfolio"
 snippet: "Aman Lil Afia is a clinic in Dubai, UAE. The website showcases their services and their team."
 isDraft: false
 image: {

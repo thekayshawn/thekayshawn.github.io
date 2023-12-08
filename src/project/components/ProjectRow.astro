@@ -40,7 +40,7 @@ const { tags, title, snippet, color, category, releaseDate } = Astro.props;
       <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
         {title}
       </h2>
-      <p class="leading-relaxed">
+      <p class="leading-relaxed text-secondary">
         {snippet}
       </p>
     </div>
@@ -48,7 +48,9 @@ const { tags, title, snippet, color, category, releaseDate } = Astro.props;
       tags.length > 0 && (
         <ul class="flex gap-2 mt-4">
           {tags.map((tag) => (
-            <li class="badge badge-sm bg-amber-200 text-amber-800">#{tag}</li>
+            <li class="badge badge-sm bg-amber-200 text-amber-800 opacity-60">
+              #{tag}
+            </li>
           ))}
         </ul>
       )

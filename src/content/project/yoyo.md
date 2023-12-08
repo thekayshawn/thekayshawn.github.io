@@ -1,5 +1,5 @@
 ---
-title: "🪀 Yoyo - Boilerplate Chat App"
+title: "🪀 Yoyo, A Boilerplate Chat App"
 snippet: "A boilerplate chat app to be used as a starting point for future projects."
 isDraft: true
 image: {

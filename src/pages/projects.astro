@@ -19,8 +19,8 @@ import { sortedProjectCollection } from "@project/projectCollection";
     <main class="mt-16 flex flex-col gap-20">
       <ProjectList>
         {
-          sortedProjectCollection.map(({ slug, ...project }, index) => (
-            <ProjectListItem {slug}>
+          sortedProjectCollection.map((project, index) => (
+            <ProjectListItem {project}>
               <ProjectRow {...project} {index} />
             </ProjectListItem>
           ))

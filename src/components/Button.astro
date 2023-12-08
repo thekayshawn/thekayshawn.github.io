@@ -1,0 +1,20 @@
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+
+type Props<Tag extends HTMLTag> = Polymorphic<{
+  as: Tag;
+  variant?: "gray" | "black";
+}>;
+
+const { as: Tag = "button", class: className, ...props } = Astro.props;
+
+const variantClasses = {
+  gray: "bg-gray-100 hover:bg-gray-200 focus:bg-gray-200 text-gray-900",
+  black: "bg-gray-900 hover:bg-gray-800 focus:bg-gray-800 text-white",
+};
+---
+
+<Tag
+  {...props}
+  class:list={["px-5 py-3 rounded-md transition", className, variantClasses]}
+/>

@@ -1,6 +1,6 @@
 ---
-title: "🌟 Tentwenty - Portfolio Clone"
-snippet: "A clone of the near-perfect portfolio of Tentwenty, with a few imperfections perfected."
+title: "🌟 Tentwenty's Portfolio Clone"
+snippet: "A clone of tentwenty's masterpiece with a few tweaks and changes."
 isDraft: false
 image: {
     src: "/src/assets/tentwenty/cover.png",

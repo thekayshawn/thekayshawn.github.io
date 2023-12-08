@@ -2,7 +2,7 @@ export const strings = {
   name: "Kashan Ahmad",
   title: "Frontend Software Engineer",
   summary:
-    "A Frontend Software Engineer with over 5 years of experience in startups, agencies, and an academy.",
+    "A Frontend Software Engineer with over 5 years of experience in startups, agencies, freelancing, and teaching.",
   bio: [
     "Hey there! I've been creating user-friendly websites since 2018. I'm a software engineer from Pakistan who taught myself JavaScript, TypeScript, and PHP. I enjoy working on open-source projects and have completed several. I love exploring the capabilities of the web and am always up for learning new things.",
     "Recently, I did something pretty cool—I built a 3D spaceship that actually moves in the browser using React, GSAP, and Tailwind CSS. And get this, when you click a link, the ship hyperdrives to a whole new page. It's a fun way to make web browsing a bit more interesting!",

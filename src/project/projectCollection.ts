@@ -22,10 +22,10 @@ export const projectCategories = [
   //   name: "UX/UI",
   //   color: "red",
   // },
-  // {
-  //   name: "Astronomy",
-  //   color: "teal",
-  // },
+  {
+    name: "Astronomy",
+    color: "teal",
+  },
   // {
   //   name: "Tentwenty",
   //   color: "blue",
