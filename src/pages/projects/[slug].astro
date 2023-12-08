@@ -55,7 +55,11 @@ const blogs = await getEntries(relatedBlogs);
           <h2>Related Blog</h2>
           <ul class="flex gap-content whitespace-nowrap overflow-x-auto">
             {blogs.map(({ slug, data }) => (
-              <li class="flex-shrink-0 relative w-3/4 max-w-sm rounded-element overflow-hidden border-2 hover:border-pink-500 focus-within:border-pink-500 transition-colors group">
+              <li
+                class:list={[
+                  "flex-shrink-0 relative max-w-sm rounded-element overflow-hidden border-2 hover:border-pink-500 focus-within:border-pink-500 transition-colors group",
+                  blogs.length > 1 ? "w-3/4" : "w-full",
+                ]}>
                 <Picture
                   width={800}
                   height={400}
@@ -67,9 +71,22 @@ const blogs = await getEntries(relatedBlogs);
                   sizes="(max-width: 800px) 100vw, 800px"
                   class="w-full rounded-md object-cover object-center bg-white aspect-video border-b-2 rounded-b-none group-hover:border-pink-500 group-focus-within:border-pink-500 transition-colors"
                 />
-                <h3 class="p-content group-hover:bg-gray-100 group-focus-within:bg-gray-200 whitespace-normal">
-                  {data.title}
-                </h3>
+                <div class="p-content group-hover:bg-gray-100 group-focus-within:bg-gray-200 flex flex-col gap-content">
+                  <h3 class="whitespace-normal">{data.title}</h3>
+                  <div class="flex gap-element">
+                    <time
+                      class="text-secondary"
+                      datetime={data.publishDate.toISOString()}>
+                      {data.publishDate.toDateString()}
+                    </time>
+                    <span
+                      aria-hidden="true"
+                      class="text-secondary hidden md:block">
+                      •
+                    </span>
+                    <span class="text-pink-500"> Read Blog</span>
+                  </div>
+                </div>
                 <a
                   href={routes.getBlog(slug)}
                   class="opacity-0 absolute top-0 left-0 w-full h-full">
