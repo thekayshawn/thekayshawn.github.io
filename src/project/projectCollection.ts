@@ -64,15 +64,3 @@ export const sortedProjectCollection = projectCollection.sort(
 export const featuredProjectCollection = sortedProjectCollection.filter(
   (project) => project.isFeatured
 );
-
-console.log({
-  projectCollection,
-  sortedProjectCollection,
-  featuredProjectCollection,
-});
-
-export async function getRelatedBlogs(project: Project) {
-  if (!project.relatedBlogs) return [];
-
-  return await getEntries(project.relatedBlogs);
-}

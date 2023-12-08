@@ -1,16 +1,20 @@
 ---
-interface Props {
+import type { HTMLTag, Polymorphic } from "astro/types";
+
+type Props<Tag extends HTMLTag> = Polymorphic<{
+  as: Tag;
   size?: "md" | "lg";
   block?: boolean;
   style?: "outline" | "primary" | "inverted";
   class?: string;
   [x: string]: any;
-}
+}>;
 
 const {
+  block,
   size = "md",
   style = "primary",
-  block,
+  as: Tag = "button",
   class: className,
   ...rest
 } = Astro.props;
@@ -21,20 +25,20 @@ const sizes = {
 };
 
 const styles = {
-  outline: "border-2 border-black hover:bg-black text-black hover:text-white",
-  primary:
-    "bg-black text-white hover:bg-slate-900  border-2 border-transparent",
+  outline: "border-black hover:bg-black text-black hover:text-white",
+  primary: "bg-black text-white hover:bg-slate-900 border-transparent",
+  inverted: "bg-gray-100 text-black hover:bg-gray-200 border-transparent",
 };
 ---
 
-<button
+<Tag
   {...rest}
   class:list={[
-    "rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200",
+    "border-2 rounded-element text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200",
     block && "w-full",
     sizes[size],
     styles[style],
     className,
-  ]}
-  ><slot />
-</button>
+  ]}>
+  <slot />
+</Tag>
