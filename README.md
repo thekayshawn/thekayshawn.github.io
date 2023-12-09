@@ -1,15 +1,18 @@
-In 2018, I launched my web development journey when I helped a friend edit his result card on a webpage. For the past 5 years, I've orbited the software industry, working with an [amazing ecommerce website](https://how2pass.com/), an [Ed-tech startup](https://thetutor.me/), a [digital agency](https://tentwenty.me/), and as a teacher at an [academy](https://itcentre.pk/).
+Hello, I'm Kashan, a Frontend Software Engineer based in Pakistan. Since 2018, I've been working on websites for various organizations, including an [ecommerce site](https://how2pass.com/), an [Ed-tech startup](https://thetutor.me/), a [digital agency](https://tentwenty.me/), and as an [educator](https://itcentre.pk/). I've also taken up freelance work on platforms like Fiverr.
 
-My mission control includes websites, applications, frontends, backends, and designs. I'm fluent in **JS, TS, and PHP**, and I've mastered the art of **responsive design, database navigation,** and  **serverless sorcery.** I'm a big fan of **React, Next.js, Astro** and **Tailwind,** making websites as dynamic as a shooting star.
+My focus is on creating visually appealing, user-friendly, and fast-loading websites designed to boost conversions. **I'm skilled in HTML, CSS, JS, and TS**, and I specialize in making websites responsive, accessible, and incorporating animations.
 
-Currently, I'm on a quest to make the web a more inclusive and accessible place for everyone. I'm also **open to exploring new horizons** for a Sr. Developer and/or Designer position.
+I'm always eager to learn and apply new skills, and my passion for astronomy influences my creative approach to projects.
 
-When I'm not coding, I'm spending time with family and friends, or I'm sharing my experiences with others. Feel free to send me an email or a DM on LinkedIn or X. Let's chat, and together, we'll reach for the stars! 🚀
+**In 2023**, my goal was to master the art of creating animated yet efficient websites and landing a position at a specialized digital agency.
 
-tl;dr
+**Looking ahead to 2024**, my aim is to develop valuable Open Source Libraries. I'm seeking a team that values my skills, provides growth opportunities, and aligns with my goals.
 
-- 5 years in the software industry.
-- Problem solver, teacher, code quality advocate, a11y, i18n.
-- Websites, Applications, Frontends, Backends, and Designs.
-- JS, TS, PHP, Responsiveness, Databases, Serverless, React, Next, Astro, Tailwind.
-- Open to work for a Sr. Developer and/or Designer position.
+To sum it up:
+
+- Proficient in HTML, CSS, JS, and TS.
+- Frontend Software Engineer with 5 years of experience.
+- Involved in website development for multinational organizations.
+- Focused on creating animated, user-friendly, and visually appealing websites.
+- 2024 goal: Develop Open Source Libraries and join a supportive team.
+- Passionate about astronomy and the cosmos.
