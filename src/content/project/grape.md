@@ -1,5 +1,5 @@
 ---
-title: "🍇 Grape! - Recipes for Great People"
+title: "🍇 Grape!"
 snippet: "Grape is a collection of recipes for everyone. It's going to be the last fitness app you'll ever need."
 isDraft: false
 image: {

@@ -1,5 +1,5 @@
 ---
-title: "🟣 Sassywares, Suite of SaaSy Apps"
+title: "🟣 Sassywares"
 snippet: "A suite of SaaS apps that I'm building to showcase my skills and to help people."
 isDraft: false
 image: {

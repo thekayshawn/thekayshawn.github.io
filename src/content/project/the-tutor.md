@@ -1,5 +1,5 @@
 ---
-title: "📗 TheTutor.me, An EdTech Platform"
+title: "📗 TheTutor.me"
 snippet: "TheTutor.me is an EdTech platform that connects students with tutors. The platform comprises of 4 web apps and a website."
 isDraft: false
 image: {

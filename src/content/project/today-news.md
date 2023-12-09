@@ -1,5 +1,5 @@
 ---
-title: "📰 Today, News for everyone"
+title: "📰 Today News"
 snippet: "A news app that is accessible to everyone, with a focus on the visually impaired."
 isDraft: false
 image: {

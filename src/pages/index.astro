@@ -1,14 +1,17 @@
 ---
-import Container from "@components/container.astro";
-import Cta from "@components/cta.astro";
-import Features from "@components/features.astro";
-import Hero from "@components/hero.astro";
-import Logos from "@components/logos.astro";
-import Layout from "@layouts/Layout.astro";
+// Utils
 import { indexPage } from "@utils/pages";
-import ProjectGridStack from "@project/stacks/ProjectGridStack.astro";
-import Button from "@components/ui/button.astro";
 import { Arrow } from "@components/ui/icons";
+
+// Components
+import Cta from "@components/cta.astro";
+import Hero from "@components/hero.astro";
+import Layout from "@layouts/Layout.astro";
+import Logos from "@components/logos.astro";
+import Button from "@components/ui/button.astro";
+import Features from "@components/features.astro";
+import Container from "@components/container.astro";
+import ProjectGridStack from "@project/stacks/ProjectGridStack.astro";
 
 const { hero, features, logos, cta, projects } = indexPage;
 ---
@@ -18,9 +21,9 @@ const { hero, features, logos, cta, projects } = indexPage;
     {!hero.isHidden && <Hero />}
     {
       !projects.isHidden && (
-        <section class="flex flex-col gap-layout">
+        <section id="projects" class="flex flex-col gap-layout">
           <header class="flex items-end justify-between">
-            <h2>{projects.title}</h2>
+            <h2 set:html={projects.title} />
             <Button
               as="a"
               href={projects.buttonHref}

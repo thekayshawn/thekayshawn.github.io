@@ -1,5 +1,5 @@
 ---
-title: "🚀 Kashtronauter 2077, A Space Ship"
+title: "🚀 Kashtronauter 2077"
 snippet: "A space ship built with HTML, CSS, and JS that literally jumps to hyperspace! ✨"
 isDraft: false
 image: {

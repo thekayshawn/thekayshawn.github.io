@@ -1,5 +1,5 @@
 ---
-title: "🌟 Tentwenty's Portfolio Clone"
+title: "🌟 Tentwenty's Portfolio"
 snippet: "A clone of tentwenty's masterpiece with a few tweaks and changes."
 isDraft: false
 image: {

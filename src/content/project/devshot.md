@@ -1,5 +1,5 @@
 ---
-title: "☕ Devshot, Agency's Portfolio"
+title: "☕ Devshot's Portfolio"
 snippet: "Devshot was my first freelance-based agency. The project was put on hold due to the pandemic."
 isDraft: false
 image: {

@@ -4,7 +4,7 @@ export const indexPage = {
   },
   projects: {
     isHidden: false,
-    title: "My Projects",
+    title: 'My <span class="fancy">Projects</span>',
     buttonText: "View All Projects",
     buttonHref: "/projects",
   },
