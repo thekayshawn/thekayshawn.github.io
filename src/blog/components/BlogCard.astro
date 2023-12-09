@@ -22,19 +22,16 @@ const { index, image, title, color, category, publishDate } = Astro.props;
     class="w-full rounded-md object-cover object-center bg-white shadow-box aspect-video"
   />
   <div>
-    <span
-      class={`px-2 py-1 mb-4 sm:mb-6 rounded bg-${color}-500 w-fit flex gap-1 items-center text-white`}>
+    <span class={`badge mb-4 sm:mb-6 rounded bg-${color}-500 text-white`}>
       {category}
     </span>
 
-    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1">
+    <h3>
       {title}
-    </h2>
+    </h3>
 
     <div class="flex gap-2 mt-3">
-      <!-- <span class="text-gray-400">{author}</span> -->
-      <!-- <span class="text-gray-400">•</span> -->
-      <time class="text-gray-400" datetime={publishDate.toISOString()}>
+      <time class="text-secondary" datetime={publishDate.toISOString()}>
         {publishDate.toDateString()}
       </time>
     </div>

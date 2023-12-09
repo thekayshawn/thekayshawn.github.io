@@ -1,21 +1,18 @@
 ---
-import type { Project } from "..";
-import { routes } from "@utils/routes";
+import type { Experience } from "..";
 
-type Props = {
-  project: Project;
-};
+type Props = Experience;
 
-const { project } = Astro.props;
+const { url } = Astro.props;
 ---
 
 <li
   class="group relative py-8 md:p-8 hover:bg-slate-100 focus-within:bg-slate-100 rounded-content transition-all">
   <slot />
   <a
+    href={url}
     target="_blank"
     rel="noopener noreferrer"
-    href={routes.getProjectRoute(project)}
     class="opacity-0 absolute top-0 left-0 w-full h-full">
     Learn More</a
   >

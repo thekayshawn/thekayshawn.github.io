@@ -5,10 +5,10 @@ import { projectsPage } from "./pages";
 
 export const routes = {
   index: "/",
-  experiences: "/experiences",
-  projects: "/projects",
-  about: "/about",
   blog: "/blog",
+  about: "/about",
+  projects: "/projects",
+  experiences: "/experiences",
   getBlog: (slug: Blog["slug"]) => `/blog/${slug}`,
   resume: "/resume.pdf",
   contact: `mailto:${strings.emailAddress}?subject=Hey%20Kashan!`,

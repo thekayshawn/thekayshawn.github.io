@@ -13,7 +13,8 @@
       "@assets/*": ["assets/*"],
       "@pages/*": ["pages/*"],
       "@blog/*": ["blog/*"],
-      "@project/*": ["project/*"]
+      "@project/*": ["project/*"],
+      "@experience/*": ["experience/*"]
     }
   }
 }

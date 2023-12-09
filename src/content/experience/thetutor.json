@@ -1,0 +1,14 @@
+{
+  "jobs": [
+    {
+      "title": "Frontend",
+      "designation": "Software Engineer"
+    }
+  ],
+  "snippet": "Thrived in a fast-paced startup, adapting to change. Used Agile TDD with Jira for project management and Cypress for module testing. Managed design and development roles to drive the product despite limited resources.",
+  "organization": "TheTutor.me",
+  "url": "https://thetutor.me",
+  "from": "2022-06-15 00:00",
+  "to": "2023-06-01 00:00",
+  "tags": ["React", "Redux", "TypeScript", "Sass", "Jest", "Jira"]
+}

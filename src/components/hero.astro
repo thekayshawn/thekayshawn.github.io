@@ -15,9 +15,10 @@ const { cta, image, title, summary, yearsOfExperience } = heroStrings;
       <div class="py-6 md:order-1 hidden md:block">
         <Picture
           format="avif"
+          quality="max"
           loading="eager"
           src={heroImage}
-          class="cursor-rocket"
+          class="max-w-sm"
           widths={[200, 400, 600]}
           alt="Astronaut in the air"
           sizes="(max-width: 800px) 100vw, 620px"

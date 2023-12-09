@@ -3,7 +3,10 @@ const { class: className } = Astro.props;
 ---
 
 <svg
-  class:list={["w-4 h-4", className]}
+  class:list={[
+    "w-4 h-4 transition-all ml-2 group-hover:ml-0 group-focus-within:ml-0 group-hover:mr-2 group-focus-within:mr-2",
+    className,
+  ]}
   viewBox="0 0 24 24"
   stroke="currentColor"
   stroke-width="2"

@@ -1,0 +1,14 @@
+{
+  "jobs": [
+    {
+      "title": "Frontend",
+      "designation": "Software Engineer"
+    }
+  ],
+  "snippet": "Overcame the fear of public speaking, promoted mutual learning in the classroom, actively sharing experiences and insights. Expanded knowledge through teaching, emphasizing accessibility, and code quality, including TypeScript and TDD.",
+  "organization": "ICR",
+  "url": "https://itcentre.pk/",
+  "from": "2022-12-05 00:00",
+  "to": "2023-05-10 00:00",
+  "tags": ["Teaching", "HTML", "CSS", "JavaScript", "Jest", "TypeScript"]
+}

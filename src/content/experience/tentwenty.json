@@ -1,0 +1,14 @@
+{
+  "jobs": [
+    {
+      "title": "Frontend",
+      "designation": "Senior Software Engineer"
+    }
+  ],
+  "snippet": "Led premium code delivery for diverse international projects, spearheading client communication, updating documentation, and elevating code quality through TypeScript and Test-Driven Development, while sharing animation expertise with the team.",
+  "organization": "Tentwenty",
+  "url": "https://tentwenty.me",
+  "from": "2023-06-05 00:00",
+  "to": "2023-12-12 00:00",
+  "tags": ["Vanilla JS", "Gsap", "jQuery", "Sass", "Jest", "WCAG"]
+}

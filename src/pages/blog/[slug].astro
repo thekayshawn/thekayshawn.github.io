@@ -2,6 +2,8 @@
 import Layout from "@layouts/Layout.astro";
 import { blogCollection, type Blog } from "@blog/index";
 import Container from "@components/container.astro";
+import Button from "@components/ui/button.astro";
+import { Arrow } from "@components/ui/icons";
 
 // Generate a new path for every collection blog
 export async function getStaticPaths() {
@@ -53,11 +55,9 @@ const { Content } = await render();
       <Content />
     </div>
     <div class="text-center mt-8">
-      <a
-        href="/blog"
-        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
-        >← Back to Blog</a
-      >
+      <Button as="a" href="/blog" style="inverted">
+        <Arrow class="rotate-180" /> Back to Blog
+      </Button>
     </div>
   </Container>
 </Layout>

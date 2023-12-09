@@ -8,13 +8,14 @@ export const indexPage = {
     buttonText: "View All Projects",
     buttonHref: "/projects",
   },
+  experiences: {
+    isHidden: false,
+    title: 'My <span class="fancy">Experiences</span>',
+  },
   features: {
     isHidden: true,
   },
   logos: {
-    isHidden: false,
-  },
-  cta: {
     isHidden: false,
   },
 };

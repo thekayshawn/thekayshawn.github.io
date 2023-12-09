@@ -1,0 +1,31 @@
+{
+  "jobs": [
+    {
+      "title": "Full Stack",
+      "designation": "Software Engineer"
+    },
+    {
+      "title": "Frontend",
+      "designation": "Junior Software Engineer"
+    },
+    {
+      "title": "Backend",
+      "designation": "Junior Software Engineer"
+    }
+  ],
+  "snippet": "Trained in frontend and backend technologies, emphasizing AWS, Azure, APIs, and Docker. Developed components with TypeScript and TDD, including creating a MySQL ORM in PHP. Collaborated on multiple modules, prioritizing accessibility and user experience in frontend features.",
+  "organization": "How2Pass",
+  "url": "https://howtopass.com/",
+  "from": "2018-11-01 00:00",
+  "to": "2022-05-10 00:00",
+  "tags": [
+    "PHP",
+    "TypeScript",
+    "MySQL",
+    "Docker",
+    "AWS",
+    "Azure",
+    "APIs",
+    "Linux"
+  ]
+}

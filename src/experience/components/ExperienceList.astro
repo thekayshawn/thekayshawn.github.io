@@ -1,0 +1,17 @@
+---
+const { class: className } = Astro.props;
+---
+
+<ul
+  class:list={[
+    "mx-auto divide-y-2 divide-gray-100 experiences-list",
+    className,
+  ]}>
+  <slot />
+</ul>
+
+<style>
+  ul:hover li {
+    @apply opacity-60;
+  }
+</style>

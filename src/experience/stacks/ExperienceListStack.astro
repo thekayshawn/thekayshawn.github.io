@@ -1,0 +1,18 @@
+---
+import ExperienceRow from "../components/ExperienceRow.astro";
+import ExperienceList from "../components/ExperienceList.astro";
+import ExperienceListItem from "../components/ExperienceListItem.astro";
+import { sortedExperienceCollection } from "../experienceCollection";
+
+const { class: className } = Astro.props;
+---
+
+<ExperienceList class:list={[className]}>
+  {
+    sortedExperienceCollection.map((experience) => (
+      <ExperienceListItem {...experience}>
+        <ExperienceRow {...experience} />
+      </ExperienceListItem>
+    ))
+  }
+</ExperienceList>

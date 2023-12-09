@@ -1,0 +1,72 @@
+---
+import type { Experience } from "../experienceSchema";
+
+type Props = Experience;
+
+const { jobs, snippet, organization, from, to, tags } = Astro.props;
+
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+---
+
+<article class="flex flex-wrap md:flex-nowrap">
+  <!-- Header -->
+  <header class="md:w-64 flex-shrink-0 flex gap-element text-secondary">
+    <time datetime={from.toISOString()}>
+      {months[from.getMonth()]}
+      {from.getFullYear()}
+    </time> -
+    <time datetime={to.toISOString()}>
+      {months[to.getMonth()]}
+      {to.getFullYear()}
+    </time>
+  </header>
+  <!-- End Header -->
+  <!-- Body -->
+  <div class="flex flex-col gap-element md:flex-grow">
+    <!-- Title -->
+    <h3>
+      {jobs[0].designation}, {jobs[0].title} @ {organization}
+      {
+        jobs.length > 1 &&
+          jobs.slice(1).map((job) => (
+            <span class="h4 text-secondary block">
+              + {job.designation}, {job.title}
+            </span>
+          ))
+      }
+    </h3>
+    <!-- End Title -->
+    <!-- Snippet -->
+    <p class="leading-relaxed text-secondary">
+      {snippet}
+    </p>
+    <!-- End Snippet -->
+    <!-- Tags -->
+    {
+      tags.length > 0 && (
+        <ul class="flex gap-element">
+          {tags.map((tag) => (
+            <li class="badge badge-sm bg-amber-200 text-amber-800 opacity-60">
+              #{tag}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    <!-- End Tags -->
+  </div>
+  <!-- End Body -->
+</article>

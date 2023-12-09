@@ -1,0 +1,17 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import ExperienceListStack from "@experience/stacks/ExperienceListStack.astro";
+---
+
+<Layout title="Experiences">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">
+        My <span class="fancy">Experiences</span>
+      </Fragment>
+    </Sectionhead>
+    <ExperienceListStack class:list={["mt-16"]} />
+  </Container>
+</Layout>

@@ -2,6 +2,7 @@
 import { Picture } from "astro:assets";
 import { projectsPage } from "@utils/pages";
 import type { Project } from "../projectSchema";
+import { Arrow } from "@components/ui/icons";
 
 interface Props extends Omit<Project, "slug"> {
   index: number;
@@ -76,17 +77,7 @@ const ctaText = projectsPage.allowCaseStudies
       <!-- CTA -->
       <span class="inline-flex items-center flex-shrink-0 text-pink-500">
         {ctaText}
-        <svg
-          class="w-4 h-4 ml-2"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M5 12h14"></path>
-          <path d="M12 5l7 7-7 7"></path>
-        </svg>
+        <Arrow class="ml-2" />
       </span>
       <!-- End CTA -->
     </div>

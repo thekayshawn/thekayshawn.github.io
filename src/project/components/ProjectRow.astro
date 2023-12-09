@@ -1,6 +1,7 @@
 ---
 import { projectsPage } from "@utils/pages";
 import type { Project } from "../projectSchema";
+import { Arrow } from "@components/ui/icons";
 
 interface Props extends Omit<Project, "slug"> {
   index: number;
@@ -27,17 +28,7 @@ const ctaText = projectsPage.allowCaseStudies
     </div>
     <span class="text-pink-500 items-center mt-4 hidden md:inline-flex">
       {ctaText}
-      <svg
-        class="w-4 h-4 ml-2"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        stroke-width="2"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
-        <path d="M5 12h14"></path>
-        <path d="M12 5l7 7-7 7"></path>
-      </svg>
+      <Arrow />
     </span>
   </div>
   <div>
@@ -63,16 +54,6 @@ const ctaText = projectsPage.allowCaseStudies
   </div>
   <span class="text-pink-500 inline-flex items-center mt-4 md:hidden">
     {ctaText}
-    <svg
-      class="w-4 h-4 ml-2"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      stroke-width="2"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round">
-      <path d="M5 12h14"></path>
-      <path d="M12 5l7 7-7 7"></path>
-    </svg>
+    <Arrow />
   </span>
 </div>

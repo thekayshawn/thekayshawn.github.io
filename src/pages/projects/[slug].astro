@@ -6,6 +6,7 @@ import { type Project, projectCollection } from "@project/index";
 import { getEntries } from "astro:content";
 import { routes } from "@utils/routes";
 import Button from "@components/ui/button.astro";
+import { Arrow } from "@components/ui/icons";
 
 // Generate a new path for every collection project
 export async function getStaticPaths() {
@@ -101,7 +102,7 @@ const blogs = await getEntries(relatedBlogs);
 
     <section class="text-center">
       <Button as="a" href="/projects" style="inverted">
-        ← Back to Projects
+        <Arrow class="rotate-180" /> Back to Projects
       </Button>
     </section>
   </Container>

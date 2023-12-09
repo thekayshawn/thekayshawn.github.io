@@ -4,7 +4,6 @@ import { indexPage } from "@utils/pages";
 import { Arrow } from "@components/ui/icons";
 
 // Components
-import Cta from "@components/cta.astro";
 import Hero from "@components/hero.astro";
 import Layout from "@layouts/Layout.astro";
 import Logos from "@components/logos.astro";
@@ -12,8 +11,9 @@ import Button from "@components/ui/button.astro";
 import Features from "@components/features.astro";
 import Container from "@components/container.astro";
 import ProjectGridStack from "@project/stacks/ProjectGridStack.astro";
+import ExperienceListStack from "@experience/stacks/ExperienceListStack.astro";
 
-const { hero, features, logos, cta, projects } = indexPage;
+const { hero, features, logos, projects, experiences } = indexPage;
 ---
 
 <Layout title="">
@@ -40,8 +40,15 @@ const { hero, features, logos, cta, projects } = indexPage;
         </section>
       )
     }
+    {
+      !experiences.isHidden && (
+        <section id="experiences" class="flex flex-col gap-layout">
+          <h2 set:html={experiences.title} />
+          <ExperienceListStack />
+        </section>
+      )
+    }
     {!features.isHidden && <Features />}
     {!logos.isHidden && <Logos />}
-    {!cta.isHidden && <Cta />}
   </Container>
 </Layout>
