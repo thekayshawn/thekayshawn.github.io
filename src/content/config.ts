@@ -1,5 +1,5 @@
 // 1. Import utilities from `astro:content`
-import { blogSchema } from "@blog/blogSchema";
+import { getBlogSchema } from "@blog/blogSchema";
 import { defineCollection } from "astro:content";
 import { projectSchema } from "@project/projectSchema";
 import { experienceSchema } from "@experience/experienceSchema";
@@ -7,7 +7,7 @@ import { experienceSchema } from "@experience/experienceSchema";
 // 2. Define your collection(s)
 const blog = defineCollection({
   type: "content",
-  schema: blogSchema,
+  schema: getBlogSchema,
 });
 
 const project = defineCollection({
