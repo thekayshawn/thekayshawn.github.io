@@ -3,7 +3,7 @@ title: "🚀 Kashtronauter 2077"
 snippet: "A space ship built with HTML, CSS, and JS that literally jumps to hyperspace! ✨"
 isDraft: false
 image: {
-    src: "/src/assets/project/kashtronauter/cover.png",
+    src: "./images/kashtronauter/cover.png",
     alt: "Screenshots of Kashtronauter 2077",
 }
 category: "Astronomy"

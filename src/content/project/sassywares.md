@@ -3,7 +3,7 @@ title: "🟣 Sassywares"
 snippet: "A suite of SaaS apps that I'm building to showcase my skills and to help people."
 isDraft: false
 image: {
-    src: "/src/assets/sassywares/cover.png",
+    src: "./images/sassywares/cover.png",
     alt: "Screenshots of the Sassywares' website",
 }
 category: "SaaS"

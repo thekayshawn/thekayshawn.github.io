@@ -3,7 +3,7 @@ title: "📰 Today News"
 snippet: "A news app that is accessible to everyone, with a focus on the visually impaired."
 isDraft: false
 image: {
-    src: "/src/assets/project/today/cover.png",
+    src: "./images/today/cover.png",
     alt: "Screenshots of Today news' website",
 }
 category: "Open Source"

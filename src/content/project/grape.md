@@ -3,7 +3,7 @@ title: "🍇 Grape!"
 snippet: "Grape is a collection of recipes for everyone. It's going to be the last fitness app you'll ever need."
 isDraft: false
 image: {
-    src: "/src/assets/project/grape/cover.png",
+    src: "./images/grape/cover.png",
     alt: "Screenshots of the Grape App",
 }
 category: "SaaS"

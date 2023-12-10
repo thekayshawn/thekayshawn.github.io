@@ -3,7 +3,7 @@ title: "🪀 Yoyo, A Boilerplate Chat App"
 snippet: "A boilerplate chat app to be used as a starting point for future projects."
 isDraft: true
 image: {
-    src: "/src/assets/project/yoyo/cover.png",
+    src: "./images/yoyo/cover.png",
     alt: "Screenshots of the Yoyo App",
 }
 category: "SaaS"

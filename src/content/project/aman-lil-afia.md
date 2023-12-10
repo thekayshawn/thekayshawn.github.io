@@ -3,7 +3,7 @@ title: "✌ Aman Lil Afia's Portfolio"
 snippet: "Aman Lil Afia is a clinic in Dubai, UAE. The website showcases their services and their team."
 isDraft: false
 image: {
-    src: "/src/assets/project/aman/cover.png",
+    src: "./images/aman/cover.png",
     alt: "Screenshots of Aman Lil Afia Clinic's Website",
 }
 category: "Portfolio"

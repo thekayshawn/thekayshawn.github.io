@@ -3,7 +3,7 @@ title: "😇 Chearful's Portfolio Draft"
 snippet: "Chearful was a med-tech startup in Dubai, UAE. The website was to showcase their services."
 isDraft: false
 image: {
-    src: "/src/assets/project/chearful/cover.png",
+    src: "./images/chearful/cover.png",
     alt: "Screenshots of Chearful's Website",
 }
 category: "Portfolio"
