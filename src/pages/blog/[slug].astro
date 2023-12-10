@@ -19,11 +19,12 @@ export async function getStaticPaths() {
 interface Props extends Blog {}
 
 // Get the blog directly from the prop on render
-const { tags, title, render, color, category, publishDate } = Astro.props;
+const { tags, title, snippet, image, render, color, category, publishDate } =
+  Astro.props;
 const { Content } = await render();
 ---
 
-<Layout title={title}>
+<Layout {title} description={snippet} image={image.src.src}>
   <Container>
     <div class="mx-auto max-w-3xl mt-14">
       <span class={`badge text-white bg-${color}-500`}>

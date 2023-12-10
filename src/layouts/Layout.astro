@@ -7,16 +7,18 @@ import { strings } from "@utils/strings";
 
 export interface Props {
   title: string;
+  image?: string;
+  description?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
+const { title, description, image } = Astro.props;
+
 const resolvedImageWithDomain = new URL(
-  "/opengraph.png",
+  image || "/opengraph.png",
   Astro.site,
 ).toString();
-
-const { title } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + strings.name
@@ -34,7 +36,7 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description={strings.bio.join(" ")}
+      description={description || strings.bio.join(" ")}
       canonical={canonicalURL}
       twitter={{
         creator: strings.twitterHandle,

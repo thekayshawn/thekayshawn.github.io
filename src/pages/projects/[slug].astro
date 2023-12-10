@@ -19,13 +19,13 @@ export async function getStaticPaths() {
 interface Props extends Project {}
 
 // Get the project directly from the prop on render
-const { tags, title, render, releaseDate, relatedBlogs } = Astro.props;
+const { tags, title, render, snippet, image, releaseDate, relatedBlogs } = Astro.props;
 const { Content } = await render();
 
 const blogs = await getEntries(relatedBlogs || []);
 ---
 
-<Layout title={title}>
+<Layout title={title} description={snippet} image={image.src.src}>
   <Container>
     <section class="section-tight">
       <h1>
