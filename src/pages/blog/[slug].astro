@@ -1,9 +1,12 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import { blogCollection, type Blog } from "@blog/index";
-import Container from "@components/container.astro";
-import Button from "@components/ui/button.astro";
+// Utils
 import { Arrow } from "@components/ui/icons";
+import { blogCollection, type Blog } from "@blog/index";
+
+// Components
+import Layout from "@layouts/Layout.astro";
+import Button from "@components/ui/button.astro";
+import Container from "@components/container.astro";
 
 // Generate a new path for every collection blog
 export async function getStaticPaths() {
