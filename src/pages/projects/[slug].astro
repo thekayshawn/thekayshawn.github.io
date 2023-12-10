@@ -1,16 +1,16 @@
 ---
+import { Arrow } from "@components/ui/icons";
 import { Picture } from "astro:assets";
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import { type Project, projectCollection } from "@project/index";
 import { getEntries } from "astro:content";
 import { routes } from "@utils/routes";
+import { type Project, sortedProjectCollection } from "@project/index";
 import Button from "@components/ui/button.astro";
-import { Arrow } from "@components/ui/icons";
+import Container from "@components/container.astro";
+import Layout from "@layouts/Layout.astro";
 
 // Generate a new path for every collection project
 export async function getStaticPaths() {
-  return projectCollection.map((project) => ({
+  return sortedProjectCollection.map((project) => ({
     params: { slug: project.slug },
     props: project,
   }));
@@ -22,7 +22,7 @@ interface Props extends Project {}
 const { tags, title, render, releaseDate, relatedBlogs } = Astro.props;
 const { Content } = await render();
 
-const blogs = await getEntries(relatedBlogs);
+const blogs = await getEntries(relatedBlogs || []);
 ---
 
 <Layout title={title}>
