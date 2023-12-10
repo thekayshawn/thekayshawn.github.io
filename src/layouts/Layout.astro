@@ -47,11 +47,11 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: strings.name + " - " + strings.title,
+          title: makeTitle,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: strings.ogImgAlt,
+          alt: title || strings.ogImgAlt,
         },
       }}
     />
