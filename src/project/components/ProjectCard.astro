@@ -65,7 +65,7 @@ const ctaText = projectsPage.allowCaseStudies
       {
         tags.length > 0 && (
           <ul class="flex gap-element flex-grow flex-wrap">
-            {tags.map((tag) => (
+            {tags.slice(0, 4).map((tag) => (
               <li class="badge badge-sm bg-pink-200 text-pink-800 opacity-80">
                 #{tag}
               </li>

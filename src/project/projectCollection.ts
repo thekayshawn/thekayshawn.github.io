@@ -61,6 +61,6 @@ export const sortedProjectCollection = projectCollection.sort(
     new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime()
 );
 
-export const featuredProjectCollection = sortedProjectCollection.filter(
-  (project) => project.isFeatured
-);
+export const featuredProjectCollection = sortedProjectCollection
+  .filter((project) => project.isFeatured)
+  .slice(0, 6);

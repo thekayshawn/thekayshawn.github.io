@@ -6,7 +6,7 @@ image: {
     src: "./images/thetutor/cover.png",
     alt: "Screenshots of TheTutor's Dashboard",
 }
-category: "Multi-App Platform"
+category: "SaaS"
 isFeatured: true
 tags: [React, Redux, TypeScript, Bootstrap]
 liveUrl: "https://thetutor.me/"

@@ -36,7 +36,7 @@ export const strings = {
   linkedInIcon: "bx:bxl-linkedin",
   calendlyUsername: "thekayshawn",
   calendlyIcon: "bx:bx-calendar",
-  website: "https://kashanahmad.me.com",
+  website: "https://kashanahmad.me",
   websiteIcon: "bx:bx-world",
   emailAddress: "kashanahmad.me@gmail.com",
   emailAddressIcon: "bx:bx-mail-send",

@@ -17,5 +17,5 @@ export const routes = {
       ? // If case studies are allowed, link to the project page
         `/projects/${project.slug}`
       : // Otherwise, link to the live URL
-        project.liveUrl,
+        `${project.liveUrl}?utm_source=${strings.website}&utm_medium=referral&utm_campaign=portfolio`,
 };
