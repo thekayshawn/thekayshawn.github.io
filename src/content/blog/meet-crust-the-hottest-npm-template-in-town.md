@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Meet Crust 🍞 - The hottest NPM package template in town"
-snippet: "Grape is a collection of recipes (currently) for everyone. It's a place where you can lookup recipes, macros, ingredients, equipment, and instructions."
+snippet: "A simple boilerplate for creating NPM packages. Includes a basic config for TypeScript, ESLint, Prettier, Vitest, and Changesets."
 image: {
     src: "./images/crust-cover.png",
     alt: "The hottest NPM package template in town - Crust"
@@ -85,7 +85,7 @@ Glad you asked. Here's a list of things you can do to help:
 
 That's it. I hope you like Crust. If you do, please spread the word. If you don't, please let me know why. Cheers! 🍻
 
-- [Crust](https://github.com/sassywares/crust#readme)
+- [Crust](https://github.com/sassywares/crust)
 - [GitHub](https://github.com/sassywares/crust)
 - [Sassywares](https://sassywares.com/)
 - [Yours Truly](https://kashanahmad.me/)
