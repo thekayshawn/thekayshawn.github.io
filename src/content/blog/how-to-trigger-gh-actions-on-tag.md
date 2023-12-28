@@ -146,40 +146,39 @@ Most of this, as expected, is boilerplate I copied from the docs, take care abou
 
 When you publish to NPM from a CI/CD pipeline, you'll need to specify a `NODE_AUTH_TOKEN`. This is just basic authentication stuff, see the links below if you wanna go in depth. Here's what you need to do to get it working.
 
-1. Create an NPM package, if you don't know how, use the `npm run release` command from your terminal and it'll manually push the package to NPM, magic of Crust.
-2. Go click your gravatar on the top right corner of the NPM website and click on `Access Tokens`.
+1. Go click your gravatar on the top right corner of the NPM website and click on `Access Tokens`.
 
 ![NPM User Menu](./images/npm/npm-menu.png)
 
-3. You'll see a default token just laying there, forget about it and click on `Create New Token`.
+2. You'll see a default token just laying there, forget about it and click on `Create New Token`.
 
 ![NPM Access Tokens](./images/npm/npm-tokens.png)
 
-4. Choose the `classic token`, granular tokens are for more advanced stuff.
+3. Choose the `classic token`, granular tokens are for more advanced stuff.
 
 ![NPM Classic Token](./images/npm/npm-token-actions.png)
 
-5. Give it a name, you should name it based on where you're gonna use it, don't follow my example, I was just testing it out. Once done, choose the `Automation` option from the 3, this allows you to use your token in CI/CD pipelines, and click `Generate Token`.
+4. Give it a name, you should name it based on where you're gonna use it, don't follow my example, I was just testing it out. Once done, choose the `Automation` option from the 3, this allows you to use your token in CI/CD pipelines, and click `Generate Token`.
 
 ![NPM Token Create](./images/npm/npm-classic-token.png)
 
-6. You'll get redirected to the token listing and your new token will be displayed atop, copy it and don't close your tab just yet, might need to copy again.
+5. You'll get redirected to the token listing and your new token will be displayed atop, copy it and don't close your tab just yet, might need to copy again.
 
 ![NPM Token Copy](./images/npm/npm-token-copy.png)
 
-7. Go to your GitHub repository and click on `Settings` and then `Secrets` and then `Actions` from the left sidebar.
+6. Go to your GitHub repository and click on `Settings` and then `Secrets` and then `Actions` from the left sidebar.
 
 ![GitHub Secrets](./images/gh/gh-repo-secrets.png)
 
-8. We're gonna generate a repository secret, so click on `New repository secret`.
+7. We're gonna generate a repository secret, so click on `New repository secret`.
 
 ![GitHub Secrets](./images/gh/gh-repo-create-secret.png)
 
-9. Name it as you please, `NODE_AUTH_TOKEN` is a good choice, then paste the token you copied from NPM in the `Value` field. Click `Add secret` and you're done.
+8. Name it as you please, `NODE_AUTH_TOKEN` is a good choice, then paste the token you copied from NPM in the `Value` field. Click `Add secret` and you're done.
 
 ![GitHub Secrets](./images/gh/gh-repo-secret-name.png)
 
-10. Now, make sure the name you gave to the secret matches the name you used in the workflow file, in this case, it's `NODE_AUTH_TOKEN`. If you named it something else, change it accordingly.
+9. Now, make sure the name you gave to the secret matches the name you used in the workflow file, in this case, it's `NODE_AUTH_TOKEN`. If you named it something else, change it accordingly.
 
 And that's about it, you're done. Now, whenever you push a tag to your repository, the workflow will trigger and create a release on GitHub and publish the package to NPM.
 
