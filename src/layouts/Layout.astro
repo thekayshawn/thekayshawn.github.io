@@ -30,7 +30,7 @@ const makeTitle = title
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
@@ -57,7 +57,10 @@ const makeTitle = title
     />
 
     <!-- Umami analytics script -->
-    <script async src="https://eu.umami.is/script.js" data-website-id="3f3abeb8-7621-44c8-98db-eed81d460a0f"></script>
+    <script
+      async
+      src="https://eu.umami.is/script.js"
+      data-website-id="3f3abeb8-7621-44c8-98db-eed81d460a0f"></script>
   </head>
   <body class="pt-[var(--navbar-height)]">
     <Navbar />
