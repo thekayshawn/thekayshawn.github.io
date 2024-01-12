@@ -7,7 +7,7 @@ image: {
     alt: "Screenshots of the Grape App",
 }
 category: "SaaS"
-isFeatured: true
+isFeatured: false
 tags: [React, Ionic, TypeScript, Tailwind]
 liveUrl: "https://grape.sassywares.com"
 repoUrl: "https://github.com/thekayshawn/grapes-pwa"

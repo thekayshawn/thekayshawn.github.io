@@ -11,7 +11,7 @@ isFeatured: true
 tags: [Gsap, React, TypeScript, Tailwind]
 liveUrl: "https://tentwenty.pages.dev/"
 repoUrl: "https://github.com/thekayshawn/tentwenty"
-releaseDate: "2022-04-01 01:00"
+releaseDate: "2023-04-01 00:00"
 ---
 
 

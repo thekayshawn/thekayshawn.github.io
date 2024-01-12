@@ -12,4 +12,7 @@ tags: ["TypeScript", "Vitest", "Changesets", "CI/CD", "NPM", "GitHub Actions"]
 liveUrl: "https://github.com/sassywares/crust#readme"
 repoUrl: "https://github.com/sassywares/crust.git"
 releaseDate: "2023-12-16 20:00"
+relatedBlogs:
+- meet-crust-the-hottest-npm-template-in-town
+- ci-cd-how-to-spend-a-weekend-without-netflix
 ---
