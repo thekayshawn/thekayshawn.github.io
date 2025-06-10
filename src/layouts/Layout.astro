@@ -17,7 +17,7 @@ const { title, description, image } = Astro.props;
 
 const resolvedImageWithDomain = new URL(
   image || "/opengraph.png",
-  Astro.site,
+  Astro.site
 ).toString();
 
 const makeTitle = title
@@ -28,6 +28,22 @@ const makeTitle = title
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google Analytics -->
+    <script
+      async
+      is:inline
+      src="https://www.googletagmanager.com/gtag/js?id=G-RYKMBK6QEM"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-RYKMBK6QEM");
+    </script>
+    <!-- End Google Analytics -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
