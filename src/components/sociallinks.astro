@@ -2,7 +2,6 @@
 import { Icon } from "astro-icon";
 import { strings } from "@utils/strings";
 import Link from "@components/ui/link.astro";
-import X from "./ui/icons/x.astro";
 ---
 
 <Link
@@ -28,7 +27,7 @@ import X from "./ui/icons/x.astro";
   style="muted"
   target="_blank"
   rel="noreferrer"
-  href={`https://twitter.com/${strings.twitterHandle}`}>
-  <span class="sr-only"> My Twitter profile</span>
-  <X class="w-6 h-6 p-1" />
+  href={`https://www.upwork.com/freelancers/${strings.upworkHandle}`}>
+  <span class="sr-only"> My Upwork profile</span>
+  <Icon class="w-6 h-6" name={strings.upworkIcon} />
 </Link>

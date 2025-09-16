@@ -21,7 +21,7 @@ const { hero, features, logos, projects, experiences } = indexPage;
     {!hero.isHidden && <Hero />}
     {
       !projects.isHidden && (
-        <section id="projects" class="flex flex-col gap-layout">
+        <section id="projects" class="flex flex-col gap-layout pt-12 md:pt-32">
           <header class="flex items-end justify-between">
             <h2 set:html={projects.title} />
             <Button

@@ -3,13 +3,12 @@ import { Picture } from "astro:assets";
 import heroImage from "assets/hero.png";
 import { Icon } from "astro-icon";
 import { heroStrings } from "@utils/strings";
-import GetInTouch from "./GetInTouch.astro";
+import Link from "./ui/link.astro";
 
-const { cta, image, title, summary, yearsOfExperience } = heroStrings;
+const { image, title, summary } = heroStrings;
 ---
 
-<main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+<main class="grid lg:grid-cols-2 place-items-center pt-16 md:pt-12">
   {
     !image.isHidden && (
       <div class="py-6 md:order-1 hidden md:block">
@@ -20,21 +19,18 @@ const { cta, image, title, summary, yearsOfExperience } = heroStrings;
           src={heroImage}
           class="max-w-sm"
           widths={[200, 400, 600]}
-          alt="Astronaut in the air"
+          alt="Kashan's avatar"
           sizes="(max-width: 800px) 100vw, 620px"
         />
       </div>
     )
   }
   <div>
-    {
-      !yearsOfExperience.isHidden && (
-        <span class="mb-4 sm:mb-6 bg-indigo-600 text-white badge">
-          <Icon class="w-5 h-5" name={yearsOfExperience.icon} />
-          {yearsOfExperience.value}
-        </span>
-      )
-    }
+    <span
+      class="mb-4 sm:mb-6 flex items-center gap-1 underline decoration-green-600 underline-offset-4">
+      <Icon class="size-5 text-green-600" name="bx:bx-bolt-circle" />
+      Looking for work
+    </span>
     {
       !title.isHidden && (
         <h1
@@ -48,6 +44,14 @@ const { cta, image, title, summary, yearsOfExperience } = heroStrings;
         <p class="text-lg mt-4 text-slate-600 max-w-xl">{summary.value}</p>
       )
     }
-    {!cta.isHidden && <GetInTouch />}
+    <div class="flex items-center gap-2 mt-5">
+      <Link href="#projects" class="grow sm:grow-0" style="pink">
+        See my work
+        <Icon name="bx:bx-down-arrow-alt" />
+      </Link>
+      <Link href="/about" class="grow sm:grow-0" style="outline">
+        More about me
+      </Link>
+    </div>
   </div>
 </main>

@@ -1,22 +1,25 @@
 ---
-import { Icon } from "astro-icon";
+import GetInTouch from "./GetInTouch.astro";
 import Button from "./ui/button.astro";
 ---
 
-<!-- To make this contact form work, create your free access key from https://web3forms.com/
-     Then you will get all form submissions in your email inbox. -->
-<form
-  novalidate
-  id="form"
-  class="needs-validation"
-  action="https://submit-form.com/hzfVgx02L">
-  <input type="hidden" name="_redirect" value="https://oikashan.com/thanks" />
+<form id="form" method="POST" action="https://api.web3forms.com/submit">
+  <!-- Replace with your Access Key -->
+  <input
+    type="hidden"
+    name="access_key"
+    value="3f696881-0598-41c1-bb08-f0aa3f1945e6"
+  />
+
+  <!-- Replace with your Thank You Page -->
+  <input type="hidden" name="redirect" value="https://kashanahmad.me/thanks" />
+
   <div class="mb-5">
     <input
       required
       type="text"
       placeholder="Full Name"
-      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-400 text-black rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
       name="name"
     />
     <div
@@ -32,7 +35,7 @@ import Button from "./ui/button.astro";
       name="email"
       id="email_address"
       placeholder="Email Address"
-      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-400 text-black rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     />
     <div role="alert" class="empty-feedback text-red-400 text-sm mt-1">
       Please provide your email address.
@@ -46,7 +49,7 @@ import Button from "./ui/button.astro";
       name="message"
       required
       placeholder="Your Message"
-      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-400 text-black rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     ></textarea>
     <div
       role="alert"
@@ -54,7 +57,8 @@ import Button from "./ui/button.astro";
       Please enter your message.
     </div>
   </div>
-  <Button block size="lg" type="submit" class="relative">Send Message</Button>
+  <GetInTouch />
+  <div id="toast" style="opacity: 0;" class="mt-4">Please wait...</div>
 </form>
 
 <style>
@@ -78,15 +82,40 @@ import Button from "./ui/button.astro";
 </style>
 
 <script is:inline>
-const form = document.getElementById("form");
+  const form = document.getElementById("form");
+  const toast = document.getElementById("toast");
 
-form.addEventListener("submit", function (e) {
-  form.classList.add("was-validated");
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-  if (!form.checkValidity()) {
-    form.querySelectorAll(":invalid")[0].focus();
-    e.preventDefault();
-    return;
-  }
-});
+    const formData = new FormData(form);
+    const entries = Object.fromEntries(formData);
+
+    toast.innerHTML = "Please wait...";
+    toast.style.opacity = "100";
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        body: JSON.stringify(entries),
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+
+      const body = await response.json();
+
+      if (body.status !== 200) {
+        throw new Error("Invalid response received");
+      } else {
+      }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      form.reset();
+      toast.style.opacity = "0";
+      alert("Thank you, I'll get back to you ASAP!");
+    }
+  });
 </script>

@@ -14,24 +14,28 @@ const menuitems: {
   children?: { title: string; path: string }[];
 }[] = [
   {
-    title: strings.experiences,
-    path: routes.experiences,
+    title: "Home",
+    path: "/",
   },
   {
     title: strings.projects,
     path: routes.projects,
   },
-  {
-    title: strings.contact,
-    path: routes.contact,
-  },
   // {
-  //   title: strings.about,
-  //   path: routes.about,
+  //   title: strings.experiences,
+  //   path: routes.experiences,
   // },
   {
     title: strings.blog,
     path: routes.blog,
+  },
+  {
+    title: strings.about,
+    path: routes.about,
+  },
+  {
+    title: strings.contact,
+    path: routes.contact,
   },
 ];
 ---
@@ -39,7 +43,9 @@ const menuitems: {
 <header
   class="h-[var(--navbar-height)] border-b fixed top-0 left-0 w-screen backdrop-blur bg-white/80 z-navbar flex items-center">
   <Container
-    class:list={["flex flex-col lg:flex-row justify-between items-center"]}>
+    class:list={[
+      "flex flex-col lg:grid lg:grid-cols-3 justify-between items-center",
+    ]}>
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg py-2 px-3 before-ornament"
@@ -91,20 +97,15 @@ const menuitems: {
             size="md"
             class="w-fit"
             style="outline"
-            href={routes.resume}
-            download="Kashan Ahmad's Resume">
+            href={routes.resume}>
             {strings.resume}
           </Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
-      <div class="hidden lg:flex items-center gap-1">
-        <Link
-          size="md"
-          style="muted"
-          href={routes.resume}
-          download="Kashan Ahmad's Resume">
+      <div class="hidden lg:flex items-center gap-1 justify-end">
+        <Link size="md" style="muted" href={routes.resume}>
           {strings.resume}
         </Link>
         <SocialLinks />

@@ -21,29 +21,13 @@ const resolvedImageWithDomain = new URL(
 ).toString();
 
 const makeTitle = title
-  ? title + " | " + strings.name
-  : strings.name + " - " + strings.title;
+  ? `${title} | ${strings.name}`
+  : `${strings.name} - ${strings.title}`;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Analytics -->
-    <script
-      async
-      is:inline
-      src="https://www.googletagmanager.com/gtag/js?id=G-RYKMBK6QEM"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-RYKMBK6QEM");
-    </script>
-    <!-- End Google Analytics -->
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -71,14 +55,8 @@ const makeTitle = title
         },
       }}
     />
-
-    <!-- Umami analytics script -->
-    <script
-      async
-      src="https://eu.umami.is/script.js"
-      data-website-id="3f3abeb8-7621-44c8-98db-eed81d460a0f"></script>
   </head>
-  <body class="pt-[var(--navbar-height)]">
+  <body class="pt-[var(--navbar-height)] bg-white">
     <Navbar />
     <slot />
     <Footer />

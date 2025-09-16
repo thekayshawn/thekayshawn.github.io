@@ -1,18 +1,42 @@
-Hello, I'm Kashan, a Frontend Software Engineer based in Pakistan. Since 2018, I've been working on websites for various organizations, including an [ecommerce site](https://how2pass.com/), an [Ed-tech startup](https://thetutor.me/), a [digital agency](https://tentwenty.me/), and as an [educator](https://itcentre.pk/). I've also taken up freelance work on platforms like Fiverr.
+## I'm Kashan
 
-My focus is on creating visually appealing, user-friendly, and fast-loading websites designed to boost conversions. **I'm skilled in HTML, CSS, JS, and TS**, and I specialize in making websites responsive, accessible, and incorporating animations.
+I work across the full stack, specializing in **React** and **Next.js** on the frontend, with **Node.js** and various databases on the backend. I focus on building complex enterprise applications that require scalable architecture. This includes, but isn't limited to:
 
-I'm always eager to learn and apply new skills, and my passion for astronomy influences my creative approach to projects.
+- CMS-based websites
+- Multi-tenant, multilingual dashboards
+- AI-powered platforms, especially chatbots
+- Independent design systems with Storybook
+- Systems handling thousands of concurrent users
 
-**In 2023**, my goal was to master the art of creating animated yet efficient websites and landing a position at a specialized digital agency.
+## How it began
 
-**Looking ahead to 2024**, my aim is to develop valuable Open Source Libraries. I'm seeking a team that values my skills, provides growth opportunities, and aligns with my goals.
+I was born in the summer of 2000 in Pakistan. My dad built a SaaS product soon after my birth, which gave me the inspiration to learn web development once I grew up, and so I did, and soon fell in love with the programming, the engineering, and the UI.
 
-To sum it up:
+I learnt English through video games and movies, I consistently would receive the highest score in English exams at school and the lowest in Chemistry (don't ask why).
 
-- Proficient in HTML, CSS, JS, and TS.
-- Frontend Software Engineer with 5 years of experience.
-- Involved in website development for multinational organizations.
-- Focused on creating animated, user-friendly, and visually appealing websites.
-- 2024 goal: Develop Open Source Libraries and join a supportive team.
-- Passionate about astronomy and the cosmos.
+Time went by, I worked my ass off, and 6 years later I can proudly say that I've worked with people from across the globe, especially from the [US](/work/archer-affiliates), [UK](/work/tentwenty), [UAE](/work/tentwenty), and [France](/work/louise).
+
+## How its going
+
+Just a month ago, I built this [AI-powered website](/work/youxnaseeb) for a dating startup in the UAE, before that I was building [the finest money transfer app](/work/monieworld) in the UK, and the list goes on.
+
+I've worked across **healthcare**, **fintech**, and **edtech** - building complete full-stack solutions from [clinic management portals](/work/louise), to [virtual classroom platforms](/work/thetutor) with WebRTC connecting teachers and students globally.
+
+Each industry taught me something different about handling complex user flows, database architecture, system scalability, and most importantly **how to build a product that resonates with the people**. Each gave me a new perspective and I gave back my best.
+
+Most of these platforms included multiple apps, sometimes distributed between web and mobile, and that created the need for [unified design systems](/work/design-systems) that either work through a monorepo or get published to a repository where the apps can install them from.
+
+This is where my love for engineering hits the peak. Creating a design system, making it reusable, publishing it to a package respository such as **NPM**, making it installable within a monorepo, creating stories for it using **Storybook**, just so good 🔥
+
+## Behind the scenes
+
+I'm a total nerd who enjoys video gaming, working out, spending time with family, and dreaming big dreams while sometimes taking a step or two to make them a reality. I also love watching TV, my favorites include **Breaking Bad**, **Better Call Saul**, **Arcane**, and **Ozark**.
+
+## Got work for me?
+
+I'm currently looking for a role where I can leverage my frontend expertise as well as my full-stack capabilities to lead technical solutions and build products I'm proud of. You can contact me by [email](mailto:k@kashanahmad.me) or hit me up on [LinkedIn](https://www.linkedin.com/in/kayshawn/) and we can get to business.
+
+---
+
+Thanks for reading ❤️<br>
+Last updated: September 16, 2025
