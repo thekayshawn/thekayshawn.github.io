@@ -4,6 +4,7 @@ import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/bricolage-grotesque/index.css";
 import { strings } from "@utils/strings";
+import Posthog from "@components/posthog.astro";
 
 export interface Props {
   title: string;
@@ -55,6 +56,8 @@ const makeTitle = title
         },
       }}
     />
+
+    <Posthog />
   </head>
   <body class="pt-[var(--navbar-height)] bg-white">
     <Navbar />
