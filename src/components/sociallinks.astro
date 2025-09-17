@@ -2,6 +2,12 @@
 import { Icon } from "astro-icon";
 import { strings } from "@utils/strings";
 import Link from "@components/ui/link.astro";
+
+export type Props = {
+  class?: string;
+};
+
+const { class: className } = Astro.props;
 ---
 
 <Link
@@ -9,6 +15,7 @@ import Link from "@components/ui/link.astro";
   style="muted"
   target="_blank"
   rel="noreferrer"
+  class={className}
   href={`https://github.com/${strings.githubUsername}`}>
   <span class="sr-only"> My GitHub profile</span>
   <Icon class="w-6 h-6" name={strings.githubIcon} />
@@ -18,6 +25,7 @@ import Link from "@components/ui/link.astro";
   style="muted"
   target="_blank"
   rel="noreferrer"
+  class={className}
   href={`https://linkedin.com/in/${strings.linkedInUsername}`}>
   <span class="sr-only"> My LinkedIn profile</span>
   <Icon class="w-6 h-6" name={strings.linkedInIcon} />
@@ -27,6 +35,7 @@ import Link from "@components/ui/link.astro";
   style="muted"
   target="_blank"
   rel="noreferrer"
+  class={className}
   href={`https://www.upwork.com/freelancers/${strings.upworkHandle}`}>
   <span class="sr-only"> My Upwork profile</span>
   <Icon class="w-6 h-6" name={strings.upworkIcon} />

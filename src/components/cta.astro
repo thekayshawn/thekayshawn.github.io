@@ -3,6 +3,7 @@ import { footerStrings, strings } from "@utils/strings";
 import GetInTouch from "./GetInTouch.astro";
 import Icon from "astro-icon";
 import Contactform from "./contactform.astro";
+import Sociallinks from "./sociallinks.astro";
 
 const linkProps = {
   target: "_blank",
@@ -39,12 +40,12 @@ const menuLinkProps = getLinkProps(menuLinkClassName);
   }
   <div
     class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16 text-slate-400">
-    <div>
+    <div class="flex flex-col gap-5">
       <p class="leading-relaxed text-left">
         Send me an email or message me on LinkedIn if you're looking for someone
         who builds without BS.
       </p>
-      <div class="mt-5">
+      <div>
         <a {...menuLinkProps} href={`mailto:${strings.emailAddress}`}>
           <Icon class="w-4 h-4" name={strings.emailAddressIcon} />
           <span>
@@ -67,6 +68,9 @@ const menuLinkProps = getLinkProps(menuLinkClassName);
           <Icon class="w-4 h-4" name={strings.addressIcon} />
           <span>{strings.address}</span>
         </div>
+      </div>
+      <div class="flex items-center mt-5">
+        <Sociallinks class="!p-2" />
       </div>
     </div>
     <div>

@@ -2,9 +2,9 @@ export const strings = {
   name: "Kashan Ahmad",
   title: "Senior Frontend Engineer",
   summary:
-    "Frontend Engineer with 6+ years of expertise building AI-powered, multi-tenant dashboards, websites, and design systems.",
+    "Top-Rated Frontend Engineer with 6+ years of expertise building AI-powered, multi-tenant dashboards, websites, and design systems.",
   bio: [
-    "Frontend Engineer specializing in React & Next.js with full-stack capabilities. 6+ years building enterprise dashboards, AI platforms, and design systems for clients across healthcare, fintech, and edtech.",
+    "Top-Rated Frontend Engineer specializing in React & Next.js with full-stack capabilities. 6+ years building enterprise dashboards, AI platforms, and design systems for clients across healthcare, fintech, and edtech.",
   ],
   isOpenToWork: true,
   openToWork: "Open to work",
