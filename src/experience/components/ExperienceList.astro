@@ -4,7 +4,7 @@ const { class: className } = Astro.props;
 
 <ul
   class:list={[
-    "mx-auto divide-y-2 divide-gray-100 experiences-list",
+    "divide-y-2 divide-gray-100 overflow-x-auto max-w-full",
     className,
   ]}>
   <slot />

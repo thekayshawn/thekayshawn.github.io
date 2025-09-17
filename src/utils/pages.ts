@@ -4,13 +4,13 @@ export const indexPage = {
   },
   projects: {
     isHidden: false,
-    title: 'My <span class="fancy">Projects</span>',
-    buttonText: "View All Projects",
-    buttonHref: "/projects",
+    title: '<span class="fancy">Work</span> that I\'ve done',
+    buttonText: "View All",
+    buttonHref: "/work",
   },
   experiences: {
     isHidden: false,
-    title: 'My <span class="fancy">Experiences</span>',
+    title: 'My <span class="fancy">Resume</span>',
   },
   features: {
     isHidden: true,

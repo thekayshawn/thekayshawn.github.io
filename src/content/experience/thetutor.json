@@ -1,14 +1,16 @@
 {
-  "jobs": [
-    {
-      "title": "Frontend",
-      "designation": "Software Engineer"
-    }
-  ],
-  "snippet": "Thrived in a fast-paced startup, adapting to change. Used Agile TDD with Jira for project management and Cypress for module testing. Managed design and development roles to drive the product despite limited resources.",
+  "job": "Frontend Engineer",
   "organization": "TheTutor.me",
+  "location": "Dubai, UAE",
+  "snippets": [
+    "Developed a multi-tenant app in React and Redux that allowed teachers in the UAE to create and sell courses across the world from a clean admin panel.",
+    "Added a marketplace for teachers to sell their courses at and for parents to buy courses from.",
+    "Created a course creator tool that teachers could use to create courses using drag and drop elements.",
+    "Created a meeting tool that allowed teachers to conduct online sessions with their students.",
+    "Built a design system in Bootstrap and Storybook as an NPM package for the tools to share."
+  ],
   "url": "https://thetutor.me",
-  "from": "2022-06-15 00:00",
+  "from": "2022-06-01 00:00",
   "to": "2023-06-01 00:00",
   "tags": ["React", "Redux", "TypeScript", "Sass", "Jest", "Jira"]
 }

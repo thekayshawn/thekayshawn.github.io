@@ -1,0 +1,13 @@
+{
+  "job": "Senior Frontend Engineer",
+  "organization": "Louise",
+  "location": "Paris, FR",
+  "snippets": [
+    "Developed an admin dashboard in React and Next.js that allowed OB/GYN doctors to manage their patients, including insights, billing, and treatments.",
+    "Built an accessible design system in Tailwind and Storybook that reflected the brand’s identity, including components such as MultiSelect and Autocomplete.",
+    "Added multilingual capabilities to the app (i18n), making French speakers feel right at home, which made it easier for doctors from both France and the US to onboard."
+  ],
+  "url": "https://louise.life",
+  "from": "2024-03-01 00:00",
+  "tags": ["Teaching", "HTML", "CSS", "JavaScript", "Jest", "TypeScript"]
+}

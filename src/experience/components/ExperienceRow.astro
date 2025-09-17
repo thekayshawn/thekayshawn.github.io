@@ -3,7 +3,7 @@ import type { Experience } from "../experienceSchema";
 
 type Props = Experience;
 
-const { jobs, snippet, organization, from, to, tags } = Astro.props;
+const { job, organization, from, to, snippets, location } = Astro.props;
 
 const months = [
   "Jan",
@@ -21,41 +21,40 @@ const months = [
 ];
 ---
 
-<article class="flex flex-wrap md:flex-nowrap">
-  <!-- Header -->
-  <header class="md:w-64 flex-shrink-0 flex gap-element text-secondary">
-    <time datetime={from.toISOString()}>
-      {months[from.getMonth()]}
-      {from.getFullYear()}
-    </time> -
-    <time datetime={to.toISOString()}>
-      {months[to.getMonth()]}
-      {to.getFullYear()}
-    </time>
-  </header>
-  <!-- End Header -->
+<article class="prose max-w-full">
   <!-- Body -->
   <div class="flex flex-col gap-element md:flex-grow">
     <!-- Title -->
-    <h3>
-      {jobs[0].designation}, {jobs[0].title} @ {organization}
-      {
-        jobs.length > 1 &&
-          jobs.slice(1).map((job) => (
-            <span class="h4 text-secondary block">
-              + {job.designation}, {job.title}
-            </span>
-          ))
-      }
-    </h3>
+    <div class="flex items-center justify-between gap-4">
+      <div>
+        <h4 class="inline">{job},</h4><p class="inline">
+          {organization} — {location}
+        </p>
+      </div>
+      <div>
+        <time datetime={from.toISOString()}>
+          {months[from.getMonth()]}
+          {from.getFullYear()}
+        </time> - {
+          to ? (
+            <time datetime={to.toISOString()}>
+              {months[to.getMonth()]}
+              {to.getFullYear()}
+            </time>
+          ) : (
+            "Present"
+          )
+        }
+      </div>
+    </div>
     <!-- End Title -->
     <!-- Snippet -->
-    <p class="leading-relaxed text-secondary">
-      {snippet}
-    </p>
+    <ul class="leading-relaxed text-secondary">
+      {snippets.map((snippet) => <li>{snippet}</li>)}
+    </ul>
     <!-- End Snippet -->
     <!-- Tags -->
-    {
+    <!-- {
       tags.length > 0 && (
         <ul class="flex gap-element">
           {tags.map((tag) => (
@@ -65,7 +64,7 @@ const months = [
           ))}
         </ul>
       )
-    }
+    } -->
     <!-- End Tags -->
   </div>
   <!-- End Body -->
