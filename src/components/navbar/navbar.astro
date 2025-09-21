@@ -97,6 +97,8 @@ const menuitems: {
             size="md"
             class="w-fit"
             style="outline"
+            target="_blank"
+            rel="noreferrer"
             href={routes.resume}>
             {strings.resume}
           </Link>
@@ -105,7 +107,12 @@ const menuitems: {
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-1 justify-end">
-        <Link size="md" style="muted" href={routes.resume}>
+        <Link
+          size="md"
+          style="muted"
+          href={routes.resume}
+          target="_blank"
+          rel="noreferrer">
           {strings.resume}
         </Link>
         <SocialLinks />
