@@ -10,7 +10,8 @@ export const routes = {
   projects: "/work",
   experiences: "/resume",
   getBlog: (slug: Blog["slug"]) => `/blog/${slug}`,
-  resume: "/resume",
+  resume:
+    "https://drive.google.com/file/d/13zhTxNKT_shaMutlK8xfymfLm7CyhpsB/view?usp=sharing",
   // contact: `mailto:${strings.emailAddress}?subject=Hey%20Kashan!`,
   contact: "#contact",
   getProjectRoute: (project: Project) =>

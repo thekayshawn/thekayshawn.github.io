@@ -5,6 +5,7 @@ import Sectionhead from "@components/sectionhead.astro";
 import ExperienceListStack from "@experience/stacks/ExperienceListStack.astro";
 import Button from "@components/ui/button.astro";
 import { Arrow } from "@components/ui/icons";
+import { routes } from "@utils/routes";
 ---
 
 <Layout title="Experiences">
@@ -15,13 +16,13 @@ import { Arrow } from "@components/ui/icons";
       </Fragment>
     </Sectionhead>
     <div class="text-end hidden sm:block">
-      <Button as="a" href="/resume.pdf" download="Kashan Ahmad's Resume"
+      <Button as="a" href={routes.resume} target="_blank" rel="noreferrer"
         >Download PDF <Arrow class="rotate-90" /></Button
       >
     </div>
     <ExperienceListStack class:list={["mt-16"]} />
     <div class="text-end sm:hidden">
-      <Button as="a" href="/resume.pdf" download="Kashan Ahmad's Resume"
+      <Button as="a" href={routes.resume} target="_blank" rel="noreferrer"
         >Download PDF <Arrow class="rotate-90" /></Button
       >
     </div>
