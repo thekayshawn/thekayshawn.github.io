@@ -7,12 +7,10 @@ export const routes = {
   index: "/",
   blog: "/blog",
   about: "/about",
+  resume: "https://drive.google.com/file/d/12ElTAmvDYSw_xNy2tRpJ5VjPHCxTAg1F/view?usp=sharing",
   projects: "/work",
   experiences: "/resume",
   getBlog: (slug: Blog["slug"]) => `/blog/${slug}`,
-  resume:
-    "https://drive.google.com/file/d/13zhTxNKT_shaMutlK8xfymfLm7CyhpsB/view?usp=sharing",
-  // contact: `mailto:${strings.emailAddress}?subject=Hey%20Kashan!`,
   contact: "#contact",
   getProjectRoute: (project: Project) =>
     projectsPage.allowCaseStudies
