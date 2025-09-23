@@ -2,7 +2,7 @@
 import { getBlogSchema } from "@blog/blogSchema";
 import { defineCollection } from "astro:content";
 import { getProjectSchema } from "@project/projectSchema";
-import { experienceSchema } from "@experience/experienceSchema";
+import { getExperienceSchema } from "@experience/experienceSchema";
 
 // 2. Define your collection(s)
 const blog = defineCollection({
@@ -16,8 +16,8 @@ const project = defineCollection({
 });
 
 const experience = defineCollection({
-  type: "data",
-  schema: experienceSchema,
+  type: "content",
+  schema: getExperienceSchema,
 });
 
 // 3. Export a single `collections` object to register your collection(s)

@@ -4,10 +4,11 @@ import type { Experience } from "./experienceSchema";
 export const experienceCollection: Experience[] = [];
 
 await getCollection("experience").then((collection) =>
-  collection.forEach(({ data, slug }: any) =>
+  collection.forEach(({ data, slug, render }: any) =>
     experienceCollection.push({
-      slug,
       ...data,
+      slug,
+      render,
     })
   )
 );

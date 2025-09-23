@@ -1,4 +1,4 @@
-import type { BlogContent } from "@utils/types";
+import type { MarkdownContent } from "@utils/types";
 import { z, type SchemaContext } from "astro:content";
 
 // 2. Define your collection(s)
@@ -19,5 +19,5 @@ export const getBlogSchema = ({ image }: SchemaContext) =>
 export type Blog = z.output<ReturnType<typeof getBlogSchema>> & {
   slug: string;
   color: string;
-  render: () => BlogContent;
+  render: () => MarkdownContent;
 };

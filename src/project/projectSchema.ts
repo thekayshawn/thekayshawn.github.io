@@ -1,4 +1,4 @@
-import type { ProjectContent } from "@utils/types";
+import type { MarkdownContent } from "@utils/types";
 import { reference, z, type SchemaContext } from "astro:content";
 
 // 2. Define your collection(s)
@@ -23,5 +23,5 @@ export const getProjectSchema = ({ image }: SchemaContext) =>
 export type Project = z.output<ReturnType<typeof getProjectSchema>> & {
   slug: string;
   color: string;
-  render: () => ProjectContent;
+  render: () => MarkdownContent;
 };

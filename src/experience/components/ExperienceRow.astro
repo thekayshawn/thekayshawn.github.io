@@ -1,46 +1,28 @@
 ---
+import { formatExperienceDate } from "@experience/experienceUtils";
 import type { Experience } from "../experienceSchema";
 
 type Props = Experience;
 
 const { job, organization, from, to, snippets, location } = Astro.props;
-
-const months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sept",
-  "Oct",
-  "Nov",
-  "Dec",
-];
 ---
 
-<article class="prose max-w-full">
+<article class="prose prose-li:marker:text-pink-500 max-w-full">
   <!-- Body -->
   <div class="flex flex-col gap-element md:flex-grow">
     <!-- Title -->
     <div class="flex items-center justify-between gap-4">
       <div>
         <h4 class="inline">{job},</h4><p class="inline">
-          {organization} — {location}
+          {organization}{location && ` — ${location}`}
         </p>
       </div>
       <div>
         <time datetime={from.toISOString()}>
-          {months[from.getMonth()]}
-          {from.getFullYear()}
+          {formatExperienceDate(from)}
         </time> - {
           to ? (
-            <time datetime={to.toISOString()}>
-              {months[to.getMonth()]}
-              {to.getFullYear()}
-            </time>
+            <time datetime={to.toISOString()}>{formatExperienceDate(to)}</time>
           ) : (
             "Present"
           )

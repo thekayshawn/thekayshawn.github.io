@@ -1,4 +1,3 @@
-import type { Blog } from "@blog/blogSchema";
 import type { Project } from "@project/projectSchema";
 import { strings } from "./strings";
 import { projectsPage } from "./pages";
@@ -7,10 +6,12 @@ export const routes = {
   index: "/",
   blog: "/blog",
   about: "/about",
-  resume: "https://drive.google.com/file/d/12ElTAmvDYSw_xNy2tRpJ5VjPHCxTAg1F/view?usp=sharing",
+  resume:
+    "https://drive.google.com/file/d/12ElTAmvDYSw_xNy2tRpJ5VjPHCxTAg1F/view?usp=sharing",
   projects: "/work",
-  experiences: "/resume",
-  getBlog: (slug: Blog["slug"]) => `/blog/${slug}`,
+  experiences: "/experiences",
+  getExperience: (slug: string) => `/experiences/${slug}`,
+  getBlog: (slug: string) => `/blog/${slug}`,
   contact: "#contact",
   getProjectRoute: (project: Project) =>
     projectsPage.allowCaseStudies
