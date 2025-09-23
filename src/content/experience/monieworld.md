@@ -13,39 +13,32 @@ snippets:
   - "Conducted thorough unit testing of the application using Jest and e2e testing using Playwright by setting up a proper test environment, reducing reported bugs by 90%."
 ---
 
-## Building the Future of International Remittances
+## What Was Going On
 
-As the founding engineer at Monieworld, I architected and built a cutting-edge money transfer platform from the ground up, revolutionizing how people send money internationally from the UK. The platform processed over £100K in transactions within its first month, establishing Monieworld as a major player in the fintech space.
+Monieworld hired me directly and I was the **founding engineer** but I wasn't the only engineer, I was soon accompanied by 2 engineers and was assigned a **10+ year expert veteran** as the Enterprise Architect who offloaded the architectural decision making load from me.
 
-## The Challenge
+## How Things Evolved
 
-International money transfers were plagued by high fees, slow processing times, and poor user experiences. Monieworld needed a modern, secure, and user-friendly platform that could compete with established players while offering superior value and convenience.
+I built their **send and add money system**, their **wallet**, **beneficiary**, and **transaction system**, their **design system**, and their **dynamic email templates** through sendgrid. Having an experienced Enterprise Architect meant I could focus on implementation while learning from someone with deep fintech experience.
 
 ## What I Built as the Founding Engineer
 
-### The Foundation
-Built the entire platform from the ground up:
-- Scalable infrastructure because we knew we'd grow fast
-- Security first approach (you can't mess around with people's money)
-- Microservices so we could add features quickly
-- Picked the right tech stack for performance and maintainability
+### Core Financial Systems
 
-### The Core App
-Built the complete money transfer application:
-- React frontend that actually looks good and works
-- Next.js for server-side rendering and performance
-- Tailwind CSS for consistent, fast UI development
-- Real-time updates so people know what's happening with their money
+I built their **send and add money system** that processed more than **£100K** within the launch month. The system included wallet management, beneficiary handling, and transaction processing with real-time updates for users tracking their money transfers.
 
-### Payment Innovation
-Added modern payment options that changed everything:
-- Apple Pay integration for iOS users
-- Google Pay for Android users
-- 55% increase in payment success rates (huge deal in fintech)
-- Multi-currency support for international transfers
+### Payment Integration
+
+I added support for **Apple Pay and Google Pay** to the money transfer system which ended up increasing payment success rate by **55%** due to more convenient transfers. The integration required careful handling of payment flows and security compliance.
+
+### Communication Infrastructure
+
+I developed their **dynamic email templates** through **sendgrid** for transaction confirmations, status updates, and user notifications. The templates were data-driven and personalized based on transaction details and user preferences.
 
 ### Testing That Actually Works
+
 Set up proper testing because bugs in fintech are not an option:
+
 - Jest for unit testing everything
 - Playwright for end-to-end testing of full user journeys
 - 90% reduction in bugs making it to production
@@ -53,13 +46,14 @@ Set up proper testing because bugs in fintech are not an option:
 
 ## The Tech Stack
 
-Frontend: React, Next.js, TypeScript, Tailwind CSS
-Backend: PHP and MySQL for handling all the data
-Cloud: AWS and Azure for redundancy (can't have the money transfer app go down)
-Docker for consistent deployments
-Testing: Jest and Playwright for comprehensive coverage
+- Frontend: React, Next.js, TypeScript, Tailwind CSS
+- Backend: Java and Springboot for handling all the data
+- Cloud: GCP and Jenkins for redundancy (can't have the app go down)
+- Docker for consistent deployments
+- Testing: Jest and Playwright for comprehensive coverage
 
 Security was obviously huge:
+
 - Full compliance with UK financial regulations
 - End-to-end encryption for everything sensitive
 - Proper API security with authentication and authorization
@@ -68,18 +62,21 @@ Security was obviously huge:
 ## The Results
 
 ### Launch Success
+
 - Processed over £100K in the first month (way above targets)
 - Rapid user adoption because the UX was actually good
 - Successfully competed against established players
 - Strong foundation for sustainable growth
 
 ### Performance
+
 - 55% increase in payment success rates with modern payment methods
 - 90% fewer bugs making it to production
 - Sub-second load times globally
 - 99.9% uptime (critical for money transfers)
 
 ### Technical Achievements
+
 - Platform ready for 10x user growth
 - Modern tech stack for competitive advantage
 - Robust testing ensuring reliability
@@ -88,35 +85,32 @@ Security was obviously huge:
 ## What Made It Different
 
 ### Payment Experience
+
 - One-touch payments with Apple Pay and Google Pay (eliminated friction)
 - Real-time updates so people always know what's happening
-- Works seamlessly across all devices
+- Works across all devices and browsers
 - Actually accessible design for everyone
 
 ### Technical Foundation
-- Built the entire technical foundation as the solo founding engineer
-- Made architecture decisions that enabled rapid scaling
-- Established testing and code quality standards
-- Documented everything for when the team would grow
+
+I led the initial development of the app as the **founding engineer**, building the architecture from the ground up which ended up as the basis of everything else. I conducted thorough **unit testing** of the application using **Jest** and **e2e testing** using **Playwright** by setting up a proper test environment, reducing reported bugs by **90%**.
 
 ## Business Impact
 
 ### Market Disruption
+
 - Superior user experience in a crowded market
 - Tech choices that enabled competitive pricing
 - Architecture that could handle exponential growth
 - Got attention from the fintech community
 
 ### Customer Success
+
 - Made international transfers accessible to everyone
 - Lower fees than traditional services
 - Real-time transfers instead of waiting days
 - Built trust through reliability
 
-## What I Learned
+## Learning from Experience
 
-Building a fintech app from scratch taught me how complex and responsible handling people's money really is. Every decision you make affects security, scalability, and whether people trust you with their cash.
-
-Being the founding engineer really drove home how important early technical choices are - they become the foundation for everything else. Also learned how much better the user experience can be with modern payment tech when you implement it right.
-
-Fintech taught me a ton about regulatory compliance, security best practices, and why reliability is absolutely critical when you're dealing with financial software.
+Working with a **10+ year expert veteran** as Enterprise Architect taught me about fintech architectural patterns and security considerations at scale. I learned how to balance rapid development with the rigorous standards required for financial applications. The experience showed me how proper mentorship can accelerate learning while maintaining code quality and system reliability.

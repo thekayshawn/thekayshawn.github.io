@@ -11,100 +11,49 @@ snippets:
   - "Synced with the clients every single day, taught them how to use the CMS, and led multiple websites to success."
 ---
 
-## Working at a Premium Digital Agency
+## What Was Going On
 
-At Tentwenty, this leading digital agency in Dubai, I got to work on high-end websites that looked incredible and actually worked properly. Working directly with premium clients, I built web experiences that weren't just pretty but actually drove business results.
+Tentwenty was also a **direct hire** and I moved cities to be in office with them, the role was brief due to me not being used to the **slow and calculated pacing of agencies**, but I learnt about **client dealership** and worked in **super tight teams** with the designers and also **led entire websites alone**.
 
-## What We Were Dealing With
+## How Things Evolved
 
-Tentwenty's clients wanted digital experiences that would make them stand out. These weren't just regular websites - they were digital showpieces that had to look amazing while also being easy for clients to manage and update their content.
+I developed **content-driven websites** in **React and Next.js**, backed by CMSs such as **Strapi**, combined with functional animations using **GSAP and SCSS**. I synced with the clients every single day, taught them how to use the CMS, and led multiple websites to success.
 
 ## What I Was Building
 
-### Premium Websites
-Created sophisticated, content-driven websites:
-- React and Next.js for modern performance and SEO
-- Strapi CMS integration so clients could manage their own content
-- Responsive design that worked perfectly on everything
-- Performance optimization so they loaded fast despite all the visual content
+### Website Development
 
-### Animations That Actually Add Value
-Brought websites to life with smooth animations:
-- GSAP animations that were smooth and actually enhanced the experience
-- Scroll-triggered effects that guided attention in the right places
-- Micro-interactions that made everything feel premium
-- SCSS for maintainable, scalable styling
+I developed content-driven websites in **React and Next.js**, backed by CMSs such as Strapi, combined with functional animations using **GSAP and SCSS**. Each website was built with performance and visual appeal in mind, requiring careful balance between rich animations and fast loading times.
 
-### Client Relationships
-Built strong relationships through good service:
-- Daily check-ins to make sure everyone was aligned
-- Comprehensive CMS training so clients could manage content themselves
-- Ongoing support after launch
-- Collaborative approach to actually achieving their goals
+### Client Management
+
+I synced with the **clients every single day**, taught them how to use the CMS, and led multiple websites to success. This involved daily communication, training sessions, and ensuring clients could independently manage their content after launch.
+
+### Team Collaboration
+
+I worked in **super tight teams** with the designers and also led entire websites alone when needed. The agency environment required close collaboration with creative teams while maintaining technical leadership on web development projects.
 
 ## The Tech I Used
 
-Frontend: React and Next.js for modern web apps
-Styling: SCSS for maintainable, scalable CSS
-Animation: GSAP for smooth, high-performance animations
-Legacy: jQuery when clients needed it for specific requirements
-Testing: Jest to make sure stuff didn't break
-Accessibility: WCAG compliance because inclusive design matters
-
-Content Management: Strapi CMS because it's flexible and developer-friendly, custom fields tailored for each client, optimized media handling, and multi-language support when needed.
-
-## Cool Projects I Worked On
-
-### Corporate Redesigns
-- Migrated old legacy sites to modern React/Next.js
-- Integrated brand guidelines seamlessly into the web experience
-- 60% improvement in page load speeds
-- Set up content management so clients could update stuff themselves
-
-### Interactive Showcases
-- Portfolio websites with stunning visuals for creative agencies
-- Interactive product launch experiences
-- Engaging conference and exhibition websites
-- Immersive brand storytelling experiences
-
-### Mobile-First Everything
-- Perfect functionality across all devices
-- Touch interactions optimized for mobile
-- Fast loading times even on mobile networks
-- Full accessibility compliance for everyone
-
-## Client Wins
-
-### Agency Portfolio Transformation
-Redesigned a creative agency's portfolio that got them:
-- 40% more client inquiries
-- 60% longer session duration
-- Premium positioning in their market
-- Awards recognition for digital excellence
-
-### Product Launch Campaign
-Built an interactive product showcase that achieved:
-- 250% increase in product page engagement
-- 35% better conversion rates
-- Went viral on social media
-- Industry recognition for innovative design
-
-### Brand Experience Platform
-Created an immersive brand experience that delivered:
-- Better brand perception through premium digital presence
-- 80% reduction in content update time
-- Way better user engagement with interactive storytelling
-- Scalable foundation for future initiatives
+- Frontend: React and Next.js for modern web apps
+- Styling: SCSS for maintainable, scalable CSS
+- Animation: GSAP for smooth, high-performance animations
+- Legacy: jQuery when clients needed it for specific requirements
+- Testing: Jest to make sure stuff didn't break
+- Accessibility: WCAG compliance because inclusive design matters
+- Content Management: Strapi CMS because it's flexible and developer-friendly, custom fields tailored for each client, optimized media handling, and multi-language support when needed.
 
 ## What Made These Projects Special
 
 ### Animation Done Right
+
 - GSAP animations that maintained 60fps performance
 - Animations that actually enhanced the story and guided users
 - Movement and timing that reflected the brand's personality
 - Respected user preferences for reduced motion
 
 ### Smart Content Strategy
+
 - CMS interfaces that non-technical users could actually use
 - Content structures optimized for SEO performance
 - Flexible content types for different storytelling needs
@@ -113,19 +62,19 @@ Created an immersive brand experience that delivered:
 ## How I Worked With Clients
 
 ### Daily Collaboration
+
 - Transparent communication with regular progress updates
 - Proactive problem-solving by anticipating challenges
 - Teaching clients how to get the most from their digital investment
 - Building relationships that lasted beyond project completion
 
 ### Training & Support
+
 - CMS workshops for content teams
 - Clear documentation for ongoing content management
 - Quick response to any post-launch issues
 - Continuous improvement based on usage analytics
 
-## What I Learned
+## Agency Experience
 
-Working at Tentwenty really showed me how important it is to balance technical excellence with business goals. Creating premium digital experiences isn't just about coding - you need to understand brand strategy, user psychology, and what the business is trying to achieve.
-
-The daily client interaction taught me a lot about communication and how to translate technical stuff into business value. This experience showed me how the right mix of modern technology and great service can create lasting client relationships and actually drive business results.
+The role was brief due to me not being used to the **slow and calculated pacing of agencies**, but I learnt about client dealership and project management in agency environments. Working directly with clients daily taught me about communication, expectation management, and translating technical capabilities into business value. The experience showed me the difference between agency work and product development, helping me understand my preference for faster-paced environments.

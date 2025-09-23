@@ -14,116 +14,56 @@ snippets:
   - "Built a design system in Bootstrap and Storybook as an NPM package for the tools to share."
 ---
 
-## Democratizing Education Through Technology
+## What Was Going On
 
-At TheTutor.me, I helped build a comprehensive educational technology platform that connected teachers in the UAE with students worldwide. This multi-tenant application revolutionized how educators create, sell, and deliver online courses, making quality education accessible globally.
+TheTutor was a **multi-app platform** with a **meeting tool**, a **content builder tool**, a **marketing website**, and a **dashboard**. It had everything an edtech platform needs, including an **LMS**, a **course creator**, an **availability/calendar/scheduler**, a **marketplace**, a **classroom system**, you name it they had it.
 
-## The EdTech Challenge
+## How Things Evolved
 
-TheTutor.me needed a complete educational ecosystem that would enable teachers to transition from traditional classroom teaching to global online education. The platform required course creation tools, marketplace functionality, virtual meeting capabilities, and a unified user experience across all components.
+I developed a **multi-tenant app** in **React and Redux** that allowed teachers in the UAE to create and sell courses across the world from a clean admin panel. The platform encompassed multiple interconnected applications that together formed a complete educational ecosystem.
 
 ## What I Built
 
-### Multi-Tenant Platform
-Built the core app architecture for different user types:
-- Teacher dashboard for managing courses
-- Student interface for taking courses
-- Parent portal for oversight and purchasing
-- Global platform supporting international sales and delivery
+### Multi-App Platform Architecture
+
+I developed a multi-tenant app in React and Redux that allowed teachers in the UAE to create and sell courses across the world from a clean admin panel. The platform included separate applications for different user types while maintaining shared state and design consistency.
 
 ### Educational Marketplace
-Developed a complete marketplace:
-- Advanced search and filtering for finding courses
-- Secure payment processing for international transactions
-- Review and rating system for student feedback
-- Automated commission and payout systems for teachers
 
-### Drag-and-Drop Course Creator
-Created an intuitive course building tool:
-- Visual drag-and-drop interface for creating lessons
-- Support for videos, documents, quizzes, and interactive stuff
-- Pre-built course templates for quick development
-- Real-time preview while creating courses
+I added a **marketplace** for teachers to sell their courses at and for parents to buy courses from. The marketplace included course discovery, payment processing, and teacher-student matching functionality with global reach.
 
-### Virtual Meeting Platform
-Built integrated video conferencing:
-- Live teacher-student sessions
-- Session recording for review later
-- Screen sharing for interactive teaching
-- Breakout rooms for small group sessions
+### Course Creation Tools
 
-### Design System & Component Library
-Built a comprehensive design system:
-- Bootstrap foundation for consistent, responsive design
-- Storybook documentation for interactive components
-- NPM package with reusable components across all tools
-- Unified visual identity across the entire platform
+I created a **course creator tool** that teachers could use to create courses using **drag and drop elements**. The tool supported multimedia content, quizzes, and interactive elements with real-time preview capabilities.
+
+### Virtual Meeting System
+
+I created a **meeting tool** that allowed teachers to conduct online sessions with their students. The system included video conferencing, screen sharing, session recording, and classroom management features.
+
+### Design System Implementation
+
+I built a **design system** in **Bootstrap and Storybook** as an **NPM package** for the tools to share. This ensured consistency across all applications while enabling rapid development of new features.
 
 ## The Tech Stack
 
-Frontend: React with Redux for state management
-Language: TypeScript for type safety and maintainability
-Styling: Sass for advanced CSS preprocessing
-Testing: Jest for comprehensive test coverage
-Project Management: Jira for agile workflows
-
-Platform Features: Multi-tenancy with isolated environments, scalable Redux state management, reusable component system, and optimized performance with smart loading strategies.
-
-## Results
-
-### Course Creation Revolution
-- Drag-and-drop builder reduced course creation time by 70%
-- Template system with pre-built structures for common course types
-- Support for multimedia and interactive elements
-- Streamlined course review and publishing workflow
-
-### Global Marketplace Success
-- Enabled UAE teachers to reach students worldwide
-- Secure, multi-currency payment processing
-- Advanced search helping students find relevant courses
-- Review and rating system that built marketplace trust
-
-### Virtual Learning Platform
-- Real-time teaching with session recording
-- Screen sharing and collaborative features
-- Automated attendance tracking and participation metrics
-- High-definition video with reliable connections
-
-### Development Infrastructure
-- Consistent UI/UX design system across the entire platform
-- Reusable component library that reduced development time
-- Comprehensive Jest testing for reliability
-- Storybook documentation with clear component guidelines
-
-## Real Impact
-
-### For Teachers
-- UAE educators could access international student markets
-- New income streams through online course sales
-- Tools that supported modern teaching methods
-- Work-from-anywhere teaching capabilities
-
-### For Students
-- Access to expert teachers regardless of location
-- Engaging, multimedia-rich course content
-- Flexible scheduling with recorded sessions
-- More affordable than traditional tutoring
-
-### For Parents
-- Tools to monitor student progress and engagement
-- Transparent billing with clear pricing
-- Teacher reviews and student feedback for quality assurance
-- Cost-effective alternative to in-person tutoring
+- Frontend: React with Redux for state management
+- Language: TypeScript for type safety and maintainability
+- Styling: Sass for advanced CSS preprocessing
+- Testing: Jest for comprehensive test coverage
+- Project Management: Jira for agile workflows
+- Platform Features: Multi-tenancy with isolated environments, scalable Redux state management, reusable component system, and optimized performance with smart loading strategies.
 
 ## What Made It Special
 
 ### Course Creation Innovation
+
 - Intuitive drag-and-drop interface for non-technical educators
 - Pre-built content templates that accelerated course development
 - Built-in quiz builders and engagement tools
 - Real-time course preview during creation
 
 ### Marketplace Excellence
+
 - Smart course recommendations based on student interests
 - Review systems and teacher verification for trust
 - Multi-currency support for global payments
@@ -132,21 +72,19 @@ Platform Features: Multi-tenancy with isolated environments, scalable Redux stat
 ## Technical Decisions
 
 ### Architecture
+
 - Redux for scalable state management in a complex app
 - TypeScript for better code quality and maintainability
 - Component-based architecture with reusable design system
 - Comprehensive Jest testing for platform reliability
 
 ### Development Practices
+
 - High code quality standards with TypeScript and testing
 - Storybook documentation for clear component guidelines
 - NPM package distribution for design system components
 - Jira integration for efficient agile workflows
 
-## What I Learned
+## Platform Complexity
 
-Building TheTutor.me taught me how complex it is to create educational technology that serves multiple user types with completely different needs. Really highlighted how important intuitive design is when you're making powerful tools accessible to non-technical users.
-
-The course creator tool showed me how valuable visual, drag-and-drop interfaces are for democratizing content creation. The marketplace component was cool because it showed how technology can create new economic opportunities by connecting global communities.
-
-This project really deepened my understanding of multi-tenant architecture and the challenges of building scalable platforms that serve diverse users while maintaining performance and security.
+Building a multi-app platform with an LMS, course creator, availability/calendar/scheduler, marketplace, and classroom system taught me about **multi-tenant architecture** and **state management** at scale. Working with **React and Redux** across multiple interconnected applications required careful planning of shared state and component reusability. The project demonstrated how educational technology can enable global reach for local educators while maintaining platform performance and user experience quality.
