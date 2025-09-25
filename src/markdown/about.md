@@ -1,5 +1,7 @@
 ## I'm Kashan
 
+<img src="/src/assets/avatar.png" alt="" width="144" height="144">
+
 I work across the full stack, specializing in **React** and **Next.js** on the frontend, with **Node.js** and various databases on the backend. I focus on building complex enterprise applications that require scalable architecture. This includes, but isn't limited to:
 
 - CMS-based websites

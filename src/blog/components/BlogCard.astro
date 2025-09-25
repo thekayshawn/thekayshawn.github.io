@@ -6,26 +6,29 @@ interface Props extends Omit<Blog, "slug"> {
   index: number;
 }
 
-const { index, image, title, color, category, publishDate } = Astro.props;
+const { tags, index, image, title, color, category, publishDate } = Astro.props;
 ---
 
 <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-  <Picture
-    width={800}
-    height={400}
-    format="webp"
-    src={image.src}
-    alt={image.alt}
-    sizes="(max-width: 800px) 100vw, 800px"
-    loading={index <= 2 ? "eager" : "lazy"}
-    decoding={index <= 2 ? "sync" : "async"}
-    class="w-full rounded-md object-cover object-center bg-white shadow-box aspect-video"
-  />
-  <div>
-    <span class={`badge mb-4 sm:mb-6 rounded bg-${color}-500 text-white`}>
+  <div class="relative">
+    <Picture
+      width={800}
+      height={400}
+      format="webp"
+      src={image.src}
+      alt={image.alt}
+      sizes="(max-width: 800px) 100vw, 800px"
+      loading={index <= 2 ? "eager" : "lazy"}
+      decoding={index <= 2 ? "sync" : "async"}
+      class="w-full rounded-md object-cover object-center bg-white shadow-box aspect-video"
+    />
+
+    <span
+      class={`badge mb-4 sm:mb-6 rounded bg-${color}-500 text-white absolute top-2 right-2`}>
       {category}
     </span>
-
+  </div>
+  <div>
     <h3 class="pr-3">
       {title}
     </h3>
@@ -34,6 +37,14 @@ const { index, image, title, color, category, publishDate } = Astro.props;
       <time class="text-secondary" datetime={publishDate.toISOString()}>
         {publishDate.toDateString()}
       </time>
+    </div>
+
+    <div class="w-full md:w-auto flex flex-wrap gap-3 mt-4">
+      {
+        tags.map((tag) => (
+          <span class="badge badge-sm bg-pink-200 text-pink-800">#{tag}</span>
+        ))
+      }
     </div>
   </div>
 </div>

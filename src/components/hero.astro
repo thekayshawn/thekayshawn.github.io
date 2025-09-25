@@ -1,6 +1,6 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "assets/hero.png";
+import heroImage from "assets/avatar.png";
 import { Icon } from "astro-icon";
 import { heroStrings } from "@utils/strings";
 import Link from "./ui/link.astro";
@@ -11,13 +11,13 @@ const { image, title, summary } = heroStrings;
 <main class="grid lg:grid-cols-2 place-items-center pt-16 md:pt-12">
   {
     !image.isHidden && (
-      <div class="py-6 md:order-1 hidden md:block">
+      <div class="py-6 md:order-1 hidden md:block text-right">
         <Picture
           format="webp"
           quality="max"
           loading="eager"
           src={heroImage}
-          class="max-w-sm"
+          class="max-w-xs -scale-x-100 rounded-lg"
           widths={[200, 400, 600]}
           alt="Kashan's avatar"
           sizes="(max-width: 800px) 100vw, 620px"

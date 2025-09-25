@@ -9,7 +9,7 @@ export const indexPage = {
     buttonHref: "/work",
   },
   experiences: {
-    isHidden: false,
+    isHidden: true,
     title: 'My <span class="fancy">Resume</span>',
   },
   features: {
