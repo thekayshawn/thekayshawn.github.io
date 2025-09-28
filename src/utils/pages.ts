@@ -4,7 +4,7 @@ export const indexPage = {
   },
   projects: {
     isHidden: false,
-    title: '<span class="fancy">Work</span> that I\'ve done',
+    title: '<span class="fancy">Work</span> I\'ve done',
     buttonText: "View All",
     buttonHref: "/work",
   },
@@ -21,5 +21,5 @@ export const indexPage = {
 };
 
 export const projectsPage = {
-  allowCaseStudies: false,
+  allowCaseStudies: true,
 };

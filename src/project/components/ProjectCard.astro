@@ -11,9 +11,7 @@ interface Props extends Omit<Project, "slug"> {
 const { tags, image, title, snippet, color, category, releaseDate } =
   Astro.props;
 
-const ctaText = projectsPage.allowCaseStudies
-  ? "Read Case Study"
-  : "View Project";
+const hasTags = tags.length > 0;
 ---
 
 <article class="flex flex-col h-full">
@@ -27,45 +25,42 @@ const ctaText = projectsPage.allowCaseStudies
     src={image.src}
     alt={image.alt}
     sizes="(max-width: 800px) 100vw, 800px"
-    class="w-full object-cover object-center aspect-video rounded-content border-b-2 bg-white group-hover:border-pink-500 group-focus-within:border-pink-500 transition-colors"
+    class="w-full object-cover object-center aspect-video border-b-2 bg-white rounded-t-lg"
   />
   <!-- Body -->
-  <div class="h-full flex flex-col gap-content p-content justify-between">
+  <div class="h-full flex flex-col gap-4 p-4 justify-between">
     <!-- Body Content -->
-    <div class="flex flex-col gap-content">
-      <!-- Header -->
-      <div class="flex items-center gap-element">
-        <span class={`badge badge-sm text-white bg-${color}-500`}>
-          {category}
-        </span>
-        <time class="text-secondary" datetime={releaseDate.toISOString()}>
-          {releaseDate.getFullYear()}
-        </time>
-      </div>
-      <!-- End Header -->
+    <div class="flex flex-col gap-4">
       <!-- Meta -->
-      <div class="flex flex-col gap-element">
+      <div class="flex gap-4 items-center justify-between">
         <!-- Title -->
-        <h3>
-          {title}
-        </h3>
+        <h3>{title}</h3>
         <!-- End Title -->
-        <!-- Snippet -->
-        <p class="leading-relaxed text-secondary">
-          {snippet}
-        </p>
-        <!-- End Snippet -->
+        <!-- Header -->
+        <div class="flex items-center gap-2">
+          <time class="text-secondary" datetime={releaseDate.toISOString()}>
+            {releaseDate.getFullYear()}
+          </time>
+          <span class={`badge badge-sm text-white bg-${color}-500`}>
+            {category}
+          </span>
+        </div>
+        <!-- End Header -->
       </div>
+      <p class="leading-relaxed text-secondary">
+        {snippet}
+      </p>
       <!-- End Meta -->
     </div>
     <!-- End Body Content -->
     <!-- Footer -->
-    <div class="flex items-end gap-element">
+    <div
+      class={`flex justify-between gap-element ${!hasTags ? "self-end" : ""}`}>
       <!-- Tags -->
       {
-        tags.length > 0 && (
+        hasTags && (
           <ul class="flex gap-element flex-grow flex-wrap">
-            {tags.slice(0, 4).map((tag) => (
+            {tags.map((tag) => (
               <li class="badge badge-sm bg-pink-200 text-pink-800 opacity-80">
                 #{tag}
               </li>
@@ -76,7 +71,6 @@ const ctaText = projectsPage.allowCaseStudies
       <!-- End Tags -->
       <!-- CTA -->
       <span class="inline-flex items-center flex-shrink-0 text-pink-500">
-        {ctaText}
         <Arrow class="ml-2" />
       </span>
       <!-- End CTA -->
