@@ -1,5 +1,5 @@
 ---
-title: "🚀 Side Projects"
+title: "Side Projects"
 snippet: "A collection of side projects I've built over the years, showcasing different technologies and creative solutions."
 isDraft: false
 image:
@@ -15,33 +15,37 @@ repoUrl: ""
 releaseDate: "2018-10-01 00:00"
 ---
 
+These are either open source libraries or mock websites or ongoing projects that aren't big enough (yet) to be listed independently, I figured it'd make more sense to list all of these together as a single case study.
+
+_💣 Bombs away!_
+
 ## 🌟 Tentwenty's Portfolio Clone
 
-A pixel-perfect clone of tentwenty's masterpiece with enhanced performance and smooth animations. Built with React, GSAP, and Tailwind CSS to showcase advanced frontend skills.
+This is essentially tentwenty's website (link) with some improvements of my own. I made this as a pitch to tentwenty cuz I wanted them to hire me, and it worked!
+
+Tentwenty's lead engineer, Niel Ong, asked me in the interview
+
+> How did you manage to not only improve the website, but also make it feel good
+
+his exact words, still remember him saying it because it felt so damn good. The original site is [here](https://tentwenty.me) and you can fine my improved version [here](https://tentwenty.pages.dev).
 
 ![Tentwenty Portfolio Clone](./images/side-projects/tentwenty.png)
 
-## 📗 TheTutor.me
-
-TheTutor.me is an EdTech platform that connects students with tutors. The platform comprises of 4 web apps and a website, built with React, Redux, and TypeScript.
-
-![TheTutor Platform](./images/side-projects/the-tutor.png)
-
 ## 🍞 Crust
 
-A simple boilerplate for creating NPM packages. Includes a basic config for TypeScript, ESLint, Prettier, Vitest, and Changesets - everything you need to get started quickly.
+A simple boilerplate for creating NPM packages. Includes TypeScript, ESLint, Prettier, Vitest, and Changesets, all you need to ship something to NPM. You can find Crust [here](https://crust.sassywares.com).
 
 ![Crust NPM Template](./images/side-projects/crust.png)
 
-## Trunk
+## 🪾 Trunk
 
-The sassiest JavaScript utilities in town + Add your own! A suite of tested functions I use regularly in my JavaScript applications, available as an open-source NPM package.
+The sassiest JavaScript utilities in town (that you can contribute to)! A suite of tested functions I use regularly in my apps, available as an NPM package [here](https://crust.sassywares.com).
 
 ![Trunk JavaScript Utilities](./images/side-projects/trunk.png)
 
 ## 🚀 Kashtronauter 2077
 
-A space ship built with HTML, CSS, and JS that literally jumps to hyperspace! A fun interactive experience showcasing creative frontend development.
+A literal space ship built with HTML, CSS, and JS that jumps to hyperspace! Someday I will actually finish it, but even in the current iteration it's so slick. You can find it [here].
 
 ![Kashtronauter Space Game](./images/side-projects/kashtronauter.png)
 

@@ -15,6 +15,8 @@ tags: [Job interviews, JavaScript, Cheatsheets]
 
 I [absolutely botched an interview](./how-to-keep-going-after-a-botched-interview) by answering just 2 out of 10 questions correctly, and my comeback tactic was to ask Claude to find me about 30 more such questions so that I could answer all 40 as a way of both learning from my mistakes as well as hoping not to fail another interview due to lack of technical depth.
 
+You can find the original list Claude generated (without answers) [here](https://claude.ai/public/artifacts/eb7085eb-c806-42ab-8be3-a25ca2c68e97). Referencing it here since I won't be answering every single thing down in this post, especially the things I find super basic or commonly known.
+
 Without further ado (I hope that's the right word), fire away!
 
 ## 1. What does `bind` do?
@@ -211,6 +213,10 @@ function executePromises(promises) {
 ```
 
 That works (I wish I'd written it this nicely in [that interview I botched](./how-to-keep-going-after-a-botched-interview)), checks all the boxes and looks clean.
+
+## 6. Build a function that mimics `Promise.allSettled` without using `Promise.allSettled`
+
+Okay, from [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled), `Promise.allSettled` does the following:
 
 ## Conclusion
 

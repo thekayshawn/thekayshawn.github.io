@@ -58,6 +58,44 @@ const makeTitle = title
     />
 
     <Posthog />
+
+    <script is:inline define:vars={{ siteUrl: import.meta.env.SITE }}>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll('a[href^="http"]');
+        const currentDomain = window.location.hostname;
+
+        if (!links || links.length === 0) {
+          return;
+        }
+
+        // Extract just the domain name from the full site URL
+        let siteName = "";
+        try {
+          const siteUrlObj = new URL(siteUrl);
+          siteName = siteUrlObj.hostname.replace(/^www\./, "");
+        } catch (e) {
+          // Fallback if URL parsing fails
+          siteName = siteUrl;
+        }
+
+        links.forEach((link) => {
+          try {
+            const url = new URL(link.href);
+
+            if (url.hostname !== currentDomain && siteName) {
+              url.searchParams.set("ref", siteName);
+              link.href = url.toString();
+
+              // Open outbound links in new tabs
+              link.rel = "noopener noreferrer";
+              link.target = "_blank";
+            }
+          } catch (e) {
+            // Invalid URL, skip
+          }
+        });
+      });
+    </script>
   </head>
   <body class="pt-[var(--navbar-height)] bg-white">
     <Navbar />

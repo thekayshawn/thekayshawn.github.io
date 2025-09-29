@@ -11,15 +11,17 @@ import Layout from "@layouts/Layout.astro";
 // Generate a new path for every collection project
 export async function getStaticPaths() {
   return sortedProjectCollection.map((project) => ({
-    params: { slug: project.slug },
     props: project,
+    params: { slug: project.slug },
   }));
 }
 
 interface Props extends Project {}
 
 // Get the project directly from the prop on render
-const { tags, title, render, snippet, image, releaseDate, relatedBlogs } = Astro.props;
+const { tags, title, render, snippet, image, releaseDate, relatedBlogs } =
+  Astro.props;
+
 const { Content } = await render();
 
 const blogs = await getEntries(relatedBlogs || []);
@@ -101,8 +103,8 @@ const blogs = await getEntries(relatedBlogs || []);
     }
 
     <section class="text-center">
-      <Button as="a" href="/projects" style="inverted">
-        <Arrow class="rotate-180" /> Back to Projects
+      <Button as="a" href="/work" style="inverted">
+        <Arrow class="rotate-180" /> Back to Work
       </Button>
     </section>
   </Container>

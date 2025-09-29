@@ -25,19 +25,19 @@ const { hero, features, logos, projects, experiences } = indexPage;
         <section id="projects" class="flex flex-col gap-layout pt-12 md:pt-32">
           <header class="flex items-end justify-between">
             <h2 set:html={projects.title} />
-            <Button
+            {/* <Button
               as="a"
               href={projects.buttonHref}
               class="hidden md:inline-flex">
               {projects.buttonText} <Arrow />
-            </Button>
+            </Button> */}
           </header>
           <ProjectGridStack />
-          <footer class="md:hidden text-right">
+          {/* <footer class="md:hidden text-right">
             <Button as="a" href={projects.buttonHref}>
               {projects.buttonText} <Arrow />
             </Button>
-          </footer>
+          </footer> */}
         </section>
       )
     }

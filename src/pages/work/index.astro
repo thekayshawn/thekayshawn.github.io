@@ -2,21 +2,20 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-import ProjectListStack from "@project/stacks/ProjectListStack.astro";
+import ProjectGridStack from "@project/stacks/ProjectGridStack.astro";
 ---
 
 <Layout title="Project">
   <Container>
     <Sectionhead>
-      <Fragment slot="title"
-        ><span class="fancy">Work</span> that I've done</Fragment
+      <Fragment slot="title"><span class="fancy">Work</span> I've done</Fragment
       >
       <Fragment slot="desc">
         Products, collaborations, and projects I'm proud of
       </Fragment>
     </Sectionhead>
     <main class="mt-16 flex flex-col gap-20">
-      <ProjectListStack />
+      <ProjectGridStack />
     </main>
   </Container>
 </Layout>

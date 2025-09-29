@@ -14,7 +14,7 @@ snippets:
 
 ## What Was Going On
 
-Archer Affiliates' CEO David hired me through [Upwork](https://www.upwork.com/freelancers/thekayshawn?ref=https://kashanahmad.me) as a **frontend engineer**. There were 3 engineers in the team, all 3 were full stack, but they needed someone who was a **master of the frontend** and could modernize their dashboard/portal.
+Archer Affiliates' CEO David hired me through [Upwork](https://www.upwork.com/freelancers/thekayshawn) as a **frontend engineer**. There were 3 engineers in the team, all 3 were full stack, but they needed someone who was a **master of the frontend** and could modernize their dashboard/portal.
 
 ## How Things Evolved
 
@@ -34,7 +34,7 @@ I introduced a ticketing service and integrated it to all contact forms, contact
 
 ### Chrome Extension
 
-I also then built a [chrome extension](https://chromewebstore.google.com/detail/archer-affiliates/oiimdgknebeljpehkmkjalllljkmeddb?ref=https://kashanahmad.me) for Archer, which used the same shared MUI-based design system from the NPM package and the Intercom package. This extension maintained design consistency across all Archer products and integrated seamlessly with their existing workflow. The extension provided users with quick access to key platform features directly from their browser. I ensured it followed the same Material UI theme and component patterns established in the main application.
+I also then built a [chrome extension](https://chromewebstore.google.com/detail/archer-affiliates/oiimdgknebeljpehkmkjalllljkmeddb) for Archer, which used the same shared MUI-based design system from the NPM package and the Intercom package. This extension maintained design consistency across all Archer products and integrated seamlessly with their existing workflow. The extension provided users with quick access to key platform features directly from their browser. I ensured it followed the same Material UI theme and component patterns established in the main application.
 
 ### Content Management System
 
