@@ -48,8 +48,11 @@ const blogs = await getEntries(relatedBlogs || []);
           (liveUrl || repoUrl) && (
             <div class="flex items-center gap-2 shrink-0">
               {liveUrl && (
-                <Link size="md" href={liveUrl} title="Open">
+                <Link size="md" href={liveUrl} title="Open" style="pink">
                   <Icon class="-rotate-45" name="bx:bx-right-arrow-alt" />
+                  {!repoUrl && (
+                    <span class="hidden sm:inline">Open live site</span>
+                  )}
                 </Link>
               )}
               {repoUrl && (
