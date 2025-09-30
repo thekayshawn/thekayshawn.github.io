@@ -172,7 +172,7 @@ Even though `getUser` has a timeout that waits for a whole second as opposed to 
 
 One catch about `Promise.all` is that you don't get any results at all if even one of the promises fail. Which is why it's encouraged to use `Promise.all` when you need all promises to succeed. Like if you have a component that uses both the user and the product, you can ensure that both are available using `Promise.all` before handing them over.
 
-## 5. Build a function that mimics `Promise.all` without using `Promise.all`
+## 5. Build a function that mimics `Promise.all` without using `Promise.all`.
 
 Okay, let's first identify what `Promise.all` does:
 
@@ -197,7 +197,7 @@ function executePromises(promises) {
     const results = new Array(promises.length); // Create an array equally sized as the promises
 
     promises.forEach((promise, index) => {
-      promise
+      Promise.resolve(promise) // Handle non-promises
         .then((result) => {
           results[index] = result;
           resultsCount++;
@@ -214,12 +214,195 @@ function executePromises(promises) {
 
 That works (I wish I'd written it this nicely in [that interview I botched](./how-to-keep-going-after-a-botched-interview)), checks all the boxes and looks clean.
 
-## 6. Build a function that mimics `Promise.allSettled` without using `Promise.allSettled`
+## 6. Build a function that mimics `Promise.allSettled` without using `Promise.allSettled`.
 
 Okay, from [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled), `Promise.allSettled` does the following:
 
+1. Takes an array of promises.
+2. Runs promises in parallel, not in sequence.
+3. Returns an array with an object for each promise in order, each object having 3 values:
+   1. `status`: A string, either _"fulfilled"_ or _"rejected"_, indicating the state of the promise.
+   2. `value`: Only present if status is _"fulfilled"_. The result of the promise.
+   3. `reason`: Only present if status is _"rejected"_. The reason why the promise was rejected.
+4. DOES NOT throw if any or even all the promises fail.
+
+This means we can modify the code we have above a tiny bit and we'll have a working `allSettled` example at our hands, let's do it:
+
+```js
+const getUser = new Promise((resolve) => setTimeout(() => resolve({}), 1000));
+const getProduct = new Promise((_, reject) =>
+  setTimeout(() => reject({}), 100)
+);
+
+const [userResult, productResult] = await executePromises([
+  getUser,
+  getProduct,
+]);
+
+const user = userResult.status === "fulfilled" ? userResult.value : null;
+const product =
+  productResult.status === "fulfilled" ? productResult.value : null;
+
+function executePromises(promises) {
+  if (!promises || promises.length === 0) {
+    return Promise.resolve([]);
+  }
+
+  return new Promise((resolve) => {
+    let resultsCount = 0;
+    const results = new Array(promises.length);
+
+    promises.forEach((promise, index) => {
+      Promise.resolve(promise) // Handle non-promises
+        .then((result) => {
+          results[index] = { status: "fulfilled", value: result };
+          resultsCount++;
+          if (resultsCount === promises.length) resolve(results);
+        })
+        .catch((reason) => {
+          results[index] = { status: "rejected", reason };
+          resultsCount++;
+          if (resultsCount === promises.length) resolve(results);
+        });
+    });
+  });
+}
+```
+
+That, is well done. Notice that the only prominent differences are 2:
+
+1. We don't reject the wrapper promise if any promise in the array fails, instead we add it to the list as rejected.
+2. We have to check if the promise is fulfilled before accessing its value.
+
+Essentially, `Promise.allSettled` is for when you want to execute multiple promises but your components don't depend on all of them, meaning partial success. Consider this React server component as an example:
+
+```jsx
+function App() {
+  const [userResult, productResult] = await executePromises([
+    getUser,
+    getProduct,
+  ]);
+
+  const user = userResult.status === "fulfilled" ? userResult.value : null;
+  const product = productResult.status === "fulfilled" ? productResult.value : null;
+
+  return (
+    <>
+      {user && <User user={user} />}
+      {product && <Product product={product} />}
+    </>
+  )
+}
+```
+
+Based on these, try to recreate [Promise.any](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any) and [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race) by yourself, will be fun.
+
+## 7. What is the event loop, and what are microtasks?
+
+Did a little piece on the event loop [here](./javascript-event-loop-for-dummies), you can check it out.
+
+## 8. Create a function that finds the maximum product of 3 numbers from a given array.
+
+Given that:
+
+```js
+const testCases = [
+  { input: [1, 5, 8, 11, 9], expected: 792 },
+  { input: [-10, -11, -1, 0, 5], expected: 550 },
+  { input: [-8, 0, 9, 10, 11], expected: 990 },
+  { input: [-5, -4, -3, -2, -1], expected: -6 },
+];
+```
+
+We need to create a function that takes an input and finds out what the maximum product can be from any 3 numbers in the array. If you look at the first array, `8 * 11 * 9 = 792`, so the expected answer is 792. Look at the second array, `-10 * -11 * 5 - 550`, but notice that the largest numbers in the array were `1, 0 and, 5`, not `-10, -11, and 5`.
+
+What that results in is an expectation that the largest number in such an array can either be:
+
+1. The product of the largest positive numbers
+2. The product of the largest negative numbers with the largest positive number (-10 \* -11 cancels out the negative)
+
+Keeping that in mind, this is what we can do:
+
+```js
+function findMaxProduct(array) {
+  if (array.length < 3) return null; // Since we know that we need minimum 3 from the question statement.
+
+  const sorted = array.toSorted((a, b) => a - b);
+  // Would result in [-11, -10, -1, 0, 5] for the second input
+
+  const n = sorted.length;
+
+  // Based on the criteria above, there can be 2 largest numbers in the array:
+  const option1 = sorted[n - 1] * sorted[n - 2] * sorted[n - 3]; // The largest positive numbers at the end of the array
+  const option2 = sorted[0] * sorted[1] * sorted[n - 1]; // The largest 2 negative numbers * the largest positive number
+
+  // JavaScript is convenient
+  return Math.max(option1, option2);
+}
+```
+
+## 9. What is the difference between event delegation, bubbling, and capturing?
+
+Pretty simple, actually.
+
+- **Event delegation** is a practice that is used to handle events on child elements through listeners on parents.
+
+  ```js
+  // Instead of this (inefficient):
+  document.querySelectorAll("li").forEach((li) => {
+    li.addEventListener("click", handleClick);
+  });
+
+  // Do this (delegation):
+  document.querySelector("ul").addEventListener("click", (event) => {
+    if (event.target.matches("li")) handleClick(event);
+  });
+  ```
+
+- **Event bubbling** is the default behavior of events. Events bubble up/propagate to the root element from the target element.
+
+  When you click a button, the event starts from the button all the way to the root, triggering all click event handlers on the way.
+
+  Something like `<button> → <body> → <html> → Document → Window`
+
+  You might have encountered a scenario where a parent clickable element has a clickable child but when you click the child, the parent's click handler also triggers. To prevent this, you can call the `stopPropagation` helper on the event and that will cancel the bubbling effect.
+
+  ```jsx
+  function handleDelete(event) {
+    event.stopPropagation(); // Stop the propagation of this event, preventing the button's click event from being fired
+    deleteSomething();
+  }
+
+  return (
+    <button onClick={handleClick}>
+      <SomeComponent />
+      <span onClick={handleDelete}>Delete</span>
+    </button>
+  );
+  ```
+
+- **Event capturing** is the opposite of bubbling. Events can be configured to flow downwards, such as `Window → Document → <html> → <body> → <button>`
+
+  Capturing is particularly useful when you want to run something before the target element's event gets fired.
+
+  ```js
+  // Stop all clicks on disabled elements before they reach any handlers
+  document.addEventListener(
+    "click",
+    (event) => {
+      if (event.target.closest("[disabled]")) {
+        event.stopPropagation();
+        event.preventDefault();
+      }
+    },
+    true // capturing phase
+  );
+  ```
+
+And there you have it, tbf I keep forgetting what delegation is and I have to constantly remind myself before interviews. Hopefully, this will help me out as well.
+
+---
+
 ## Conclusion
 
-I'll keep adding more and more problems here as I see them fit.
-
-Until then, Arrivederci baby (I think it means goodbye).
+I'll probably keep adding more and more questions here as I encounter them or just want to. **Until then, Arrivederci baby** (I think it means goodbye).
