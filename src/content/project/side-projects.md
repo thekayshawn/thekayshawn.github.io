@@ -45,36 +45,22 @@ The sassiest JavaScript utilities in town (that you can contribute to)! A suite 
 
 ## 🚀 Kashtronauter 2077
 
-A literal space ship built with HTML, CSS, and JS that jumps to hyperspace! Someday I will actually finish it, but even in the current iteration it's so slick. You can find it [here].
+A literal space ship built with HTML, CSS, and JS that jumps to hyperspace! It's a little unfinished, but even then it's so slick. You can find it [here](https://kashtronauter.pages.dev/).
 
 ![Kashtronauter Space Game](./images/side-projects/kashtronauter.png)
 
-## 🟣 Sassywares
-
-A suite of SaaS apps that I'm building to showcase my skills and to help people. The main website showcases various tools and applications.
-
-![Sassywares Website](./images/side-projects/sassywares.png)
-
 ## 🍇 Grape!
 
-Grape is a collection of recipes for everyone. It's going to be the last fitness app you'll ever need, built as a Progressive Web App with Ionic and React.
+Grape is a SaaS in progress. A collection of recipes for everyone (for now), and in future will be getting AI-powered meal, workout, and sleep tracking, sort of an all-in-one meta fitness app. I built Grape as a PWA using Ionic and React. You can find it [here](https://grapes-pwa.pages.dev/).
 
 ![Grape Recipe App](./images/side-projects/grape.png)
 
-## 😇 Chearful's Portfolio Draft
-
-Chearful was a med-tech startup in Dubai, UAE. This website was designed to showcase their services with a clean, modern interface. This is a draft I made as a sketch of what the landing page could be.
-
-![Chearful Website](./images/side-projects/chearful.png)
-
 ## 📰 Today News
 
-A news app that is accessible to everyone, with a focus on the visually impaired. Built with React and designed for maximum accessibility and usability.
+A mock news app that is a proof of how powerful CSS variables are. Go ahead and switch the themes on [the site](https://today-news.pages.dev/), every change you see is happening by a simple CSS variable-set and an HTML `data-theme` attribute.
 
 ![Today News App](./images/side-projects/today-news.png)
 
-## ☕ Devshot's Portfolio
+<!-- ## ☕ Devshot
 
-Devshot was my first freelance-based agency. The project was put on hold due to the pandemic, but represents my early work in Angular and Firebase.
-
-![Devshot Portfolio](./images/side-projects/devshot.png)
+Devshot was my first freelance-based agency. The project was put on hold and the team dismembered due to the pandemic, but represents my early work in Angular and Firebase before I adopted React and Supabase. -->
