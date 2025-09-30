@@ -7,6 +7,9 @@ import { type Project, sortedProjectCollection } from "@project/index";
 import Button from "@components/ui/button.astro";
 import Container from "@components/container.astro";
 import Layout from "@layouts/Layout.astro";
+import Icon from "astro-icon";
+import Link from "@components/ui/link.astro";
+import { strings } from "@utils/strings";
 
 // Generate a new path for every collection project
 export async function getStaticPaths() {
@@ -19,8 +22,17 @@ export async function getStaticPaths() {
 interface Props extends Project {}
 
 // Get the project directly from the prop on render
-const { tags, title, render, snippet, image, releaseDate, relatedBlogs } =
-  Astro.props;
+const {
+  tags,
+  title,
+  render,
+  snippet,
+  image,
+  liveUrl,
+  repoUrl,
+  releaseDate,
+  relatedBlogs,
+} = Astro.props;
 
 const { Content } = await render();
 
@@ -30,9 +42,25 @@ const blogs = await getEntries(relatedBlogs || []);
 <Layout title={title} description={snippet} image={image.src.src}>
   <Container>
     <section class="section-tight">
-      <h1>
-        {title}
-      </h1>
+      <header class="flex items-start gap-4 justify-between">
+        <h1 class="flex-1">{title}</h1>
+        {
+          (liveUrl || repoUrl) && (
+            <div class="flex items-center gap-2 shrink-0">
+              {liveUrl && (
+                <Link size="md" href={liveUrl} title="Open">
+                  <Icon class="-rotate-45" name="bx:bx-right-arrow-alt" />
+                </Link>
+              )}
+              {repoUrl && (
+                <Link size="md" href={repoUrl} title="Open">
+                  <Icon name={strings.githubIcon} />
+                </Link>
+              )}
+            </div>
+          )
+        }
+      </header>
       <div class="flex gap-element items-center flex-wrap md:flex-nowrap">
         <time class="text-secondary" datetime={releaseDate.toISOString()}>
           {releaseDate.toDateString()}
