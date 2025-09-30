@@ -12,7 +12,7 @@ isFeatured: true
 tags: [React, Next.js, Open Source]
 liveUrl: ""
 repoUrl: ""
-releaseDate: "2018-10-01 00:00"
+releaseDate: "2023-10-01 00:00"
 ---
 
 These are either open source libraries or mock websites or ongoing projects that aren't big enough (yet) to be listed independently, I figured it'd make more sense to list all of these together as a single case study.
