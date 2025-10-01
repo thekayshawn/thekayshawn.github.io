@@ -34,14 +34,14 @@ const {
   relatedBlogs,
 } = Astro.props;
 
-const { Content } = await render();
+const { Content, headings } = await render();
 
 const blogs = await getEntries(relatedBlogs || []);
 ---
 
 <Layout title={title} description={snippet} image={image.src.src}>
   <Container>
-    <section class="section-tight">
+    <section>
       <header class="flex items-start gap-4 justify-between">
         <h1 class="flex-1">{title}</h1>
         {
@@ -79,9 +79,32 @@ const blogs = await getEntries(relatedBlogs || []);
       </div>
     </section>
 
-    <section class="mx-auto prose prose-lg section-tight">
-      <Content />
-    </section>
+    <div class="flex gap-8 section-tight">
+      <section class="flex-1 prose prose-lg max-w-full scroll-pt-56">
+        <Content />
+      </section>
+      <div class="hidden lg:block flex-shrink-0 flex-1 max-w-96">
+        <div
+          class="sticky top-28 bg-white border border-gray-200 rounded-lg p-4 shadow-sm h-fit max-h-[calc(100vh-6rem)] w-full">
+          <div>
+            <h3 class="font-semibold text-sm text-gray-900 mb-3">Contents</h3>
+            <nav class="space-y-1">
+              {
+                headings
+                  .filter((heading) => heading.depth === 2)
+                  .map((heading) => (
+                    <a
+                      href={`#${heading.slug}`}
+                      class="block text-sm text-gray-600 hover:text-pink-600 transition-colors duration-200 py-1">
+                      {heading.text}
+                    </a>
+                  ))
+              }
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
 
     {
       blogs.length > 0 && (

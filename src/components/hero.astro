@@ -26,11 +26,12 @@ const { image, title, summary } = heroStrings;
     )
   }
   <div>
-    <span
+    <a
+      href="#contact"
       class="mb-4 sm:mb-6 flex items-center gap-1 underline decoration-green-600 underline-offset-4">
       <Icon class="size-5 text-green-600" name="bx:bx-bolt-circle" />
       Looking for work
-    </span>
+    </a>
     {
       !title.isHidden && (
         <h1

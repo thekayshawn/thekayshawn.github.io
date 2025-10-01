@@ -41,7 +41,8 @@ const menuitems: {
 ---
 
 <header
-  class="h-[var(--navbar-height)] border-b fixed top-0 left-0 w-screen backdrop-blur bg-white/80 z-navbar flex items-center">
+  id="navbar"
+  class="h-[var(--navbar-height)] border-b fixed top-0 left-0 w-screen backdrop-blur bg-white/80 z-navbar flex items-center transition-transform duration-300">
   <Container
     class:list={[
       "flex flex-col lg:grid lg:grid-cols-3 justify-between items-center",
@@ -120,6 +121,31 @@ const menuitems: {
     </div>
   </Container>
 </header>
+
+<script>
+  let lastScrollY = 0;
+  const navbar = document.getElementById('navbar');
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY <= 0) {
+      // At the top of the page - always show
+      navbar?.classList.remove('-translate-y-full');
+    } else if (currentScrollY > lastScrollY) {
+      // Scrolling down - hide navbar
+      navbar?.classList.add('-translate-y-full');
+    } else {
+      // Scrolling up - show navbar
+      navbar?.classList.remove('-translate-y-full');
+    }
+
+    lastScrollY = currentScrollY;
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+</script>
+
 <style is:global>
   .astronav-toggle:not(.hidden) {
     height: calc(100svh - var(--navbar-height));
