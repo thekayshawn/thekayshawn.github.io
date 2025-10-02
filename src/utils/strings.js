@@ -69,7 +69,7 @@ export const heroStrings = {
   },
   image: {
     isHidden: false,
-    value: "assets/hero.png",
+    value: "/hero.png",
   },
 };
 
