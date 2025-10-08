@@ -1,5 +1,4 @@
 import type { Project } from "@project/projectSchema";
-import { strings } from "./strings";
 import { projectsPage } from "./pages";
 
 export const routes = {
@@ -7,7 +6,7 @@ export const routes = {
   blog: "/blog",
   about: "/about",
   resume:
-    "https://drive.google.com/file/d/12ElTAmvDYSw_xNy2tRpJ5VjPHCxTAg1F/view?usp=sharing",
+    "https://drive.google.com/file/d/1Hh2RHRJD-3FJOGZcxCBteqBLTmxeJVDF/view?usp=sharing",
   projects: "/work",
   experiences: "/experiences",
   getExperience: (slug: string) => `/experiences/${slug}`,
