@@ -1,10 +1,10 @@
 export const strings = {
   name: "Kashan Ahmad",
-  title: "Senior Frontend Engineer",
+  title: "Lead Frontend Engineer",
   summary:
-    "Top-Rated Frontend Engineer with 6 years of experience in AI-powered, multi-tenant dashboards, websites, and design systems.",
+    "Lead Frontend Engineer with 6 years of experience developing flagship web apps for startups.",
   bio: [
-    "Top-Rated Frontend Engineer specializing in React & Next.js with full-stack capabilities. 6+ years building enterprise dashboards, AI platforms, and design systems for clients across healthcare, fintech, and edtech.",
+    "Lead Frontend Engineer combining startup experience (FinTech, Healthcare, EdTech) with 50+ freelance projects delivered. Expert in React/Next.js/TypeScript with full-stack capabilities, specialized in payment integrations, testing infrastructure, and rapid MVP development. Currently open to both full-time roles and contract projects.",
   ],
   isOpenToWork: true,
   openToWork: "Open to work",
