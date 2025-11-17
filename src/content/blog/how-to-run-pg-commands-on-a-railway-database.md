@@ -13,7 +13,7 @@ author: "Kashan Ahmad"
 tags: ["Railway", "pg_dump", "Postgres"]
 ---
 
-Just like the last post, I love [Railway](https://railway.com), and I always use it for my databases.
+Just like the [last post](./how-to-connect-to-a-railway-database-using-dbeaver.md), I love [Railway](https://railway.com), and I always use it for my databases.
 
 I was doing some sus work on my production DB for a client's website, so ofc I didn't wanna nuke it, so I thought well let's back it up and then I'll restore if shit goes south.
 
