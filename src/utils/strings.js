@@ -1,10 +1,10 @@
 export const strings = {
   name: "Kashan Ahmad",
-  title: "Lead Frontend Engineer",
+  title: "Software Engineer",
   summary:
-    "Lead Frontend Engineer with 6 years of experience developing flagship web apps for startups.",
+    "Software Engineer with 6 years of experience developing flagship web apps for startups.",
   bio: [
-    "Lead Frontend Engineer combining startup experience (FinTech, Healthcare, EdTech) with 50+ freelance projects delivered. Expert in React/Next.js/TypeScript with full-stack capabilities, specialized in payment integrations, testing infrastructure, and rapid MVP development. Currently open to both full-time roles and contract projects.",
+    "Software Engineer combining startup experience (FinTech, Healthcare, EdTech) with 50+ freelance projects delivered. Expert in React/Next.js/TypeScript with full-stack capabilities, specialized in payment integrations, testing infrastructure, and rapid MVP development. Currently open to both full-time roles and contract projects.",
   ],
   isOpenToWork: true,
   openToWork: "Open to work",
@@ -44,7 +44,7 @@ export const strings = {
   address: "Rahim Yar Khan, Pakistan",
   addressIcon: "bx:bx-map",
   phoneNumber: "+923025811158",
-  phoneNumberDisplay: "+92 302 5811 158",
+  phoneNumberDisplay: "+92 302 5811158",
   phoneNumberIcon: "bx:bx-phone-call",
   ogImgAlt: "Kashan's Homepage",
 };

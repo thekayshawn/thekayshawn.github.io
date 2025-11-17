@@ -1,8 +1,8 @@
 ---
+import { heroStrings } from "@utils/strings";
+import { Icon } from "astro-icon";
 import { Picture } from "astro:assets";
 import heroImage from "../../public/avatar.png";
-import { Icon } from "astro-icon";
-import { heroStrings } from "@utils/strings";
 import Link from "./ui/link.astro";
 
 const { image, title, summary } = heroStrings;
@@ -26,12 +26,12 @@ const { image, title, summary } = heroStrings;
     )
   }
   <div>
-    <a
+    <!-- <a
       href="#contact"
       class="mb-4 sm:mb-6 flex items-center gap-1 underline decoration-green-600 underline-offset-4">
       <Icon class="size-5 text-green-600" name="bx:bx-bolt-circle" />
       Looking for work
-    </a>
+    </a> -->
     {
       !title.isHidden && (
         <h1

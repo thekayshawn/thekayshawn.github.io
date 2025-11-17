@@ -2,7 +2,7 @@
 
 <img src="/avatar.png" alt="" width="144" height="144">
 
-I work across the full stack, specializing in **React** and **Next.js** on the frontend, with **Node.js** and various databases on the backend. I focus on building complex enterprise applications that require scalable architecture. This includes, but isn't limited to:
+I work across the full stack, building enterprise applications that require a pretty solid architecture to withstand the test of time and ambiguous af requirements. This includes, but isn't limited to:
 
 - CMS-based websites
 - Multi-tenant, multilingual dashboards
