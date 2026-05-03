@@ -41,7 +41,7 @@ export const strings = {
   websiteIcon: "bx:bx-world",
   emailAddress: "k@kashanahmad.me",
   emailAddressIcon: "bx:bx-mail-send",
-  address: "Rahim Yar Khan, Pakistan",
+  address: "Islamabad, Pakistan",
   addressIcon: "bx:bx-map",
   phoneNumber: "+923025811158",
   phoneNumberDisplay: "+92 302 5811158",
@@ -68,7 +68,7 @@ export const heroStrings = {
     value: strings.contactLabel,
   },
   image: {
-    isHidden: false,
+    isHidden: true,
     value: "/hero.png",
   },
 };
